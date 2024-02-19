@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model gamers {
+  id          Int           @id @default(autoincrement())
+  lastTen     String        @db.VarChar(255)
+  mmr         Float
+  name        String        @db.VarChar(255)
+  server      String        @db.VarChar(255)
+  match_gamer match_gamer[]
+}
+
+model kills_and_caps {
+  id             Int         @id @default(autoincrement())
+  caps           Int
+  kills          Int
+  titan          Int?
+  match_gamer_id Int         @unique(map: "UK_f34p42nipgi334fgahcpwc7hu")
+  match_gamer    match_gamer @relation(fields: [match_gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKtd2tjb6kpg1unyfjxqckingg8")
+}
+
+model match_gamer {
+  id             Int             @id @default(autoincrement())
+  gamer_id       Int?
+  match_id       Int?
+  team_id        Int?
+  kills_and_caps kills_and_caps?
+  teams          teams?          @relation(fields: [team_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK1ds5km99di58335h0art5ddsj")
+  gamers         gamers?         @relation(fields: [gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKd4u9abhd09u33swxfvswa231k")
+  matches        matches?        @relation(fields: [match_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKg8cvpyt5dgciuklm33offk1do")
+
+  @@index([team_id], map: "FK1ds5km99di58335h0art5ddsj")
+  @@index([gamer_id], map: "FKd4u9abhd09u33swxfvswa231k")
+  @@index([match_id], map: "FKg8cvpyt5dgciuklm33offk1do")
+}
+
+model matches {
+  id          Int           @id @default(autoincrement())
+  created     DateTime      @db.DateTime(6)
+  map         Int
+  server      String        @db.VarChar(255)
+  match_gamer match_gamer[]
+}
+
+model teams {
+  id             Int           @id @default(autoincrement())
+  flag_advantage Int
+  win_or_loose   Int
+  match_gamer    match_gamer[]
+}
