@@ -1,8 +1,8 @@
 import React from 'react';
 import prisma from '@/prisma/client';
 import BackgroundImage from '../components/BackgroundImage'
-import GamersList from "./GamersList"
-import SelectGamer from "./SelectGamer"
+
+import PickGamersBar from "./PickGamersBar"
 
 interface Gamer {
     id: number;
@@ -18,13 +18,11 @@ interface PageProps {
 
 async function Page() {
     //workaround for importing async components 'GamersList' cannot be used as a JSX component. Its return type 'Promise<Element>' is not a valid JSX element.
-    const asyncGamersList: JSX.Element = await SelectGamer();
-
-
+    const asyncPickGamersBar: JSX.Element = await PickGamersBar();
     return (
         <>
             <BackgroundImage/>
-            {asyncGamersList}
+            {asyncPickGamersBar}
         </>
     );
 }
