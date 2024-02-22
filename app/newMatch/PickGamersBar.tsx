@@ -1,6 +1,8 @@
 import React from 'react';
 import GamersList from './GamersList'
-interface Gamer {
+import prisma from '@/prisma/client';
+import StoreWrapperForGamersList from './StoreWrapperForGamersList'
+export interface Gamer {
     id: number;
     lastTen: string;
     mmr: number;
@@ -8,31 +10,21 @@ interface Gamer {
     server: string;
 }
 
-interface Gamers {
-    gamers: Gamer[];
-}
 
 async function PickGamersBar() {
-    const gamersTable: Gamers [] = new Array(10).fill({});
-    const asyncGamersList: JSX.Element = await GamersList();
-    const gamersJSX = gamersTable.map((elem,index) =>
-            (
-                <select key={index} className="select select-ghost select-bordered w-full max-w-xs flex flex-col space-y-4 text-white">
-                    <option disabled selected>PickGamer</option>
-                    {asyncGamersList}
-                </select>
-            )
-    );
+    const gamers: Gamer[] = await prisma.gamers.findMany();
+
+
 
     return (
         <nav className="absolute left-0 right-0 p-4 h-3/4 flex flex-col justify-center">
             <div className="container mx-auto ">
-                {gamersJSX}
+                <form>
+                    <StoreWrapperForGamersList gamers={gamers} />
+                    <button type="submit" className="btn btn-outline btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Create teams</button>
+                </form>
             </div>
         </nav>
     );
 }
-
-
-
 export default PickGamersBar;
