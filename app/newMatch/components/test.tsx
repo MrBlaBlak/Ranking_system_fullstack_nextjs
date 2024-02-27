@@ -1,5 +1,5 @@
 import React from 'react';
-import prisma from '@/prisma/client';
+import prisma from '../../../prisma/client';
 async function Test() {
     const gamers = await getGamers()
     return (

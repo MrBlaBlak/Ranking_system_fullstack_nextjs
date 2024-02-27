@@ -1,5 +1,5 @@
 
-import prisma from '@/prisma/client';
+import prisma from '../../../prisma/client';
 import React from 'react';
 
 async function GetGamers() {

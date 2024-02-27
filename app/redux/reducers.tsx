@@ -1,4 +1,5 @@
 import { DISABLE_SELECTED_OPTION, DisableSelectedOptionAction } from './actions';
+import { combineReducers } from 'redux';
 export interface State {
     selectedOptions: string[];
 }
@@ -7,7 +8,7 @@ const initialState: State = {
     selectedOptions: new Array(10).fill(''),
 };
 
-const reducer = (state = initialState, action:DisableSelectedOptionAction): State => {
+const disableSelectedOptionReducer = (state = initialState, action:DisableSelectedOptionAction): State => {
     switch (action.type) {
         case DISABLE_SELECTED_OPTION:
             const { index, value } = action.payload;
@@ -21,5 +22,8 @@ const reducer = (state = initialState, action:DisableSelectedOptionAction): Stat
             return state;
     }
 };
+const rootReducer = combineReducers({
+    disableSelectedOptionReducer
+});
 
-export default reducer;
+export default disableSelectedOptionReducer;

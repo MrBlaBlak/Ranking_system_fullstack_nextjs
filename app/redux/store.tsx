@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import reducer from './reducers'
+import disableSelectedOptionReducer from './reducers'
 export const makeStore = () => {
     return configureStore({
-        reducer: reducer
+        reducer: disableSelectedOptionReducer
     })
 }
 
