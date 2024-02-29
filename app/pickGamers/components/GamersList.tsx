@@ -9,8 +9,8 @@ import {useAppDispatch, useAppSelector} from '../../redux/hooks'
 type Props = {
     gamers: Gamer[]
 };
-// import GetGamers from  './GetGamers'
 const GamersList: React.FC<Props> = ({gamers}) => {
+    
     const dispatch = useAppDispatch();
     const selectedOptions = useAppSelector((state: State) => state.selectedOptions);
     const handleSelectChange = (index: number, value: string) => {
@@ -21,11 +21,12 @@ const GamersList: React.FC<Props> = ({gamers}) => {
         <>
 
                 {gamersTable.map((elem, index) => (
-                        <select defaultValue={`-Player ${index + 1}-`} key={index}
+                        <select key={index}
                                 className="select select-ghost select-bordered w-full max-w-xs flex flex-col space-y-4 text-white"
                                 onChange={(e) => handleSelectChange(index, e.target.value)}
+                                required
                         >
-                            <option disabled>-Player {index + 1}-</option>
+                            <option value="" style={{display: "none"} }>-Player {index + 1}-</option>
                             {
                                 gamers.map((gamer) =>
                                     (<option key={gamer.id}
@@ -41,7 +42,13 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                         </select>
                     )
                 )}
-
+            <select className="select select-ghost select-bordered  max-w-xs flex flex-col space-y-4 text-white"
+                    required
+            >
+                <option value="" style={{display: "none"} }>-Server-</option>
+                <option value="EU">EU</option>
+                <option value="NY">NY</option>
+            </select>
         </>
     );
 }

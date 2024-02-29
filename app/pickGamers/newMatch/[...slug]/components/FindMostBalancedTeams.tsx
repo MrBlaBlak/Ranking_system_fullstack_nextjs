@@ -1,4 +1,4 @@
-import {Gamer} from './PickGamersBar'
+import {Gamer} from '../../../components/PickGamersBar'
 const calculatePerfectBalance = (gamers: Gamer[]): number => {
     
     return gamers.reduce((sum, gamer) => sum + gamer.mmr, 0) / 2;
