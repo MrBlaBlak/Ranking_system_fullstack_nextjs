@@ -1,35 +1,103 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, {useState} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
-interface Props {
+
+type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
     team1: Gamer[],
     team2: Gamer[],
     server: string
 }
+type Team = {
+    elims: string;
+    flags: string;
+    titans: string;
+    gamersId: string;
+};
+type FormValues = {
+    team1: Team[];
+    team2: Team[];
+    mapPlayed: string;
+    suddenDeath: boolean;
+    suddenDeathWhoWon: string;
+    server: string;
+    [key: string]: Team[] | string | boolean;
+};
 const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
+    const [formValues, setFormValues] = useState<FormValues>({
+        team1: Array.from({length: 5}, () => ({
+            elims: '',
+            flags: '',
+            titans: '',
+            gamersId: '',
+        })),
+        team2: Array.from({length: 5}, () => ({
+            elims: '',
+            flags: '',
+            titans: '',
+            gamersId: '',
+        })),
+        mapPlayed: '',
+        suddenDeath: false,
+        suddenDeathWhoWon: '',
+        server: '',
+    });
+    const enableSDWinner = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.checked) {
+            setFormValues((prevValues) => ({
+                ...prevValues
+                , suddenDeath: !prevValues.suddenDeath
+            }));
+        } else {
+            setFormValues((prevValues) => ({
+                ...prevValues,
+                suddenDeath: !prevValues.suddenDeath,
+                suddenDeathWhoWon: ''
+            }));
+            const radioButtons = document.getElementsByName('suddenDeathWhoWon') as NodeListOf<HTMLInputElement>;
+            radioButtons.forEach((button) => {
+                button.checked = false;
+            });
+        }
+    };
 
-    const [suddenDeathWhoWon, setSuddenDeathWhoWon] = useState('');
-    const [suddenDeath, setSuddenDeath] = useState(false);
     const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSuddenDeathWhoWon(e.currentTarget.value);
+        setFormValues((prevValues) => ({
+            ...prevValues,
+            suddenDeathWhoWon: e.target.value
+        }));
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         // Tutaj dodaj logikę obsługi submita
     };
-    const enableSDWinner =  (e: React.ChangeEvent<HTMLInputElement>) =>{
-        if (e.target.checked) {
-            setSuddenDeath(true);
-        } else {
-            setSuddenDeath(false)
-        }
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
+        const {name, value} = e.target;
+        const [team, index, field] = name.split('-');
+
+        setFormValues(prevValues => ({
+            ...prevValues,
+            [team]: (prevValues[team] as Team[]).map((player: Team, i: number) =>
+                i === parseInt(index)
+                    ? {...player, [field]: value}
+                    : player
+            ),
+        }));
     };
+    const handleMapChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const {name, value} = e.target;
+        setFormValues(prevValues => ({
+                ...prevValues,
+                [name]: value
+            })
+        );
+    };
+
     return (
-        <form >
+        <form>
             <table>
                 <thead>
                 <tr>
@@ -37,25 +105,36 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                 </tr>
                 </thead>
                 <tbody>
-                {team1.map((gamer) => (
+                {team1.map((gamer, index) => (
                     <tr key={gamer.id}>
                         <td>{gamer.name}</td>
                         <td>{gamer.mmr}</td>
                         <td>
-                            <input className="input input-bordered input-xs w-full max-w-xs" type="number" name="team1elims" placeholder="Elims" min="0" max="99" required />
+                            <input className="input input-bordered input-xs w-full max-w-xs"
+                                   name={`team1-${index}-elims`}
+                                   value={formValues.team1[index].elims}
+                                   onChange={handleInputChange}
+                                   type="number" placeholder="Elims" min="0" max="99" required/>
                         </td>
                         <td>
-                            <input className="input input-bordered input-xs w-full max-w-xs" type="number" name="team1flags" placeholder="Flags" min="0" max="6" required />
+                            <input className="input input-bordered input-xs w-full max-w-xs"
+                                   name={`team1-${index}-flags`}
+                                   value={formValues.team1[index].flags}
+                                   onChange={handleInputChange}
+                                   type="number" placeholder="Flags" min="0" max="6" required/>
                         </td>
                         <td>
-
-                            <select className="select select-bordered select-xs w-full max-w-xs" name="team1titans" required>
-                                <option value="" style={{display: "none"} }>-Pick Titan-</option>
-                                {titanOptions.map((titan)=> <option key={titan.value} value={titan.value}>{titan.label}</option>)}
+                            <select className="select select-bordered select-xs w-full max-w-xs"
+                                    name={`team1-${index}-titans`}
+                                    value={formValues.team1[index].titans}
+                                    onChange={handleInputChange} required>
+                                <option value="" style={{display: "none"}}>-Pick Titan-</option>
+                                {titanOptions.map((titan) => <option key={titan.value}
+                                                                     value={titan.value}>{titan.label}</option>)}
                             </select>
                         </td>
                         <td>
-                            <input type="hidden" name="team1gamersId" value={gamer.id} />
+                            <input type="hidden" name={`team1-${index}-gamersId`} value={gamer.id}/>
                         </td>
                     </tr>
                 ))}
@@ -66,24 +145,36 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                 </tr>
                 </thead>
                 <tbody>
-                {team2.map((gamer) => (
+                {team2.map((gamer, index) => (
                     <tr key={gamer.id}>
                         <td>{gamer.name}</td>
                         <td>{gamer.mmr}</td>
                         <td>
-                            <input className="input input-bordered input-xs w-full max-w-xs" type="number" name="team2elims" placeholder="Elims" min="0" max="99" required />
+                            <input className="input input-bordered input-xs w-full max-w-xs"
+                                   name={`team2-${index}-elims`}
+                                   value={formValues.team2[index].elims}
+                                   onChange={handleInputChange}
+                                   type="number" placeholder="Elims" min="0" max="99" required/>
                         </td>
                         <td>
-                            <input className="input input-bordered input-xs w-full max-w-xs" type="number" name="team2flags" placeholder="Flags" min="0" max="6" required />
+                            <input className="input input-bordered input-xs w-full max-w-xs"
+                                   name={`team2-${index}-flags`}
+                                   value={formValues.team2[index].flags}
+                                   onChange={handleInputChange}
+                                   type="number" placeholder="Flags" min="0" max="6" required/>
                         </td>
                         <td>
-                            <select className="select select-bordered select-xs w-full max-w-xs" name="team2titans" required>
-                                <option value="" style={{display: "none"} }>-Pick Titan-</option>
-                                {titanOptions.map((titan)=> <option key={titan.value} value={titan.value}>{titan.label}</option>)}
+                            <select className="select select-bordered select-xs w-full max-w-xs"
+                                    name={`team2-${index}-titans`}
+                                    value={formValues.team2[index].titans}
+                                    onChange={handleInputChange} required>
+                                <option value="" style={{display: "none"}}>-Pick Titan-</option>
+                                {titanOptions.map((titan) => <option key={titan.value}
+                                                                     value={titan.value}>{titan.label}</option>)}
                             </select>
                         </td>
                         <td>
-                            <input type="hidden" name="team2gamersId" value={gamer.id} />
+                            <input type="hidden" name={`team2-${index}-gamersId`} value={gamer.id}/>
                         </td>
                     </tr>
                 ))}
@@ -94,16 +185,18 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                 </tr>
                 <tr>
                     <td>
-                        <select className="select select-bordered select-xs w-full max-w-xs" id="map" name="mapPlayed" required>
-                            <option value="" style={{display: "none"} }>-Pick Map-</option>
-                            {mapOptions.map((map)=> <option key={map.value} value={map.value}>{map.label}</option>)}
+                        <select className="select select-bordered select-xs w-full max-w-xs"
+                                id="map" name="mapPlayed" required>
+                            <option value="" style={{display: "none"}}>-Pick Map-</option>
+                            {mapOptions.map((map) => <option key={map.value} value={map.value}>{map.label}</option>)}
                         </select>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <input className="checkbox checkbox-xs" onChange={enableSDWinner}  type="checkbox" id="suddenDeath" name="suddenDeath" /> Sudden Death
+                        <input className="checkbox checkbox-xs" onChange={enableSDWinner} type="checkbox"
+                               id="suddenDeath" name="suddenDeath"/> Sudden Death
                     </td>
                     <td>
                         <input
@@ -112,7 +205,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                             id="team1WinRadio"
                             name="suddenDeathWhoWon"
                             value="team1"
-                            disabled={!suddenDeath}
+                            disabled={!formValues.suddenDeath}
                             onChange={handleRadioChange}
                         />{' '}
                         Team1 Win
@@ -124,7 +217,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                             id="team2WinRadio"
                             name="suddenDeathWhoWon"
                             value="team2"
-                            disabled={!suddenDeath}
+                            disabled={!formValues.suddenDeath}
                             onChange={handleRadioChange}
                         />{' '}
                         Team2 Win
@@ -132,7 +225,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                 </tr>
                 <tr>
                     <td>
-                        <input type="hidden" name="server" value={server} />
+                        <input type="hidden" name="server" value={server}/>
                     </td>
 
                 </tr>
