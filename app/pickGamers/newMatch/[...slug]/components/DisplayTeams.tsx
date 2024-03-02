@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
-
+import CalculateMMR from './CalculateMMR'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -10,30 +10,31 @@ type Props = {
     team2: Gamer[],
     server: string
 }
-type Team = {
+export type GamerMatchStats = {
     elims: string;
     flags: string;
     titans: string;
     gamersId: string;
 };
-type FormValues = {
-    team1: Team[];
-    team2: Team[];
+export type FormValues = {
+    team1Stats: GamerMatchStats[];
+    team2Stats: GamerMatchStats[];
     mapPlayed: string;
     suddenDeath: boolean;
     suddenDeathWhoWon: string;
     server: string;
-    [key: string]: Team[] | string | boolean;
+    [key: string]: GamerMatchStats[] | string | boolean;
 };
 const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
+    
     const [formValues, setFormValues] = useState<FormValues>({
-        team1: Array.from({length: 5}, () => ({
+        team1Stats: Array.from({length: 5}, () => ({
             elims: '',
             flags: '',
             titans: '',
             gamersId: '',
         })),
-        team2: Array.from({length: 5}, () => ({
+        team2Stats: Array.from({length: 5}, () => ({
             elims: '',
             flags: '',
             titans: '',
@@ -80,7 +81,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
 
         setFormValues(prevValues => ({
             ...prevValues,
-            [team]: (prevValues[team] as Team[]).map((player: Team, i: number) =>
+            [team]: (prevValues[team] as GamerMatchStats[]).map((player: GamerMatchStats, i: number) =>
                 i === parseInt(index)
                     ? {...player, [field]: value}
                     : player
@@ -97,7 +98,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
     };
 
     return (
-        <form>
+        <form onSubmit={() => CalculateMMR(formValues)}>
             <table>
                 <thead>
                 <tr>
@@ -112,21 +113,21 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                         <td>
                             <input className="input input-bordered input-xs w-full max-w-xs"
                                    name={`team1-${index}-elims`}
-                                   value={formValues.team1[index].elims}
+                                   value={formValues.team1Stats[index].elims}
                                    onChange={handleInputChange}
                                    type="number" placeholder="Elims" min="0" max="99" required/>
                         </td>
                         <td>
                             <input className="input input-bordered input-xs w-full max-w-xs"
                                    name={`team1-${index}-flags`}
-                                   value={formValues.team1[index].flags}
+                                   value={formValues.team1Stats[index].flags}
                                    onChange={handleInputChange}
                                    type="number" placeholder="Flags" min="0" max="6" required/>
                         </td>
                         <td>
                             <select className="select select-bordered select-xs w-full max-w-xs"
                                     name={`team1-${index}-titans`}
-                                    value={formValues.team1[index].titans}
+                                    value={formValues.team1Stats[index].titans}
                                     onChange={handleInputChange} required>
                                 <option value="" style={{display: "none"}}>-Pick Titan-</option>
                                 {titanOptions.map((titan) => <option key={titan.value}
@@ -152,21 +153,21 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                         <td>
                             <input className="input input-bordered input-xs w-full max-w-xs"
                                    name={`team2-${index}-elims`}
-                                   value={formValues.team2[index].elims}
+                                   value={formValues.team2Stats[index].elims}
                                    onChange={handleInputChange}
                                    type="number" placeholder="Elims" min="0" max="99" required/>
                         </td>
                         <td>
                             <input className="input input-bordered input-xs w-full max-w-xs"
                                    name={`team2-${index}-flags`}
-                                   value={formValues.team2[index].flags}
+                                   value={formValues.team2Stats[index].flags}
                                    onChange={handleInputChange}
                                    type="number" placeholder="Flags" min="0" max="6" required/>
                         </td>
                         <td>
                             <select className="select select-bordered select-xs w-full max-w-xs"
                                     name={`team2-${index}-titans`}
-                                    value={formValues.team2[index].titans}
+                                    value={formValues.team2Stats[index].titans}
                                     onChange={handleInputChange} required>
                                 <option value="" style={{display: "none"}}>-Pick Titan-</option>
                                 {titanOptions.map((titan) => <option key={titan.value}

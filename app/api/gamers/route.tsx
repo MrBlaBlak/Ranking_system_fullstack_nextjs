@@ -1,6 +1,6 @@
 import {NextRequest, NextResponse} from "next/server";
 import prisma from "@/prisma/client"
-
+import Match from '../../model/Match'
 
 export async function GET() {
     
@@ -8,3 +8,10 @@ export async function GET() {
     return NextResponse.json(gamers);
 }
 
+export async function postMatch(match: Match){
+
+    const newMatch = await prisma.matches.create({
+        data: match
+    })
+    return newMatch
+}

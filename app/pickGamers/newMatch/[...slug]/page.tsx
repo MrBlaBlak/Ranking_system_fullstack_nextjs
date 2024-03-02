@@ -12,8 +12,11 @@ interface Props {
 async function NewMatchPage({params: {slug}}: Props) {
     const gamers: Gamer[] = await prisma.gamers.findMany();
     const selectedGamers: Gamer[] = [];
-    const localServer = "EU"
-    slug.forEach((name) => {
+    let localServer = "EU"
+    slug.forEach((name,index) => {
+        if(index===slug.length-1) {
+            localServer = name;
+        }
         const matchingGamer: Gamer | undefined = gamers.find((gamer) => gamer.name === name);
         if (matchingGamer) {
             selectedGamers.push(matchingGamer);
@@ -22,7 +25,6 @@ async function NewMatchPage({params: {slug}}: Props) {
     const [localTeam1, localTeam2] = findMostBalancedTeams(selectedGamers);
 
     return (
-
         <>
             <BackgroundImage/>
             <nav className="absolute left-12 p-4 h-3/4 flex flex-col justify-center">

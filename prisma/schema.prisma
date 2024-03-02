@@ -20,7 +20,7 @@ model kills_and_caps {
   id             Int         @id @default(autoincrement())
   caps           Int
   kills          Int
-  titan          Int?
+  titan          Titan_Name?
   match_gamer_id Int         @unique(map: "UK_f34p42nipgi334fgahcpwc7hu")
   match_gamer    match_gamer @relation(fields: [match_gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKtd2tjb6kpg1unyfjxqckingg8")
 }
@@ -43,7 +43,7 @@ model match_gamer {
 model matches {
   id          Int           @id @default(autoincrement())
   created     DateTime      @db.DateTime(6)
-  map         Int
+  map         Map_Name
   server      String        @db.VarChar(255)
   match_gamer match_gamer[]
 }
@@ -53,4 +53,24 @@ model teams {
   flag_advantage Int
   win_or_loose   Int
   match_gamer    match_gamer[]
+}
+enum Map_Name{
+  boomtown
+  exo
+  eden
+  drydock
+  angel
+  colony
+  glitch
+  none
+}
+enum Titan_Name{
+  ion
+  tone
+  ronin
+  northstar
+  monarch
+  legion
+  scorch
+  none
 }
