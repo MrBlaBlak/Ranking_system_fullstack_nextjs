@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
 import CalculateMMR from './CalculateMMR'
+
+// import {TitanName} from '../../../../model/KillsAndCaps'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -98,7 +100,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
     };
 
     return (
-        <form onSubmit={() => CalculateMMR(formValues)}>
+        <form onSubmit={() => CalculateMMR(formValues, team1, team2)}>
             <table>
                 <thead>
                 <tr>

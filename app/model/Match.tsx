@@ -13,7 +13,7 @@ class Match{
 }
 
 // Enumeracja dla Map_Name
-enum MapName {
+export enum MapName {
     Boomtown = 'boomtown',
     Exo = 'exo',
     Eden = 'eden',

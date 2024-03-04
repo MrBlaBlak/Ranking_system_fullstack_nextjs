@@ -8,21 +8,21 @@ interface MapOption {
     label: string;
 }
 export const titanOptions: TitanOption[] = [
-    { value: 'ion', label: 'Ion' },
-    { value: 'tone', label: 'Tone' },
-    { value: 'monarch', label: 'Monarch' },
-    { value: 'northstar', label: 'Northstar' },
-    { value: 'ronin', label: 'Ronin' },
-    { value: 'legion', label: 'Legion' },
-    { value: 'scorch', label: 'Scorch' },
+    { value: 'Ion', label: 'Ion' },
+    { value: 'Tone', label: 'Tone' },
+    { value: 'Monarch', label: 'Monarch' },
+    { value: 'Northstar', label: 'Northstar' },
+    { value: 'Ronin', label: 'Ronin' },
+    { value: 'Legion', label: 'Legion' },
+    { value: 'Scorch', label: 'Scorch' },
 ];
 
  export const mapOptions: MapOption[] = [
-    { value: 'boomtown', label: 'Boomtown' },
-    { value: 'exo', label: 'Exo' },
-    { value: 'eden', label: 'Eden' },
-    { value: 'drydock', label: 'Drydock' },
-    { value: 'angel', label: 'Angel' },
-    { value: 'colony', label: 'Colony' },
-    { value: 'glitch', label: 'Glitch' },
+    { value: 'Boomtown', label: 'Boomtown' },
+    { value: 'Exo', label: 'Exo' },
+    { value: 'Eden', label: 'Eden' },
+    { value: 'Drydock', label: 'Drydock' },
+    { value: 'Angel', label: 'Angel' },
+    { value: 'Colony', label: 'Colony' },
+    { value: 'Glitch', label: 'Glitch' },
 ];

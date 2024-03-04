@@ -1,13 +1,13 @@
 class MatchGamer{
     id?: number;
-    gamerId: number;
-    matchId: number;
-    teamId: number;
-    constructor(id: number | undefined, gamerId: number, matchId: number, teamId: number) {
+    gamer_id: number;
+    match_id: number;
+    team_id: number;
+    constructor(id: number | undefined, gamer_id?: number, match_id?: number, team_id?: number) {
         this.id = id;
-        this.gamerId = gamerId;
-        this.matchId= matchId;
-        this.teamId = teamId;
+        this.gamer_id = gamer_id || 0;
+        this.match_id= match_id || 0;
+        this.team_id = team_id || 0;
     }
 }
 export default MatchGamer
