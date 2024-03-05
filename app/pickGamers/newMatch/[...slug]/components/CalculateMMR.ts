@@ -1,3 +1,4 @@
+'use server'
 import React from 'react';
 import Gamer from '../../../../model/Gamer';
 import Match from '../../../../model/Match'
@@ -13,6 +14,7 @@ import {postTeam} from "@/app/api/gamers/route"
 import {postMatchGamer} from "@/app/api/gamers/route"
 import {postKillsAndCaps} from "@/app/api/gamers/route"
 import {postGamer} from "@/app/api/gamers/route"
+import {updateGamer} from "@/app/api/gamers/route"
 // FormValues = {
 //     team1: Team[];
 //     team2: Team[];
@@ -24,14 +26,15 @@ import {postGamer} from "@/app/api/gamers/route"
 // };
 export default async function CalculateMMR(formValues: FormValues, team1: Gamer[], team2: Gamer[]) {
 
-
+    // console.log(await GET())
     const server = formValues.server;
+    // console.log(server);
     const suddenDeath = formValues.suddenDeath;
     const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
     const team1Stats = formValues.team1Stats;
     const team2Stats = formValues.team2Stats;
     const mapPlayed = formValues.mapPlayed;
-    console.log(formValues);
+    // console.log(formValues);
 
     let team1flagsTotal = 0;
     let team2flagsTotal = 0;
@@ -139,23 +142,24 @@ export default async function CalculateMMR(formValues: FormValues, team1: Gamer[
         team1[i].mmr = Math.round((team1[i].mmr + points) * 10) / 10;
         team2[i].mmr = Math.round((team2[i].mmr + points2) * 10) / 10;
 
-        await postGamer(team1[i]);
-        await postGamer(team2[i]);
+        await updateGamer(team1[i]);
+        await updateGamer(team2[i]);
         
         streak = 0;
         streak2 = 0;
-        for (let i = 0; i < 5; i++) {
-            const matchGamer1:MatchGamer = new MatchGamer(undefined, team1[i].id, matchForDB.id,team1forDB.id);
-            const matchGamer2:MatchGamer = new MatchGamer(undefined, team2[i].id, matchForDB.id,team2forDB.id);
-            
-            const newMatchGamer1 = await postMatchGamer(matchGamer1);
-            const newMatchGamer2 = await postMatchGamer(matchGamer2);
-            
-            const killsAndCaps1:KillsAndCaps = new KillsAndCaps(undefined, +team1Stats[i].elims, +team1Stats[i].flags, TitanName[team1Stats[i].titans as keyof typeof TitanName], newMatchGamer1.id);
-            const killsAndCaps2:KillsAndCaps = new KillsAndCaps(undefined, +team2Stats[i].elims, +team2Stats[i].flags, TitanName[team2Stats[i].titans as keyof typeof TitanName], newMatchGamer2.id);
-            await postKillsAndCaps(killsAndCaps1);
-            await postKillsAndCaps(killsAndCaps2);
-        }
+        
+    }
+    for (let i = 0; i < 5; i++) {
+        const matchGamer1:MatchGamer = new MatchGamer(undefined, team1[i].id, newMatch.id, newTeam1.id);
+        const matchGamer2:MatchGamer = new MatchGamer(undefined, team2[i].id, newMatch.id, newTeam2.id);
+
+        const newMatchGamer1 = await postMatchGamer(matchGamer1);
+        const newMatchGamer2 = await postMatchGamer(matchGamer2);
+
+        const killsAndCaps1:KillsAndCaps = new KillsAndCaps(undefined, +team1Stats[i].elims, +team1Stats[i].flags, TitanName[team1Stats[i].titans as keyof typeof TitanName], newMatchGamer1.id);
+        const killsAndCaps2:KillsAndCaps = new KillsAndCaps(undefined, +team2Stats[i].elims, +team2Stats[i].flags, TitanName[team2Stats[i].titans as keyof typeof TitanName], newMatchGamer2.id);
+        await postKillsAndCaps(killsAndCaps1);
+        await postKillsAndCaps(killsAndCaps2);
     }
 
 }

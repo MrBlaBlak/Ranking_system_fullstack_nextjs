@@ -1,5 +1,4 @@
 import React from 'react';
-import prisma from '@/prisma/client';
 import BackgroundImage from '../components/BackgroundImage'
 import PickGamersBar from "./components/PickGamersBar"
 

@@ -1,4 +1,6 @@
+Mmr ranking system as full stack application with database service (Prisma) using NextJs, Typescript, Redux. Styled with DaisyUI and Tailwind.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 ## Getting Started
 

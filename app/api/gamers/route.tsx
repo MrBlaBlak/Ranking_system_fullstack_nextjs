@@ -5,10 +5,15 @@ import Gamer from '../../model/Gamer';
 import Team from '../../model/Team'
 import MatchGamer from '../../model/MatchGamer'
 import KillsAndCaps from '../../model/KillsAndCaps'
-export async function GET() {
+export async function updateGamer(gamer: Gamer) {
     
-    const gamers = await prisma.gamers.findMany();
-    return NextResponse.json(gamers);
+    const updatedGamer = await prisma.gamers.update({
+        where:{
+            id: gamer.id
+        },
+        data:gamer
+    });
+    return updatedGamer;
 }
 
 export async function postMatch(match: Match){
