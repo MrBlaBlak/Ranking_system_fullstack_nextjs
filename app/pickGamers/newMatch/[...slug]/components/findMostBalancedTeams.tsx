@@ -4,56 +4,56 @@ const calculatePerfectBalance = (gamers: Gamer[]): number => {
     
     return gamers.reduce((sum, gamer) => sum + gamer.mmr, 0) / 2;
 };
-export const applyServerHandicap = (gameServer: string, gamerServer: string) => {
+export const applyServerHandicap = (matchServer: string, gamerServer: string) => {
         let handicap=0;
         switch (gamerServer) {
             case "EU1": {
-                if(gameServer ==="NY") handicap=5;
-                else if(gameServer==="EU") handicap=0; break;
+                if(matchServer ==="NY") handicap=5;
+                else if(matchServer==="EU") handicap=0; break;
             }
             case "EU2": {
-                if(gameServer==="NY") handicap=6;
-                else if(gameServer==="EU") handicap=0; break;
+                if(matchServer==="NY") handicap=6;
+                else if(matchServer==="EU") handicap=0; break;
             }
             case "EU3": {
-                if(gameServer==="NY") handicap=7;
-                else if(gameServer==="EU") handicap=0; break;
+                if(matchServer==="NY") handicap=7;
+                else if(matchServer==="EU") handicap=0; break;
             }
             case "EU4": {
-                if(gameServer==="NY") handicap=8;
-                else if(gameServer==="EU") handicap=0; break;
+                if(matchServer==="NY") handicap=8;
+                else if(matchServer==="EU") handicap=0; break;
             }
             case "EU5": {
-                if(gameServer==="NY") handicap=10;
-                else if(gameServer==="EU") handicap=5; break;
+                if(matchServer==="NY") handicap=10;
+                else if(matchServer==="EU") handicap=5; break;
             }
             case "EU6": {
-                if(gameServer==="NY") handicap=12;
-                else if(gameServer==="EU") handicap=6; break;
+                if(matchServer==="NY") handicap=12;
+                else if(matchServer==="EU") handicap=6; break;
             }
             case "NY1": {
-                if(gameServer==="EU") handicap=5;
-                else if(gameServer==="NY") handicap=0; break;
+                if(matchServer==="EU") handicap=5;
+                else if(matchServer==="NY") handicap=0; break;
             }
             case "NY2": {
-                if(gameServer==="EU") handicap=6;
-                else if(gameServer==="NY") handicap=0; break;
+                if(matchServer==="EU") handicap=6;
+                else if(matchServer==="NY") handicap=0; break;
             }
             case "NY3": {
-                if(gameServer==="EU") handicap=7;
-                else if(gameServer==="NY") handicap=0; break;
+                if(matchServer==="EU") handicap=7;
+                else if(matchServer==="NY") handicap=0; break;
             }
             case "NY4": {
-                if(gameServer==="EU") handicap=8;
-                else if(gameServer==="NY") handicap=0; break;
+                if(matchServer==="EU") handicap=8;
+                else if(matchServer==="NY") handicap=0; break;
             }
             case "NY5": {
-                if(gameServer==="EU") handicap=10;
-                else if(gameServer==="NY") handicap=5; break;
+                if(matchServer==="EU") handicap=10;
+                else if(matchServer==="NY") handicap=5; break;
             }
             case "NY6": {
-                if(gameServer==="EU") handicap=12;
-                else if(gameServer==="NY") handicap=6; break;
+                if(matchServer==="EU") handicap=12;
+                else if(matchServer==="NY") handicap=6; break;
             }
             default: {
                 handicap=0;
@@ -64,8 +64,8 @@ export const applyServerHandicap = (gameServer: string, gamerServer: string) => 
 
 }
 const findMostBalancedTeams = (gamers: Gamer[], gameServer:string): [Gamer[], Gamer[]] => {
-    console.log(gamers)
-    console.log(gameServer)
+    // console.log(gamers)
+    // console.log(gameServer)
     const perfectBalance = calculatePerfectBalance(gamers);
     let bestScoreSoFar = 0;
     let smallestDiff = 1000;

@@ -29,7 +29,7 @@ export default async function CalculateMMR(formValues: FormValues, team1: Gamer[
 
     // console.log(await GET())
     const server = formValues.server;
-    // console.log(server);
+    console.log(server);
     const suddenDeath = formValues.suddenDeath;
     const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
     const team1Stats = formValues.team1Stats;
@@ -140,8 +140,8 @@ export default async function CalculateMMR(formValues: FormValues, team1: Gamer[
             }
         }
 
-        team1[i].mmr = Math.round((team1[i].mmr + points + applyServerHandicap(team1[i].server, server)) * 10) / 10;
-        team2[i].mmr = Math.round((team2[i].mmr + points2 + applyServerHandicap(team2[i].server, server)) * 10) / 10;
+        team1[i].mmr = Math.round((team1[i].mmr + points + applyServerHandicap(server, team1[i].server)) * 10) / 10;
+        team2[i].mmr = Math.round((team2[i].mmr + points2 + applyServerHandicap(server, team2[i].server)) * 10) / 10;
 
         await updateGamer(team1[i]);
         await updateGamer(team2[i]);
