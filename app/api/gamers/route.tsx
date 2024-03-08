@@ -5,6 +5,24 @@ import Gamer from '../../model/Gamer';
 import Team from '../../model/Team'
 import MatchGamer from '../../model/MatchGamer'
 import KillsAndCaps from '../../model/KillsAndCaps'
+interface TitanStats {
+    gamer_id: number;
+    max_titan: string;
+}
+export async function findMostFrequentTitanForGamer(){
+    //find most frequently used titan for every gamer
+    const titan: TitanStats[] = await prisma.$queryRaw`SELECT t.gamer_id, MAX(t.max_titan) AS max_titan
+                                         FROM (SELECT mg.gamer_id,
+                                                      k.titan AS   max_titan,
+                                                      ROW_NUMBER() OVER (PARTITION BY mg.gamer_id ORDER BY COUNT(k.titan) DESC) AS row_num
+                                               FROM match_gamer mg
+                                                        JOIN kills_and_caps k ON mg.id = k.match_gamer_id
+                                               WHERE k.titan != 7
+                                               GROUP BY mg.gamer_id, k.titan) AS t
+                                         WHERE t.row_num = 1
+                                         GROUP BY t.gamer_id`
+    return titan
+}
 export async function updateGamer(gamer: Gamer) {
     
     const updatedGamer = await prisma.gamers.update({

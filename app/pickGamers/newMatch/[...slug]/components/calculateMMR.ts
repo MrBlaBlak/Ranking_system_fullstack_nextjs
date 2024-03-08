@@ -15,6 +15,7 @@ import {postMatchGamer} from "@/app/api/gamers/route"
 import {postKillsAndCaps} from "@/app/api/gamers/route"
 import {postGamer} from "@/app/api/gamers/route"
 import {updateGamer} from "@/app/api/gamers/route"
+import {applyServerHandicap} from "./findMostBalancedTeams"
 // FormValues = {
 //     team1: Team[];
 //     team2: Team[];
@@ -139,8 +140,8 @@ export default async function CalculateMMR(formValues: FormValues, team1: Gamer[
             }
         }
 
-        team1[i].mmr = Math.round((team1[i].mmr + points) * 10) / 10;
-        team2[i].mmr = Math.round((team2[i].mmr + points2) * 10) / 10;
+        team1[i].mmr = Math.round((team1[i].mmr + points + applyServerHandicap(team1[i].server, server)) * 10) / 10;
+        team2[i].mmr = Math.round((team2[i].mmr + points2 + applyServerHandicap(team2[i].server, server)) * 10) / 10;
 
         await updateGamer(team1[i]);
         await updateGamer(team2[i]);

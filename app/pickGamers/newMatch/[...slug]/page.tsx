@@ -22,7 +22,7 @@ async function NewMatchPage({params: {slug}}: Props) {
             selectedGamers.push(matchingGamer);
         }
     });
-    const [localTeam1, localTeam2] = findMostBalancedTeams(selectedGamers);
+    const [localTeam1, localTeam2] = findMostBalancedTeams(selectedGamers, localServer);
 
     return (
         <>

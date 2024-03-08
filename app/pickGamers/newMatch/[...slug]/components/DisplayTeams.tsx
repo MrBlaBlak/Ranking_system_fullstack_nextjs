@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
 import CalculateMMR from './CalculateMMR'
+import {getRandomStats} from './randomValues'
 
-// import {TitanName} from '../../../../model/KillsAndCaps'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -17,6 +17,8 @@ export type GamerMatchStats = {
     flags: string;
     titans: string;
     gamersId: string;
+    // mmr: number;
+    // handicap: number;
 };
 export type FormValues = {
     team1Stats: GamerMatchStats[];
@@ -27,19 +29,16 @@ export type FormValues = {
     server: string;
     [key: string]: GamerMatchStats[] | string | boolean;
 };
+
 const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
     
     const [formValues, setFormValues] = useState<FormValues>({
-        team1Stats: Array.from({length: 5}, (_, index) => ({
-            elims: '',
-            flags: '',
-            titans: '',
+        team1Stats: Array.from({ length: 5 }, (_, index) => ({
+            ...getRandomStats(),
             gamersId: team1[index].id.toString(),
         })),
-        team2Stats: Array.from({length: 5}, (_, index) => ({
-            elims: '',
-            flags: '',
-            titans: '',
+        team2Stats: Array.from({ length: 5 }, (_, index) => ({
+            ...getRandomStats(),
             gamersId: team2[index].id.toString(),
         })),
         mapPlayed: '',

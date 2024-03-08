@@ -10,7 +10,7 @@ type Props = {
 //uncontrolled version of the form
 const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {
     const router = useRouter();
-    console.log(gamers);
+    
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const emptyArray: string[] = new Array(e.currentTarget.length).fill({});

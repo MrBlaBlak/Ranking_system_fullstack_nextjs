@@ -1,6 +1,6 @@
 import React from 'react';
 import GamersList from './GamersList'
-import prisma from '../../../prisma/client';
+import prisma from '@/prisma/client';
 import StoreWrapperForGamersList from './StoreWrapperForGamersList'
 export interface Gamer {
     id: number;
@@ -10,6 +10,7 @@ export interface Gamer {
     server: string;
 }
 async function PickGamersBar() {
+    
     const gamers: Gamer[] = await prisma.gamers.findMany();
 
     // console.log("team1total", team1.reduce((accumulator, currentValue) => accumulator + currentValue.mmr, 0))
