@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import IonImage from '@/public/images/ion.png';
-import ToneImage from '@/public/images/tone.png';
-import MonarchImage from '@/public/images/monarch.png';
-import RoninImage from '@/public/images/ronin.png';
-import NorthstarImage from '@/public/images/northstar.png';
-import LegionImage from '@/public/images/legion.png';
-import ScorchImage from '@/public/images/scorch.png';
+import IonImage from '../../../public/images/ion.png';
+import ToneImage from '../../../public/images/tone.png';
+import MonarchImage from '../../../public/images/monarch.png';
+import RoninImage from '../../../public/images/ronin.png';
+import NorthstarImage from '../../../public/images/northstar.png';
+import LegionImage from '../../../public/images/legion.png';
+import ScorchImage from '../../../public/images/scorch.png';
 
 const GetTitanImage = ({ titan }: { titan: string }) => {
     switch (titan.toLowerCase()) {

@@ -135,7 +135,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                                     onChange={handleInputChange} required>
                                 <option value="" style={{display: "none"}}>-Pick Titan-</option>
                                 {titanOptions.map((titan) => <option key={titan.value}
-                                                                     value={titan.value}>{titan.label}</option>)}
+                                                                     value={titan.value}>{titan.value}</option>)}
                             </select>
                         </td>
                         <td>
@@ -175,7 +175,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                                     onChange={handleInputChange} required>
                                 <option value="" style={{display: "none"}}>-Pick Titan-</option>
                                 {titanOptions.map((titan) => <option key={titan.value}
-                                                                     value={titan.value}>{titan.label}</option>)}
+                                                                     value={titan.value}>{titan.value}</option>)}
                             </select>
                         </td>
                         <td>
@@ -195,7 +195,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
                                 value={formValues.mapPlayed}
                                 onChange={handleMapChange} required>
                             <option value="" style={{display: "none"}}>-Pick Map-</option>
-                            {mapOptions.map((map) => <option key={map.value} value={map.value}>{map.label}</option>)}
+                            {mapOptions.map((map) => <option key={map.value} value={map.value}>{map.value}</option>)}
                         </select>
                     </td>
                 </tr>

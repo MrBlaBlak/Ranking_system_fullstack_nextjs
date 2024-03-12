@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import BronzeBadge from '@/public/images/Bronze_Badge.png';
-import SilverBadge from '@/public/images/Silver_Badge.png';
-import GoldBadge from '@/public/images/Gold_Badge.png';
-import PlatinumBadge from '@/public/images/Platinum_Badge.png';
-import DiamondBadge from '@/public/images/Diamond_Badge.png';
-import MastersBadge from '@/public/images/Masters_Badge.png';
-import ApexPredatorBadge from '@/public/images/Apex_Predator_Badge.png';
+import BronzeBadge from '../../../public/images/Bronze_Badge.png';
+import SilverBadge from '../../../public/images/Silver_Badge.png';
+import GoldBadge from '../../../public/images/Gold_Badge.png';
+import PlatinumBadge from '../../../public/images/Platinum_Badge.png';
+import DiamondBadge from '../../../public/images/Diamond_Badge.png';
+import MastersBadge from '../../../public/images/Masters_Badge.png';
+import ApexPredatorBadge from '../../../public/images/Apex_Predator_Badge.png';
 
 const GetBadgeImage = ({mmr}: { mmr: number }) => {
         if (mmr > 620.1) {

@@ -9,9 +9,15 @@ interface TitanStats {
     gamer_id: number;
     max_titan: string;
 }
+interface MapStats {
+    name: string;
+    total_wins: number;
+    total_losses: number;
+    map: string;
+}
 export async function findMostFrequentTitanForGamer(){
     //find most frequently used titan for every gamer
-    const titan: TitanStats[] = await prisma.$queryRaw`SELECT t.gamer_id, MAX(t.max_titan) AS max_titan
+    const titanStats: TitanStats[] = await prisma.$queryRaw`SELECT t.gamer_id, MAX(t.max_titan) AS max_titan
                                          FROM (SELECT mg.gamer_id,
                                                       k.titan AS   max_titan,
                                                       ROW_NUMBER() OVER (PARTITION BY mg.gamer_id ORDER BY COUNT(k.titan) DESC) AS row_num
@@ -20,8 +26,20 @@ export async function findMostFrequentTitanForGamer(){
                                                WHERE k.titan != 7
                                                GROUP BY mg.gamer_id, k.titan) AS t
                                          WHERE t.row_num = 1
-                                         GROUP BY t.gamer_id`
-    return titan
+                                         GROUP BY t.gamer_id`;
+    return titanStats
+}
+export async function getMapStats() {
+    const mapStats: MapStats[] = await prisma.$queryRaw`SELECT g.name,
+                                                               SUM(CASE WHEN t.win_or_loose = 1 THEN 1 ELSE 0 END) AS total_wins,
+                                                               SUM(CASE WHEN t.win_or_loose = 0 THEN 1 ELSE 0 END) AS total_losses,
+                                                               m.map
+                                                        FROM gamers g
+                                                                 LEFT JOIN match_gamer mg ON g.id = mg.gamer_id
+                                                                 LEFT JOIN matches m ON mg.match_id = m.id
+                                                                 LEFT JOIN teams t ON mg.team_id = t.id
+                                                        GROUP BY g.name, m.map`;
+    return mapStats;
 }
 export async function updateGamer(gamer: Gamer) {
     
