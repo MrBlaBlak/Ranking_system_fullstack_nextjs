@@ -2,7 +2,7 @@ import React from 'react';
 import prisma from '@/prisma/client';
 import Gamer from '../../model/Gamer';
 import { getMapStats } from '../../api/gamers/route';
-
+import GetMap from './GetMapImage'
 interface MapStats {
     name: string;
     total_wins: number;
@@ -16,9 +16,7 @@ interface MapOption {
 
 interface MapStatsDTO {
     gamerName: string;
-    mapWins: Record<string, number>;
-    mapLosses: Record<string, number>;
-    mapWinPercent: Record<string, number>;
+    mapStats: Record<string, { wins: number; losses: number; winPercent: number }>;
 }
 
 async function Page() {
@@ -31,7 +29,7 @@ async function Page() {
 
     for (const stats of mapStats) {
         const { name: gamerName, total_wins: mapWins, total_losses: mapLosses, map } = stats;
-        const mapWinPercent: number = Math.round(mapWins * 1.0 / (mapWins + mapLosses) * 100);
+        const mapWinPercent: number = Math.round((mapWins * 1.0 / (+mapWins + +mapLosses)) * 100);
 
         // Check if the gamer is already in the list
         const existingGamerStats: MapStatsDTO | undefined = gamerStatsList.find(
@@ -40,16 +38,12 @@ async function Page() {
 
         if (existingGamerStats) {
             // If yes, update the map data
-            existingGamerStats.mapWins[map] = mapWins;
-            existingGamerStats.mapLosses[map] = mapLosses;
-            existingGamerStats.mapWinPercent[map] = mapWinPercent;
+            existingGamerStats.mapStats[map] = { wins: mapWins, losses: mapLosses, winPercent: mapWinPercent };
         } else {
             // If no, create a new entry for the gamer
             const newGamerStats: MapStatsDTO = {
                 gamerName,
-                mapWins: { [map]: mapWins },
-                mapLosses: { [map]: mapLosses },
-                mapWinPercent: { [map]: mapWinPercent },
+                mapStats: { [map]: { wins: mapWins, losses: mapLosses, winPercent: mapWinPercent } },
             };
             gamerStatsList.push(newGamerStats);
         }
@@ -57,15 +51,25 @@ async function Page() {
 
     return (
         <div className="overflow-x-auto h-dvh">
-            <table className="table table-zebra table-sm table-pin-rows ">
-                <thead>
-                <tr>
-                    <th>Gamer Name</th>
+            <table className="table table-zebra table-sm ">
+                <thead className="sticky top-0 " data-theme="dark">
+                <tr className="h-20 border-none">
+                    <th>Map</th>
                     {mapOrder.map((map) => (
                         <>
-                            <th key={`${map}_Wins`}>{`${map} Wins`}</th>
-                            <th key={`${map}_Losses`}>{`${map} Losses`}</th>
-                            <th key={`${map}_WinPercent`}>{`${map} Win%`}</th>
+                            <th  colSpan={3} key={`${map}_Header`} >
+                                        <GetMap map={map}/>
+                            </th>
+                        </>
+                    ))}
+                </tr>
+                <tr className="">
+                    <th>Player</th>
+                    {mapOrder.map((map) => (
+                        <>
+                            <th key={`${map}_Wins`}>Wins</th>
+                            <th key={`${map}_Losses`}>Losses</th>
+                            <th key={`${map}_WinPercent`}>Win%</th>
                         </>
                     ))}
                 </tr>
@@ -76,9 +80,9 @@ async function Page() {
                         <td>{gamerStats.gamerName}</td>
                         {mapOrder.map((map) => (
                             <>
-                                <td key={`${map}_Wins`}>{gamerStats.mapWins[map] || 0}</td>
-                                <td key={`${map}_Losses`}>{gamerStats.mapLosses[map] || 0}</td>
-                                <td key={`${map}_WinPercent`}>{gamerStats.mapWinPercent[map] || 0}%</td>
+                                <td key={`${map}_Wins`}>{gamerStats.mapStats[map] ? gamerStats.mapStats[map].wins : 0}</td>
+                                <td key={`${map}_Losses`}>{gamerStats.mapStats[map] ? gamerStats.mapStats[map].losses : 0}</td>
+                                <td key={`${map}_WinPercent`}>{gamerStats.mapStats[map] ? gamerStats.mapStats[map].winPercent : 0}%</td>
                             </>
                         ))}
                     </tr>
@@ -90,3 +94,4 @@ async function Page() {
 }
 
 export default Page;
+
