@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import BoomtownImage from '@/public/images/maps/boomtown.webp';
-import ExoImage from '@/public/images/maps/exoplanet.webp';
-import EdenImage from '@/public/images/maps/eden.webp';
-import DrydockImage from '@/public/images/maps/drydock.webp';
-import AngelImage from '@/public/images/maps/angelcity.webp';
-import ColonyImage from '@/public/images/maps/colony.webp';
-import GlitchImage from '@/public/images/maps/glitch.webp';
+import BoomtownImage from '../../public/images/maps/Boomtown.webp';
+import ExoImage from '../../public/images/maps/Exoplanet.webp';
+import EdenImage from '../../public/images/maps/Eden.webp';
+import DrydockImage from '../../public/images/maps/Drydock.webp';
+import AngelImage from '../../public/images/maps/AngelCity.webp';
+import ColonyImage from '../../public/images/maps/Colony.webp';
+import GlitchImage from '../../public/images/maps/Glitch.webp';
 const GetMapImage = ({ map }: { map: string }) => {
     switch (map.toLowerCase()) {
         case 'boomtown':

@@ -3,17 +3,20 @@ import {findMostFrequentTitanForGamer} from '../../api/gamers/route'
 import Gamer from '../../model/Gamer'
 import prisma from '@/prisma/client'
 import GetBadge from './GetBadgeImage'
-import GetTitan from './GetTitanImage'
+import GetTitan from '../GetTitanImage'
+import Link from 'next/link'
 
 interface TitanStats {
     gamer_id: number;
     max_titan: string;
 }
+
 function formatLastTenResults(lastTen: string): string {
     const wins = (lastTen.match(/1/g) || []).length;
     const losses = 10 - wins
     return `${wins}:${losses}`;
 }
+
 async function Page() {
     const gamers: Gamer[] = await prisma.gamers.findMany();
     const titanStats: TitanStats[] = await findMostFrequentTitanForGamer()
@@ -34,7 +37,13 @@ async function Page() {
                         <th>MMR</th>
                         <th>Most played Titan</th>
                         <th>Last 10</th>
-                        <th>Server</th>
+                        <div className="flex items-center">
+                            <th>Server</th>
+                            <Link href="/"
+                                  className=" btn btn-outline hover:text-gray-300 transition duration-300 ">Go
+                                back</Link>
+                        </div>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -43,7 +52,7 @@ async function Page() {
                             <td>
                                 <div className="flex items-center gap-3">
                                     <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12" >
+                                        <div className="mask mask-squircle w-12 h-12">
                                             <GetBadge mmr={gamer.mmr}/>
                                         </div>
                                     </div>
