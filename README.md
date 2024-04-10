@@ -46,6 +46,11 @@ Here's an example of how the DATABASE_URL might look for a MySQL database:
 
 `DATABASE_URL="mysql://myuser:mypassword@localhost:3306/mydatabase"`
 
+### Creating tables and uploading initial data
+To create tables run 
+```prisma db push```
+To upload initial data run
+```prisma db execute --file ./prisma/dump.sql --schema ./prisma/schema.prisma```
 ### Starting Development Server
 
 Now, run the development server:
@@ -59,5 +64,5 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+If you want to fill statistic tables with data for showcase, press getStats button
 
