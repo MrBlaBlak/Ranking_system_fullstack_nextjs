@@ -48,9 +48,8 @@ Here's an example of how the DATABASE_URL might look for a MySQL database:
 
 ### Creating tables and uploading initial data
 To create tables run 
-```prisma db push```
-To upload initial data run
-```prisma db execute --file ./prisma/dump.sql --schema ./prisma/schema.prisma```
+```npx prisma db push```
+
 ### Starting Development Server
 
 Now, run the development server:
@@ -64,5 +63,5 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-If you want to fill statistic tables with data for showcase, press getStats button
+```To be able to create teams you have to first upload some players. Press Load Gamers button to get them into database. Press Load Stats Data button to get some initial match statistics for your players```
 
