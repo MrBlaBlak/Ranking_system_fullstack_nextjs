@@ -31,7 +31,7 @@ function Navbar() {
             <div className="container mx-auto ">
                 <ul className="flex flex-col space-y-4 text-white">
                     <Link href="/pickGamers"
-                          className={"btn btn-outline btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300" + (isGamersDataNotLoaded ? '' : ' disabled')} >Start a new Match</Link>
+                          className={"btn btn-outline btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300 " + (isGamersDataNotLoaded ? 'btn-disabled' : '')}  >Start a new Match</Link>
                     <Link href="/stats/leaderboard"
                           className="btn btn-outline btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Leaderboard</Link>
                     <Link href="/stats/mapsStats"
