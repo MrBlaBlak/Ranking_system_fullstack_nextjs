@@ -4,6 +4,7 @@ import {Gamer} from './PickGamersBar';
 import StoreProvider from '../../api/StoreProvider';
 import GamersList from './GamersList';
 import {useRouter} from 'next/navigation'
+import Link from 'next/link'
 type Props = {
     gamers: Gamer[]
 };
@@ -24,9 +25,12 @@ const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {
                     <form onSubmit={handleSubmit}>
                         <GamersList gamers={gamers}></GamersList>
                         <button type="submit"
-                                className="btn btn-outline btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Create
+                                className="btn btn-outline btn-success  btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Create
                             teams
                         </button>
+                        <Link href="/"
+                              className="btn btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300 ">Go
+                            back</Link>
                     </form>
                 </StoreProvider>
         </>

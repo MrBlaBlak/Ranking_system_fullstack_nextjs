@@ -5,6 +5,7 @@ import {titanOptions, mapOptions} from './MapsAndTitans'
 import updatePlayers from './updatePlayers'
 import {getRandomStats} from './randomValues'
 import calculateMMR from './calculateMMR'
+import Link from 'next/link'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -252,8 +253,12 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 </tbody>
             </table>
             <button type="submit"
-                    className="btn btn-outline btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300">Submit
+                    className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
             </button>
+            <div className="w-5 inline-block" ></div>
+            <Link href="/pickGamers"
+                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
+                back</Link>
         </form>
     );
 }
