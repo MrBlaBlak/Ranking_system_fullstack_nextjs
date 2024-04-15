@@ -1,15 +1,15 @@
 'use client'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
-import CalculateMMR from './CalculateMMR'
+import updatePlayers from './updatePlayers'
 import {getRandomStats} from './randomValues'
-
+import calculateMMR from './calculateMMR'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
-    team1: Gamer[],
-    team2: Gamer[],
+    t1: Gamer[],
+    t2: Gamer[],
     server: string
 }
 export type GamerMatchStats = {
@@ -30,14 +30,16 @@ export type FormValues = {
     [key: string]: GamerMatchStats[] | string | boolean;
 };
 
-const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
+const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
     
+    const [team1, setTeam1State] = useState(t1);
+    const [team2, setTeam2State] = useState(t2);
     const [formValues, setFormValues] = useState<FormValues>({
-        team1Stats: Array.from({ length: 5 }, (_, index) => ({
+        team1Stats: Array.from({length: 5}, (_, index) => ({
             ...getRandomStats(),
             gamersId: team1[index].id.toString(),
         })),
-        team2Stats: Array.from({ length: 5 }, (_, index) => ({
+        team2Stats: Array.from({length: 5}, (_, index) => ({
             ...getRandomStats(),
             gamersId: team2[index].id.toString(),
         })),
@@ -46,6 +48,18 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
         suddenDeathWhoWon: '',
         server: server,
     });
+    const updateTeams = (newTeam1: Gamer[], newTeam2: Gamer[]) => {
+        for (let i = 0; i < 5; i++) {
+            setTeam1State((prevState: Gamer[]) => {
+                return newTeam1
+            })
+            setTeam2State((prevState: Gamer[]) => {
+                return newTeam2
+            })
+        }
+
+    }
+
     const enableSDWinner = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.checked) {
             setFormValues((prevValues) => ({
@@ -73,8 +87,10 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        // Tutaj dodaj logikę obsługi submita
+            event.preventDefault();
+            updatePlayers({ ...formValues }, [...team1], [...team2]);
+            const [newTeam1, newTeam2] = calculateMMR({ ...formValues }, [...team1], [...team2]);
+            updateTeams(newTeam1, newTeam2);
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;
@@ -99,10 +115,7 @@ const DisplayTeams = ({pickedGamers, gamers, team1, team2, server}: Props) => {
     };
 
     return (
-        <form onSubmit={(e) => {
-            e.preventDefault();
-            CalculateMMR(formValues, team1, team2)
-        }}>
+        <form onSubmit={handleSubmit}>
             <table>
                 <thead>
                 <tr>

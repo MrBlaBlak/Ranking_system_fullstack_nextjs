@@ -17,7 +17,7 @@ async function PickGamersBar() {
     // console.log("team2total", team2.reduce((accumulator, currentValue) => accumulator + currentValue.mmr, 0))
 
     return (
-        <nav className="absolute left-0 right-0 p-4 h-3/4 flex flex-col justify-center">
+        <nav className="absolute left-0 right-0 p-4 h-3/4 flex flex-col ">
             <div className="container mx-auto ">
                     <StoreWrapperForGamersList gamers={gamers} />
             </div>
