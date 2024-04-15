@@ -1,11 +1,11 @@
 class Gamer {
-    id?: number;
+    id: number;
     name: string;
     mmr: number;
     server: string;
     lastTen: string;
 
-    constructor(id: number | undefined, name: string, mmr: number, server: string, lastTen: string) {
+    constructor(id: number , name: string, mmr: number, server: string, lastTen: string) {
         this.id = id;
         this.name = name;
         this.mmr = mmr;

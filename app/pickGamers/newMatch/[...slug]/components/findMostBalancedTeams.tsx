@@ -1,4 +1,3 @@
-'use server'
 import {Gamer} from '../../../components/PickGamersBar'
 const calculatePerfectBalance = (gamers: Gamer[]): number => {
     
