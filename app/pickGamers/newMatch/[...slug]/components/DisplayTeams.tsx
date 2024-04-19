@@ -1,11 +1,12 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, MouseEventHandler} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './MapsAndTitans'
 import updatePlayers from './updatePlayers'
-import {getRandomStats} from './randomValues'
+import {getRandomStats, getRandomMap} from './randomValues'
 import calculateMMR from './calculateMMR'
 import Link from 'next/link'
+
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -32,16 +33,20 @@ export type FormValues = {
 };
 
 const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
-    
+
     const [team1, setTeam1State] = useState(t1);
     const [team2, setTeam2State] = useState(t2);
     const [formValues, setFormValues] = useState<FormValues>({
         team1Stats: Array.from({length: 5}, (_, index) => ({
-            ...getRandomStats(),
+            elims: "",
+            flags: "",
+            titans: "",
             gamersId: team1[index].id.toString(),
         })),
         team2Stats: Array.from({length: 5}, (_, index) => ({
-            ...getRandomStats(),
+            elims: "",
+            flags: "",
+            titans: "",
             gamersId: team2[index].id.toString(),
         })),
         mapPlayed: '',
@@ -49,6 +54,24 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
         suddenDeathWhoWon: '',
         server: server,
     });
+    const handleGetRandomStats = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+
+        setFormValues((prevState) => ({
+            ...prevState,
+            team1Stats: prevState.team1Stats.map(stats => ({
+                ...stats,
+                ...getRandomStats(),
+            })),
+
+            team2Stats: prevState.team2Stats.map(stats => ({
+                ...stats,
+                ...getRandomStats(),
+            })),
+            ...getRandomMap()
+
+        }));
+    }
     const updateTeams = (newTeam1: Gamer[], newTeam2: Gamer[]) => {
         for (let i = 0; i < 5; i++) {
             setTeam1State((prevState: Gamer[]) => {
@@ -88,10 +111,10 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-            event.preventDefault();
-            updatePlayers({ ...formValues }, [...team1], [...team2]);
-            const [newTeam1, newTeam2] = calculateMMR({ ...formValues }, [...team1], [...team2]);
-            updateTeams(newTeam1, newTeam2);
+        event.preventDefault();
+        updatePlayers({...formValues}, [...team1], [...team2]);
+        const [newTeam1, newTeam2] = calculateMMR({...formValues}, [...team1], [...team2]);
+        updateTeams(newTeam1, newTeam2);
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;
@@ -255,10 +278,16 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
             <button type="submit"
                     className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
             </button>
-            <div className="w-5 inline-block" ></div>
+            <div className="w-5 inline-block"></div>
             <Link href="/pickGamers"
-                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
-                back</Link>
+                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go back
+            </Link>
+            <div className="w-5 inline-block"></div>
+            <button type="button"
+                    onClick={handleGetRandomStats}
+                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
+                Random
+            </button>
         </form>
     );
 }

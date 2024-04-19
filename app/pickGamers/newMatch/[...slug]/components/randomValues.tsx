@@ -1,4 +1,4 @@
-import {titanOptions} from './MapsAndTitans'
+import {titanOptions, mapOptions} from './MapsAndTitans'
 export const getRandomValue = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -7,3 +7,6 @@ export const getRandomValue = (min: number, max: number) => {
      flags: getRandomValue(0, 2).toString(),
      titans: titanOptions[getRandomValue(0, titanOptions.length - 1)].value,
  });
+ export const getRandomMap = () => ({
+     mapPlayed: mapOptions[getRandomValue(0, mapOptions.length - 1)].value
+ })
