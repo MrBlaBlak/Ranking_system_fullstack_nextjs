@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {disableSelectedOption} from '../../redux/actions';
 import {State} from '../../redux/reducers';
 import {useAppDispatch, useAppSelector} from '../../redux/hooks'
-
+import Link from 'next/link'
 type Props = {
     gamers: Gamer[]
 };
@@ -22,7 +22,7 @@ const GamersList: React.FC<Props> = ({gamers}) => {
 
                 {gamersTable.map((elem, index) => (
                         <select key={index}
-                                className="select select-ghost select-bordered w-full max-w-xs flex flex-col space-y-4 text-white"
+                                className="select select-ghost select-bordered w-full max-w-xs sm:select-xs md:select-sm lg:select-md flex flex-col space-y-4 text-white"
                                 onChange={(e) => handleSelectChange(index, e.target.value)}
                                 required
                         >
@@ -42,13 +42,21 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                         </select>
                     )
                 )}
-            <select className="select select-ghost select-bordered  max-w-xs flex flex-col space-y-4 text-white"
+            <select className="select select-ghost select-bordered max-w-xs sm:select-xs md:select-sm lg:select-md flex flex-col space-y-4 text-white"
                     required
             >
                 <option value="" style={{display: "none"} }>-Server-</option>
                 <option value="EU">EU</option>
                 <option value="NY">NY</option>
             </select>
+            <button type="submit"
+                    className="btn btn-outline btn-success  btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Create
+                teams
+            </button>
+            <div className="w-5 inline-block"></div>
+            <Link href="/"
+                  className="btn btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300 ">Go
+                back</Link>
         </>
     );
 }

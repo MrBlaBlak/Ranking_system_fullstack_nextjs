@@ -24,6 +24,10 @@ The system continuously monitors player statistics, allowing users to explore va
 
 * **Titan Effectiveness:** Insights into players' efficiency when using different titans.
 
+## More information
+For more explanation you can watch video below (presented on the sister project in Java Spring MVC)
+
+https://www.youtube.com/watch?v=UoY1Vs-6aJ4
 
 ## Getting Started
 
