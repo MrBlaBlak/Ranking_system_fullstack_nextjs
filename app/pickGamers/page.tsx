@@ -15,7 +15,7 @@ async function Page() {
     return (
         <>
                 <BackgroundImage/>
-            {/* @ts-expect-error Server Component */}
+
                 <PickGamersBar/>
         </>
     );
