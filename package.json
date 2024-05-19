@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-
   "dependencies": {
     "@prisma/client": "^5.9.1",
     "@reduxjs/toolkit": "^2.2.1",
@@ -30,6 +29,7 @@
   },
   "devDependencies": {
     "daisyui": "^4.7.2",
+    "encoding": "^0.1.13",
     "prisma": "^5.9.1"
   }
 }
