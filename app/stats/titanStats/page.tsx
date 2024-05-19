@@ -1,7 +1,7 @@
 import React from 'react';
 import prisma from '@/prisma/client';
 import Gamer from '../../model/Gamer';
-import { getTitanStats } from '../../api/gamers/route';
+import { getTitanStats } from '../../api/gamers/routeDump';
 import GetTitan from '../GetTitanImage'
 import Link from 'next/link'
 interface TitanStatsDTO {

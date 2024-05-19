@@ -1,5 +1,5 @@
 import React from 'react';
-import {findMostFrequentTitanForGamer} from '../../api/gamers/route'
+import {findMostFrequentTitanForGamer} from '../../api/gamers/routeDump'
 import Gamer from '../../model/Gamer'
 import prisma from '@/prisma/client'
 import GetBadge from './GetBadgeImage'
