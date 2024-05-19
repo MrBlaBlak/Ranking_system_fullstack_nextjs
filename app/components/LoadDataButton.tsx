@@ -1,7 +1,7 @@
 'use client';
 import React, {useState, useEffect} from 'react';
 
-import {setStatsData} from '../api/stats/route'
+import {setStatsData} from '../api/stats/routeDump'
 
 type Props = {
     isDisabled : boolean,

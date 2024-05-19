@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import LoadDataButton from './LoadDataButton'
 import LoadGamersButton from './LoadGamersButton'
-import { checkIfDataExist, checkIfGamersExist } from '../api/stats/route';
+import { checkIfDataExist, checkIfGamersExist } from '../api/stats/routeDump';
 
 
 function Navbar() {

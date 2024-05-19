@@ -1,5 +1,5 @@
 
-import {checkIfGamersExist, setGamersData} from '../api/stats/route'
+import {checkIfGamersExist, setGamersData} from '../api/stats/routeDump'
 import React, {useState, useEffect} from 'react';
 type Props = {
     isDisabled: boolean,
