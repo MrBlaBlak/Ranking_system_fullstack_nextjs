@@ -1,4 +1,4 @@
-import {titanOptions, mapOptions} from './MapsAndTitans'
+import {titanOptions, mapOptions} from './mapsAndTitans'
 export const getRandomValue = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };

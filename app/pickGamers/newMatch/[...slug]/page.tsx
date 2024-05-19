@@ -3,7 +3,7 @@ import DisplayTeams from './components/DisplayTeams'
 import {Gamer} from "../../components/PickGamersBar";
 import prisma from '../../../../prisma/client';
 import BackgroundImage from '../../../components/BackgroundImage'
-import findMostBalancedTeams from './components/FindMostBalancedTeams'
+import findMostBalancedTeams from './components/findMostBalancedTeams'
 
 interface Props {
     params: { slug: string[] }
