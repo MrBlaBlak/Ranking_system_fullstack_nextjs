@@ -16,6 +16,7 @@ import {postGamer} from "@/app/api/gamers/routeDump"
 import {updateGamer} from "@/app/api/gamers/routeDump"
 import {applyServerHandicap} from "./findMostBalancedTeams"
 import calculateMMR from './calculateMMR'
+export const maxDuration = 20; // This function can run for a maximum of 20 seconds
 // FormValues = {
 //     team1: Team[];
 //     team2: Team[];
