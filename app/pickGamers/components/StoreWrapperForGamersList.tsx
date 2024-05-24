@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Gamer} from './PickGamersBar';
-import StoreProvider from '../../api/StoreProvider';
+import Gamer from '@/app/model/Gamer';
+import StoreProvider from '@/app/api/StoreProvider';
 import GamersList from './GamersList';
 import {useRouter} from 'next/navigation'
 
