@@ -34,6 +34,7 @@ export type FormValues = {
 
 const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [team1, setTeam1State] = useState(t1);
     const [team2, setTeam2State] = useState(t2);
     const [formValues, setFormValues] = useState<FormValues>({
@@ -110,11 +111,13 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
         }));
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        updatePlayers({...formValues}, [...team1], [...team2]);
+        setIsSubmitting(true);
+        await updatePlayers({...formValues}, [...team1], [...team2]);
         const [newTeam1, newTeam2] = calculateMMR({...formValues}, [...team1], [...team2]);
         updateTeams(newTeam1, newTeam2);
+        setIsSubmitting(false);
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;
@@ -275,8 +278,10 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 </tr>
                 </tbody>
             </table>
-            <button type="submit"
+            <button disabled={isSubmitting}
+                    type="submit"
                     className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
+                {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
             </button>
             <div className="w-5 inline-block"></div>
             <Link href="/pickGamers"
@@ -285,8 +290,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
             <div className="w-5 inline-block"></div>
             <button type="button"
                     onClick={handleGetRandomStats}
-                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
-                Random
+                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get Random
             </button>
         </form>
     );
