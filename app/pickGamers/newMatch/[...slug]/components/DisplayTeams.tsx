@@ -1,4 +1,5 @@
 'use client'
+
 import React, {useState, useEffect, MouseEventHandler} from 'react';
 import {Gamer} from '../../../components/PickGamersBar';
 import {titanOptions, mapOptions} from './mapsAndTitans'
@@ -297,3 +298,4 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
 }
 
 export default DisplayTeams;
+export const maxDuration = 20; // This function can run for a maximum of 20 seconds
