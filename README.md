@@ -1,6 +1,9 @@
 # Titanfall 2 Balanced Teams Ranking System
 ## Introduction
 Welcome to the Titanfall 2 Balanced Teams Ranking System! This project aims to create a balanced team selection and ranking system for the first-person shooter (FPS) game Titanfall 2. The system focuses on ensuring fair and competitive matches by intelligently forming teams based on players' Matchmaking Ratings (MMR) and implementing a comprehensive ranking algorithm.
+The application is live on Vercel for testing at this link 
+
+https://ranking-system-fullstack-nextjs.vercel.app/
 
 In Titanfall 2's "Capture the Flag" mode, two teams of five players each compete to capture more flags than their opponents. The game features powerful titans, colossal machines that can be summoned onto the battlefield periodically, adding an extra layer of strategy to the gameplay.
 

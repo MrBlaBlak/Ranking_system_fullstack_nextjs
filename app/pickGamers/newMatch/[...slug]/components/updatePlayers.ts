@@ -82,20 +82,24 @@ export default async function updatePlayers(formValues: FormValues, team1: Gamer
         team1New[i].mmr = Math.round((team1[i].mmr  + applyServerHandicap(server, team1[i].server)) * 10) / 10;
         team2New[i].mmr = Math.round((team2[i].mmr  + applyServerHandicap(server, team2[i].server)) * 10) / 10;
     }
+
     for (let i = 0; i < 5; i++) {
-        await updateGamer(team1New[i]);
-        await updateGamer(team2New[i]);
-        const matchGamer1: MatchGamer = new MatchGamer(undefined, team1New[i].id, newMatch.id, newTeam1.id);
-        const matchGamer2: MatchGamer = new MatchGamer(undefined, team2New[i].id, newMatch.id, newTeam2.id);
+        // Update gamers in both teams
+        await Promise.all([updateGamer(team1New[i]), updateGamer(team2New[i])]);
 
-        const newMatchGamer1 = await postMatchGamer(matchGamer1);
-        const newMatchGamer2 = await postMatchGamer(matchGamer2);
+        // Create match gamers for both teams
+        const [newMatchGamer1, newMatchGamer2] = await Promise.all([
+            postMatchGamer(new MatchGamer(undefined, team1New[i].id, newMatch.id, newTeam1.id)),
+            postMatchGamer(new MatchGamer(undefined, team2New[i].id, newMatch.id, newTeam2.id))
+        ]);
 
-        const killsAndCaps1: KillsAndCaps = new KillsAndCaps(undefined, +team1Stats[i].elims, +team1Stats[i].flags, TitanName[team1Stats[i].titans as keyof typeof TitanName], newMatchGamer1.id);
-        const killsAndCaps2: KillsAndCaps = new KillsAndCaps(undefined, +team2Stats[i].elims, +team2Stats[i].flags, TitanName[team2Stats[i].titans as keyof typeof TitanName], newMatchGamer2.id);
-        await postKillsAndCaps(killsAndCaps1);
-        await postKillsAndCaps(killsAndCaps2);
-
+        // Create kills and caps for both teams
+        await Promise.all([
+            postKillsAndCaps(new KillsAndCaps(undefined, +team1Stats[i].elims, +team1Stats[i].flags, TitanName[team1Stats[i].titans as keyof typeof TitanName], newMatchGamer1.id)),
+            postKillsAndCaps(new KillsAndCaps(undefined, +team2Stats[i].elims, +team2Stats[i].flags, TitanName[team2Stats[i].titans as keyof typeof TitanName], newMatchGamer2.id))
+        ]);
     }
+
+
 }
 
