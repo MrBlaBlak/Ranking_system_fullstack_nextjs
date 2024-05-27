@@ -1,3 +1,4 @@
+'use server'
 import {NextRequest, NextResponse} from "next/server";
 import prisma from "@/prisma/client"
 import Match from '../../model/Match'
@@ -35,7 +36,27 @@ interface TitanStats {
     total_losses: number;
     titan: string;
 }
+export async function addPlayerTest() {
 
+     await prisma.gamers.create({
+        data: {
+            name: 'Elsa',
+            mmr: 500,
+            server: 'EU',
+            lastTen: '1010101010'
+        },
+    })
+
+}
+export async function removePlayerTest() {
+
+     await prisma.gamers.deleteMany({
+        where: {
+            name: 'Elsa'
+        },
+    })
+
+}
 export async function findMostFrequentTitanForGamer(){
     //find most frequently used titan for every gamer
     const titanStats: TitanFrequencyStats[] = await prisma.$queryRaw`SELECT t.gamer_id, MAX(t.max_titan) AS max_titan

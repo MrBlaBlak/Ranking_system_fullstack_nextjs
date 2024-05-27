@@ -1,7 +1,7 @@
 import React from 'react';
 import prisma from '@/prisma/client';
-import Gamer from '../../model/Gamer';
-import { getCapsStats } from '../../api/gamers/routeDump';
+import Gamer from '@/app/model/Gamer';
+import { getCapsStats } from '@/app/api/gamers/routeDump';
 import GetMap from '../GetMapImage'
 import Link from 'next/link';
 interface CapsStats {

@@ -1,5 +1,5 @@
 import {FormValues} from './DisplayTeams'
-import Gamer from '../../../../model/Gamer';
+import Gamer from '@/app/model/Gamer';
 import {applyServerHandicap} from "./findMostBalancedTeams"
 const calculateMmr = (formValues: FormValues, team1: Gamer[], team2: Gamer[]): [Gamer[], Gamer[]] => {
     const suddenDeath = formValues.suddenDeath;

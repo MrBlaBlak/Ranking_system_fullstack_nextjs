@@ -1,8 +1,8 @@
 import React from 'react';
 import DisplayTeams from './components/DisplayTeams'
-import {Gamer} from "../../components/PickGamersBar";
-import prisma from '../../../../prisma/client';
-import BackgroundImage from '../../../components/BackgroundImage'
+import Gamer from "@/app/model/Gamer";
+import prisma from '@/prisma/client';
+import BackgroundImage from '@/app/components/BackgroundImage'
 import findMostBalancedTeams from './components/findMostBalancedTeams'
 
 interface Props {

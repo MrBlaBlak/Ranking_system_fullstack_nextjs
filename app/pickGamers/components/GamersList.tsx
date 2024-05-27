@@ -1,10 +1,10 @@
 'use client'
-import {Gamer} from './PickGamersBar'
+import Gamer from '@/app/model/Gamer'
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {disableSelectedOption} from '../../redux/actions';
-import {State} from '../../redux/reducers';
-import {useAppDispatch, useAppSelector} from '../../redux/hooks'
+import {disableSelectedOption} from '@/app/redux/actions';
+import {State} from '@/app/redux/reducers';
+import {useAppDispatch, useAppSelector} from '@/app/redux/hooks'
 import Link from 'next/link'
 type Props = {
     gamers: Gamer[]

@@ -1,7 +1,7 @@
 'use client'
 
 import React, {useState, useEffect, MouseEventHandler} from 'react';
-import {Gamer} from '../../../components/PickGamersBar';
+import Gamer from '@/app/model/Gamer';
 import {titanOptions, mapOptions} from './mapsAndTitans'
 import updatePlayers from './updatePlayers'
 import {getRandomStats, getRandomMap} from './randomValues'

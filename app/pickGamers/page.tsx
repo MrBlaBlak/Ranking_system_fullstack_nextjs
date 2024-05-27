@@ -1,22 +1,20 @@
+
 import React from 'react';
 import BackgroundImage from '../components/BackgroundImage'
-import PickGamersBar from "./components/PickGamersBar"
+import prisma from '@/prisma/client';
+import StoreWrapperForGamersList from './components/StoreWrapperForGamersList'
+import Gamer from "@/app/model/Gamer";
 
-interface Gamer {
-    id: number;
-    lastTen: string;
-    mmr: number;
-    name: string;
-    server: string;
-}
 async function Page() {
-    //workaround for importing async components 'GamersList' cannot be used as a JSX component. Its return type 'Promise<Element>' is not a valid JSX element.
-    // const asyncPickGamersBar: JSX.Element = await PickGamersBar();
+    const gamers: Gamer[] = await prisma.gamers.findMany();
     return (
         <>
-                <BackgroundImage/>
-
-                <PickGamersBar/>
+            <BackgroundImage/>
+            <nav className="absolute left-0 right-0 p-4 h-3/4 flex flex-col ">
+                <div className="container mx-auto ">
+                    <StoreWrapperForGamersList gamers={gamers}/>
+                </div>
+            </nav>
         </>
     );
 }
