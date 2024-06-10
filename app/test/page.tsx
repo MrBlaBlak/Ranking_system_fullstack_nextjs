@@ -11,20 +11,21 @@ function Page() {
         await addPlayerTest();
         setIsSubmitting(false);
     };
-    const handleRemove = async ()=> {
+    const handleRemove = async () => {
         await removePlayerTest();
     }
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <button disabled={isSubmitting}
-                    type="submit"
-                    className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
-                {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
+            <form onSubmit={handleSubmit}>
+                <button disabled={isSubmitting}
+                        type="submit"
+                        className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
+                    {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
+                </button>
+            </form>
+            <button onClick={handleRemove}
+                    className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">button
             </button>
-        </form>
-        <button onClick = {handleRemove}
-                className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">button</button>
         </>
     );
 }
