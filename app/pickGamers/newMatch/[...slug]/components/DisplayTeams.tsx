@@ -36,6 +36,9 @@ export type FormValues = {
 const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isDrawAlert, setIsDrawAlert] = useState(false);
+    const [suddenDeathErrorAlert, setSuddenDeathErrorAlert] = useState(false);
+    const [isDraw, setIsDraw] = useState(false);
     const [team1, setTeam1State] = useState(t1);
     const [team2, setTeam2State] = useState(t2);
     const [formValues, setFormValues] = useState<FormValues>({
@@ -56,6 +59,23 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
         suddenDeathWhoWon: '',
         server: server,
     });
+    useEffect(() => {
+        const team1Flags = formValues.team1Stats.reduce((acc, player) => acc + Number(player.flags), 0);
+        const team2Flags = formValues.team2Stats.reduce((acc, player) => acc + Number(player.flags), 0);
+        setIsDraw(team1Flags===team2Flags);
+        if(!isDraw) {
+            setFormValues((prevState) => ({
+                ...prevState,
+                suddenDeath: false,
+                suddenDeathWhoWon: ''
+            }))
+            const radioButtons = document.getElementsByName('suddenDeathWhoWon') as NodeListOf<HTMLInputElement>;
+            radioButtons.forEach((button) => {
+                button.checked = false;
+            });
+        }
+    })
+
     const handleGetRandomStats = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
 
@@ -114,11 +134,26 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        const team1Flags = formValues.team1Stats.reduce((acc, player) => acc + Number(player.flags), 0);
+        const team2Flags = formValues.team2Stats.reduce((acc, player) => acc + Number(player.flags), 0);
+        if(formValues.suddenDeath && formValues.suddenDeathWhoWon==='') {
+            setSuddenDeathErrorAlert(true);
+        }
+        else{
+            setSuddenDeathErrorAlert(false);
+        }
+        if(!formValues.suddenDeath || isDrawAlert===true)
+        {
+            setIsDrawAlert(team1Flags === team2Flags);
+        }
+
         setIsSubmitting(true);
         await updatePlayers({...formValues}, [...team1], [...team2]);
         const [newTeam1, newTeam2] = calculateMMR({...formValues}, [...team1], [...team2]);
         updateTeams(newTeam1, newTeam2);
         setIsSubmitting(false);
+
+
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;
@@ -244,7 +279,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 <tr>
                     <td>
                         <input className="checkbox checkbox-xs" onChange={enableSDWinner} type="checkbox"
-                               id="suddenDeath" name="suddenDeath"/> Sudden Death
+                               id="suddenDeath" name="suddenDeath" disabled={!isDraw} checked={formValues.suddenDeath}/> Sudden Death
                     </td>
                     <td>
                         <input
@@ -286,14 +321,38 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
             </button>
             <div className="w-5 inline-block"></div>
             <Link href="/pickGamers"
-                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go back
+                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
+                back
             </Link>
             <div className="w-5 inline-block"></div>
             <button type="button"
                     onClick={handleGetRandomStats}
-                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get Random
+                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
+                Random
             </button>
+            {isDrawAlert && (
+                <div role="alert" className="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         className="stroke-info shrink-0 w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>This match is a draw.</span>
+                </div>
+            )}
+            {suddenDeathErrorAlert && (
+                <div role="alert" className="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         className="stroke-info shrink-0 w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>You need to check SuddenDeathWinner.</span>
+                </div>
+            )}
+
         </form>
+
     );
 }
 
