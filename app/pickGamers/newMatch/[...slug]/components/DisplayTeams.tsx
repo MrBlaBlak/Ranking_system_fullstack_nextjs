@@ -7,7 +7,7 @@ import updatePlayers from './updatePlayers'
 import {getRandomStats, getRandomMap} from './randomValues'
 import calculateMMR from './calculateMMR'
 import Link from 'next/link'
-
+import Alert from './Alert'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -74,7 +74,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 button.checked = false;
             });
         }
-    })
+    }, [formValues.team1Stats, formValues.team2Stats])
 
     const handleGetRandomStats = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
@@ -330,26 +330,12 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                     className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
                 Random
             </button>
-            {isDrawAlert && (
-                <div role="alert" className="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         className="stroke-info shrink-0 w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span>This match is a draw.</span>
-                </div>
-            )}
-            {suddenDeathErrorAlert && (
-                <div role="alert" className="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         className="stroke-info shrink-0 w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span>You need to check SuddenDeathWinner.</span>
-                </div>
-            )}
+            {isDrawAlert &&
+                <Alert text="This match is a draw."/>
+            }
+            {suddenDeathErrorAlert &&
+                <Alert text="You need to check SuddenDeathWinner."/>
+            }
 
         </form>
 
