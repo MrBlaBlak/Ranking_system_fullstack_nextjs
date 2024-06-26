@@ -22,7 +22,7 @@ const GamersList: React.FC<Props> = ({gamers}) => {
 
                 {gamersTable.map((elem, index) => (
                         <select key={index}
-                                className="select select-ghost select-bordered w-full max-w-xs sm:select-xs md:select-sm lg:select-md flex flex-col space-y-4 text-white"
+                                className="select max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 select-sm md:select-md"
                                 onChange={(e) => handleSelectChange(index, e.target.value)}
                                 required
                         >
@@ -42,7 +42,7 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                         </select>
                     )
                 )}
-            <select className="select select-ghost select-bordered max-w-xs sm:select-xs md:select-sm lg:select-md flex flex-col space-y-4 text-white"
+            <select className="select my-1 max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 select-sm md:select-md"
                     required
             >
                 <option value="" style={{display: "none"} }>-Server-</option>
@@ -50,12 +50,12 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                 <option value="NY">NY</option>
             </select>
             <button type="submit"
-                    className="btn btn-outline btn-success  btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300">Create
+                    className="btn btn-success max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">Create
                 teams
             </button>
             <div className="w-5 inline-block"></div>
             <Link href="/"
-                  className="btn btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300 ">Go
+                  className="btn btn-neutral max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm sm:btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">Go
                 back</Link>
         </>
     );

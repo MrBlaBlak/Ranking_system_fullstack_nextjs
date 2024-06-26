@@ -10,11 +10,9 @@ async function Page() {
     return (
         <>
             <BackgroundImage/>
-            <nav className="absolute left-0 right-0 p-4 h-3/4 flex flex-col ">
-                <div className="container mx-auto ">
+            <div className="relative left-8  sm:left-20 md:left-32 lg:left-40 xl:left-1/4 p-4 ">
                     <StoreWrapperForGamersList gamers={gamers}/>
-                </div>
-            </nav>
+            </div>
         </>
     );
 }

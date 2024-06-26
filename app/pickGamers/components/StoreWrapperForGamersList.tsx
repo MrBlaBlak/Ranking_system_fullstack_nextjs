@@ -22,7 +22,7 @@ const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {
     return (
         <>
                 <StoreProvider>
-                    <form onSubmit={handleSubmit}>
+                    <form className="flex flex-col gap-y-1" onSubmit={handleSubmit}>
                         <GamersList gamers={gamers}></GamersList>
                     </form>
                 </StoreProvider>
