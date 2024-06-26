@@ -108,7 +108,6 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
         }
 
     }
-
     const enableSDWinner = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues((prevState) => ({
             ...prevState,

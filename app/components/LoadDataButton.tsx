@@ -21,7 +21,7 @@ const LoadDataButton: React.FC<Props> = ({isDisabled , setDataLoadedTrue}) => {
     return (
         <>
             <button
-                className="btn btn-outline btn-accent btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:text-gray-300 transition duration-300"
+                className="btn btn-outline btn-md lg:btn-lg max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60  hover:text-gray-300 transition duration-300"
                 onClick={handleClick}
                 disabled={isDisabled}
             >

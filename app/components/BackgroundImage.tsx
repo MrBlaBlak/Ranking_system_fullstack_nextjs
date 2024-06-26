@@ -1,9 +1,13 @@
 import Image from 'next/image';
-import PilotBackgroundPhoto from '@/public/images/landingImage.jpg';
+import PilotBackgroundPhoto from '@/public/images/background/bg1920.png';
 
 const BackgroundImage = () => {
+
     return (
-        <Image  className="bg-cover bg-center fixed" src={PilotBackgroundPhoto} alt="Pilot"/>
+        <div className="fixed top-[-50%] left-[-50%] w-[200%] h-[200%]">
+            <Image  className="absolute inset-0 m-auto min-w-[50%] min-h-[50%]"  src={PilotBackgroundPhoto} alt="Pilot"/>
+        </div>
+
     );
 };
 export default BackgroundImage
