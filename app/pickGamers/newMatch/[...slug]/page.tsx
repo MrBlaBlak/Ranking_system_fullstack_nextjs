@@ -27,12 +27,10 @@ async function NewMatchPage({params: {slug}}: Props) {
     return (
         <>
             <BackgroundImage/>
-            <nav className="absolute left-12 p-4 h-3/4 flex flex-col">
-                <div className="container mx-auto ">
+                <div className="relative left-2 top-2 sm:left-8 sm:top-8 md:left-32 lg:left-40 xl:left-60 p-4 rounded-lg max-w-xl bg-base-200">
                     <DisplayTeams pickedGamers={slug} gamers={gamers} t1={localTeam1} t2={localTeam2}
                                   server={localServer}/>
                 </div>
-            </nav>
         </>
 
     );

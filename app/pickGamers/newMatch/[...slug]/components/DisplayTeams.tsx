@@ -174,6 +174,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 <tr>
                     <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
                     <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues} handleRadioChange={handleRadioChange}/>
+                    <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues} handleRadioChange={handleRadioChange}/>
                 </tr>
                 <tr>
                     <td>
