@@ -54,7 +54,21 @@ model teams {
   win_or_loose   Int
   match_gamer    match_gamer[]
 }
-enum Map_Name{
+
+model weapons {
+  Id            Int    @id @default(autoincrement())
+  Name          String @db.VarChar(255)
+  Class         String @db.VarChar(255)
+  Near_Damage   Int
+  Mid_Damage    Int
+  Far_Damage    Int
+  Near_Distance Int
+  Mid_Distance  Int
+  Far_Distance  Int
+  Fire_Rate     Int
+}
+
+enum Map_Name {
   boomtown
   exo
   eden
@@ -64,7 +78,8 @@ enum Map_Name{
   glitch
   none
 }
-enum Titan_Name{
+
+enum Titan_Name {
   ion
   tone
   ronin

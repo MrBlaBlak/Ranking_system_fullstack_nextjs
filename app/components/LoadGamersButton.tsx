@@ -24,7 +24,7 @@ const LoadGamersButton: React.FC<Props> = ({isDisabled, setGamersLoaded}) => {
             >
                 Load Gamers
             </button>
-            <div role="alert" className={"alert alert-success " + (isAlertVisible ? 'show' : 'hidden')}>
+            <div role="alert" className={"alert alert-success max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 " + (isAlertVisible ? 'show' : 'hidden')}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
                      viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
