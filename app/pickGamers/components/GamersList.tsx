@@ -16,12 +16,24 @@ const GamersList: React.FC<Props> = ({gamers}) => {
     const handleSelectChange = (index: number, value: string) => {
         dispatch(disableSelectedOption(index, value));
     };
+    const handleRandomSelect = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+        const randomPlayers = [...gamers]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 10)
+            .map(gamer => gamer.name);
+        console.log(randomPlayers)
+        randomPlayers.forEach((player, index) => {
+            dispatch(disableSelectedOption(index, player));
+        });
+    };
     const gamersTable: string [] = new Array(10).fill({});
     return (
         <>
 
                 {gamersTable.map((elem, index) => (
                         <select key={index}
+                                value={selectedOptions[index]}
                                 className="select max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 select-sm md:select-md"
                                 onChange={(e) => handleSelectChange(index, e.target.value)}
                                 required
@@ -50,13 +62,18 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                 <option value="NY">NY</option>
             </select>
             <button type="submit"
-                    className="btn btn-success max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">Create
-                teams
+                    className="btn btn-success max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md  hover:text-gray-300 transition duration-300 mb-1">
+                Create teams
             </button>
-            <div className="w-5 inline-block"></div>
+            <button type="button"
+                    onClick={handleRandomSelect}
+                    className="btn btn-primary max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md hover:text-gray-300 transition duration-300 mb-1">
+                Randomize Players
+            </button>
             <Link href="/"
-                  className="btn btn-neutral max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm sm:btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">Go
-                back</Link>
+                  className="btn btn-neutral max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm sm:btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">
+                Go back
+            </Link>
         </>
     );
 }

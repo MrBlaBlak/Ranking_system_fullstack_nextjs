@@ -30,20 +30,16 @@ async function Page() {
             <div className="overflow-x-auto h-dvh">
                 <table className="table table-zebra table-sm table-pin-rows ">
                     <thead>
-                    <tr>
-
+                    <tr >
                         <th>Rank</th>
                         <th>Name</th>
                         <th>MMR</th>
                         <th>Most played Titan</th>
                         <th>Last 10</th>
-                        <div className="flex items-center">
-                            <th>Server</th>
-                            <Link href="/"
-                                  className=" btn btn-outline hover:text-gray-300 transition duration-300 ">Go
-                                back</Link>
-                        </div>
-
+                        <th>Server</th>
+                        <td><Link href="/"
+                                  className=" btn btn-outline hover:text-gray-300 transition duration-300 my-1">Go
+                            back</Link></td>
                     </tr>
                     </thead>
                     <tbody>
