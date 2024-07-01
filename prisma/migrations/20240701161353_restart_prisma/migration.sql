@@ -14,7 +14,7 @@ CREATE TABLE `kills_and_caps` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `caps` INTEGER NOT NULL,
     `kills` INTEGER NOT NULL,
-    `titan` INTEGER NULL,
+    `titan` ENUM('ion', 'tone', 'ronin', 'northstar', 'monarch', 'legion', 'scorch', 'none') NULL,
     `match_gamer_id` INTEGER NOT NULL,
 
     UNIQUE INDEX `UK_f34p42nipgi334fgahcpwc7hu`(`match_gamer_id`),
@@ -38,7 +38,7 @@ CREATE TABLE `match_gamer` (
 CREATE TABLE `matches` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `created` DATETIME(6) NOT NULL,
-    `map` INTEGER NOT NULL,
+    `map` ENUM('boomtown', 'exo', 'eden', 'drydock', 'angel', 'colony', 'glitch', 'none') NOT NULL,
     `server` VARCHAR(255) NOT NULL,
 
     PRIMARY KEY (`id`)
@@ -49,6 +49,22 @@ CREATE TABLE `teams` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `flag_advantage` INTEGER NOT NULL,
     `win_or_loose` INTEGER NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `weapons` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `weapon_class` VARCHAR(255) NOT NULL,
+    `near_damage` INTEGER NOT NULL,
+    `mid_damage` INTEGER NOT NULL,
+    `far_damage` INTEGER NOT NULL,
+    `near_distance` INTEGER NOT NULL,
+    `mid_distance` INTEGER NOT NULL,
+    `far_distance` INTEGER NOT NULL,
+    `fire_rate` INTEGER NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
