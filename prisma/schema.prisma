@@ -58,7 +58,7 @@ model teams {
 model weapons {
   id            Int    @id @default(autoincrement())
   name          String @db.VarChar(255)
-  weapon_class         String @db.VarChar(255)
+  weapon_class  String @db.VarChar(255)
   near_damage   Int
   mid_damage    Int
   far_damage    Int
