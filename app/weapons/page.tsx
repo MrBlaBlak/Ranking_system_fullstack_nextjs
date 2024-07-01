@@ -1,9 +1,11 @@
 import React from 'react';
 import {getWeaponsStats} from '../api/weapons/routeDump'
-
+import Weapon from '../model/Weapon'
+import Table from './components/Table'
 type Props = {};
-const Page = ({}: Props) => {
-
-    return (<></>)
+async function Page ({}: Props)  {
+    const weaponsStats: Weapon[] = await getWeaponsStats();
+    console.log(weaponsStats)
+    return ( <Table weaponStats={weaponsStats}/>)
 };
 export default Page;
