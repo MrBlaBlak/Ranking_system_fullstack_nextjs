@@ -56,16 +56,16 @@ model teams {
 }
 
 model weapons {
-  Id            Int    @id @default(autoincrement())
-  Name          String @db.VarChar(255)
-  Class         String @db.VarChar(255)
-  Near_Damage   Int
-  Mid_Damage    Int
-  Far_Damage    Int
-  Near_Distance Int
-  Mid_Distance  Int
-  Far_Distance  Int
-  Fire_Rate     Int
+  id            Int    @id @default(autoincrement())
+  name          String @db.VarChar(255)
+  weapon_class         String @db.VarChar(255)
+  near_damage   Int
+  mid_damage    Int
+  far_damage    Int
+  near_distance Int
+  mid_distance  Int
+  far_distance  Int
+  fire_rate     Int
 }
 
 enum Map_Name {

@@ -16,6 +16,14 @@
   }
 }
 
+.hover-image {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.hover-image:hover {
+  transform: scale(1.1);
+}
+
 body {
   /*color: rgb(var(--foreground-rgb));*/
  /*padding: 1rem;*/
