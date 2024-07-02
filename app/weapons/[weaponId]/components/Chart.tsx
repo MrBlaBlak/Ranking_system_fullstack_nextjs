@@ -11,17 +11,17 @@ type Props = {
 const Chart = ({weapon}: Props) => {
 
 
-    const health = 140;
+    const health = 100;
     const dataPoints = [
 
-        {distance: weapon.near_distance/100, damage: weapon.near_damage},
-        {distance: weapon.mid_distance/100, damage: weapon.mid_damage},
-        {distance: weapon.far_distance/100, damage: weapon.far_damage},
+        {distance: weapon.near_distance, damage: weapon.near_damage},
+        {distance: weapon.mid_distance, damage: weapon.mid_damage},
+        {distance: weapon.far_distance, damage: weapon.far_damage},
     ];
 
     const breakpoints = [];
     breakpoints.push({x: 0, y: weapon.near_damage});
-    breakpoints.push({x: weapon.near_distance/100, y: weapon.near_damage});
+    breakpoints.push({x: weapon.near_distance, y: weapon.near_damage});
     for (let i = 0; i < dataPoints.length - 1; i++) {
         const point1 = dataPoints[i];
         const point2 = dataPoints[i + 1];
@@ -37,19 +37,24 @@ const Chart = ({weapon}: Props) => {
             counter++;
         }
     }
-    breakpoints.push({x: weapon.far_distance/100, y: weapon.far_damage})
-    breakpoints.push({x: 40, y: weapon.far_damage})
-
+    breakpoints.push({x: weapon.far_distance, y: weapon.far_damage})
+    breakpoints.push({x: 4000, y: weapon.far_damage})
+    const fireRatePerSecond = weapon.fire_rate / 60;
+    const ttkBreakpoints = breakpoints.map(point => {
+        const bullets = Math.ceil(health / point.y);
+        const ttk = bullets / fireRatePerSecond;
+        return { x: point.x, y: ttk };
+    });
 
 
     return (
-        <div>
+        <div >
             <LineChart
                 xAxis={[{data: breakpoints.map(point => point.x), label: 'Distance'}] }
                 series={[
                     {
                         data: breakpoints.map(point => point.y),
-                        showMark: ({ index }) => index !== 0 && index !== breakpoints.length - 1,
+                        showMark: ({ index }) => index > 1 && index < ttkBreakpoints.length - 2,
                         label: 'Damage',
                         curve: "linear"
                     }
@@ -59,10 +64,25 @@ const Chart = ({weapon}: Props) => {
                     min: 0,
                     max: 40,
                 },]}
-                width={500}
+                width={700}
                 height={300}
             />
-
+            <LineChart
+                xAxis={[{ data: ttkBreakpoints.map(point => point.x), label: 'Distance' }]}
+                series={[
+                    {
+                        data: ttkBreakpoints.map(point => point.y),
+                        showMark: ({ index }) => index > 1 && index < ttkBreakpoints.length - 2,
+                        label: 'TTK',
+                        curve: "stepBefore"
+                    }
+                ]}
+                yAxis={[{
+                    min: 0,
+                }]}
+                width={700}
+                height={300}
+            />
         </div>)
 };
 export default Chart;
