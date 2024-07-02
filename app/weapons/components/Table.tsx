@@ -26,8 +26,12 @@ const Table = ({weaponStats}: Props) => {
                 </thead>
                 <tbody>
                 {weaponStats.map((weaponStat) => (
-                    <tr  key={weaponStat.id}>
-                        <td className="flex justify-center"><GetWeaponImage weapon={weaponStat.name}/></td>
+                    <tr key={weaponStat.id}>
+                        <td className="flex justify-center">
+                            <Link href={`/weapons/${weaponStat.id}`}>
+                                <GetWeaponImage weapon={weaponStat.name} height={100} className="hover-image"/>
+                            </Link>
+                        </td>
                         {weaponProperties.map((property) => (
                             <td key={property}>{weaponStat[property as keyof Weapon]}</td>
                         ))}

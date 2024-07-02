@@ -5,6 +5,8 @@ import Table from './components/Table'
 type Props = {};
 async function Page ({}: Props)  {
     const weaponsStats: Weapon[] = await getWeaponsStats();
-    return ( <Table weaponStats={weaponsStats}/>)
+    return (
+        <Table weaponStats={weaponsStats}/>
+    )
 };
 export default Page;

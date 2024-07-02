@@ -8,26 +8,26 @@ import FlatlineImage from '@/public/images/weapons/Flatline.webp';
 import G2Image from '@/public/images/weapons/G2A4.webp';
 import HemlokImage from '@/public/images/weapons/Hemlok.webp';
 import SpitfireImage from '@/public/images/weapons/Spitfire.webp';
-const GetWeaponImage = ({ weapon }: { weapon: string }) => {
+const GetWeaponImage = ({ weapon, height, className }: { weapon: string, height: number, className?: string }) => {
     switch (weapon.toLowerCase()) {
         case 'car':
-            return <Image className="hover-image" src={CARImage} height={100} alt="CAR" title="CAR"/>;
+            return <Image className={className} src={CARImage} height={height} alt="CAR" title="CAR"/>;
         case 'r-97':
-            return <Image className="hover-image"  src={R97Image} height={100} alt="R97" title="R97"/>;
+            return <Image className={className}  src={R97Image} height={height} alt="R97" title="R97"/>;
         case 'volt':
-            return <Image className="hover-image" src={VoltImage} height={100} alt="Volt" title="Volt"/>;
+            return <Image className={className} src={VoltImage} height={height} alt="Volt" title="Volt"/>;
         case 'alternator':
-            return <Image className="hover-image" src={AlternatorImage} height={100} alt="Alternator" title="Alternator"/>;
+            return <Image className={className} src={AlternatorImage} height={height} alt="Alternator" title="Alternator"/>;
         case 'r-101':
-            return <Image className="hover-image" src={R101Image} height={100} alt="R101" title="R101"/>;
+            return <Image className={className} src={R101Image} height={height} alt="R101" title="R101"/>;
         case 'flatline':
-            return <Image className="hover-image" src={FlatlineImage} height={100} alt="Flatline" title="Flatline"/>;
+            return <Image className={className} src={FlatlineImage} height={height} alt="Flatline" title="Flatline"/>;
         case 'hemlok':
-            return <Image className="hover-image" src={HemlokImage} height={100} alt="Hemlok" title="Hemlok"/>;
+            return <Image className={className} src={HemlokImage} height={height} alt="Hemlok" title="Hemlok"/>;
         case 'g2':
-            return <Image className="hover-image" src={G2Image} height={100} alt="G2" title="G2"/>;
+            return <Image className={className} src={G2Image} height={height} alt="G2" title="G2"/>;
         case 'spitfire':
-            return <Image className="hover-image" src={SpitfireImage} height={100} alt="Spitfire" title="Spitfire"/>;
+            return <Image className={className} src={SpitfireImage} height={height} alt="Spitfire" title="Spitfire"/>;
         default:
             return null;
     }
