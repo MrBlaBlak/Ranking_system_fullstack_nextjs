@@ -14,6 +14,8 @@ const ChartsSectionWrapper = ({weaponId, weaponsData}: Props) => {
         <>
 
             <div className="flex flex-wrap justify-center">
+
+                <ChartsSection weaponId={weaponId} weaponsData={weaponsData}/>
                 <select
                     id="compareWeapon"
                     value={weaponToCompare}
@@ -23,7 +25,6 @@ const ChartsSectionWrapper = ({weaponId, weaponsData}: Props) => {
                     <option value="" style={{display: "none"}}>-Compare Weapon-</option>
                     {weaponsData.map(weapon => (<option key={weapon.id} value={weapon.id}>{weapon.name}</option>))}
                 </select>
-                <ChartsSection weaponId={weaponId} weaponsData={weaponsData}/>
                 {weaponToCompare !== 0 && <ChartsSection weaponId={weaponToCompare} weaponsData={weaponsData}/>}
             </div>
         </>
