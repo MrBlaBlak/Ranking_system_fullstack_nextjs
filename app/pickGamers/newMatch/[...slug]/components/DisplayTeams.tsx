@@ -1,9 +1,9 @@
 'use client'
 import React, {useState, useEffect, MouseEventHandler} from 'react';
 import Gamer from '@/app/model/Gamer';
-import updatePlayers from './updatePlayers'
-import {getRandomStats, getRandomMap} from './randomValues'
-import calculateMMR from './calculateMMR'
+import updatePlayers from '../utils/updatePlayers'
+import {getRandomStats, getRandomMap} from '../utils/randomValues'
+import calculateMMR from '../utils/calculateMMR'
 import Link from 'next/link'
 import Alert from './Alert'
 import TeamScore from './TeamScore'
@@ -183,29 +183,28 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 </tr>
                 </tbody>
             </table>
-            <button disabled={isSubmitting}
-                    type="submit"
-                    className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
-                {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
-            </button>
-            <div className="w-5 inline-block"></div>
-            <Link href="/pickGamers"
-                  className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
-                back
-            </Link>
-            <div className="w-5 inline-block"></div>
-            <button type="button"
-                    onClick={handleGetRandomStats}
-                    className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
-                Random
-            </button>
+            <div className="flex gap-5">
+                <button disabled={isSubmitting}
+                        type="submit"
+                        className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
+                    {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
+                </button>
+                <Link href="/pickGamers"
+                      className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
+                    back
+                </Link>
+                <button type="button"
+                        onClick={handleGetRandomStats}
+                        className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
+                    Random
+                </button>
+            </div>
             {isDrawAlert &&
                 <Alert text="This match is a draw."/>
             }
             {suddenDeathErrorAlert &&
                 <Alert text="You need to check SuddenDeathWinner."/>
             }
-
         </form>
 
     );

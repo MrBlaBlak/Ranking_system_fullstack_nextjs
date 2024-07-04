@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormValues} from './DisplayTeams'
-import {titanOptions, mapOptions} from './mapsAndTitans'
+import {titanOptions, mapOptions} from '../utils/mapsAndTitans'
 type Props = {
     formValues: FormValues,
     handleMapChange: (e: React.ChangeEvent<HTMLSelectElement>) => void

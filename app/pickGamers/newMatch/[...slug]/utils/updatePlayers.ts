@@ -6,8 +6,8 @@ import MatchGamer from '@/app/model/MatchGamer'
 import KillsAndCaps from '@/app/model/KillsAndCaps'
 import {MapName} from '@/app/model/Match'
 import {TitanName} from "@/app/model/KillsAndCaps";
-import {FormValues} from './DisplayTeams'
-import {GamerMatchStats} from "./DisplayTeams";
+import {FormValues} from '../components/DisplayTeams'
+import {GamerMatchStats} from "../components/DisplayTeams";
 import {postMatch} from "@/app/api/gamers/routeDump"
 import {postTeam} from "@/app/api/gamers/routeDump"
 import {postMatchGamer} from "@/app/api/gamers/routeDump"
@@ -17,15 +17,6 @@ import {updateGamer} from "@/app/api/gamers/routeDump"
 import {applyServerHandicap} from "./findMostBalancedTeams"
 import calculateMMR from './calculateMMR'
 
-// FormValues = {
-//     team1: Team[];
-//     team2: Team[];
-//     mapPlayed: string;
-//     suddenDeath: boolean;
-//     suddenDeathWhoWon: string;
-//     server: string;
-//     [key: string]: Team[] | string | boolean;
-// };
 export default async function updatePlayers(formValues: FormValues, team1: Gamer[], team2: Gamer[]) {
     
     const server = formValues.server;

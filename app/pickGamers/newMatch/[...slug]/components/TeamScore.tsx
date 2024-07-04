@@ -1,7 +1,7 @@
 import React from 'react';
 import Gamer from '@/app/model/Gamer'
 import {FormValues, GamerMatchStats} from './DisplayTeams'
-import {titanOptions} from './mapsAndTitans'
+import {titanOptions} from '../utils/mapsAndTitans'
 
 type Props = {
     nr: number,

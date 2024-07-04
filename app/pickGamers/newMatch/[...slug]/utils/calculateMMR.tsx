@@ -1,4 +1,4 @@
-import {FormValues} from './DisplayTeams'
+import {FormValues} from '../components/DisplayTeams'
 import Gamer from '@/app/model/Gamer';
 import {applyServerHandicap} from "./findMostBalancedTeams"
 const calculateMmr = (formValues: FormValues, team1: Gamer[], team2: Gamer[]): [Gamer[], Gamer[]] => {
