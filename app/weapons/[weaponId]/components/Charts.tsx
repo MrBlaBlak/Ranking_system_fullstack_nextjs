@@ -26,7 +26,7 @@ const Charts = ({damageBreakpoints, ttkBreakpoints}: Props) => {
         legend: {
             labelStyle: {
                 fontSize: 14,
-                    fill: '#aaaaaa',
+                fill: '#aaaaaa',
             },
         },
     };
