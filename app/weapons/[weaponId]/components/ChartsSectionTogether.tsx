@@ -49,7 +49,7 @@ const ChartsSectionTogether = ({weaponsData, weaponsIdToCompare}: Props) => {
         <div className="flex m-10">
             <div className="flex flex-col text-center">
                 {weapons.map((weapon) => (
-                    <WeaponImageSection weapon={weapon}/>
+                    <WeaponImageSection key={weapon.id} weapon={weapon}/>
                 ))}
                 <div>
                     <ChartsTogether damageBreakpoints={damageBreakpointsCombined} ttkBreakpoints={ttKBreakpointsCombined}/>
