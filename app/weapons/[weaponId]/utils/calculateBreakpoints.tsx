@@ -51,4 +51,20 @@ export const calculateTTKBreakpoints = (weapon: Weapon, health: number) => {
     return ttkBreakpoints;
 
 }
+export const mergeBreakpoints = (breakpoints1: { x: number, y: number }[], breakpoints2: { x: number, y: number }[]) => {
+    const allXValues = Array.from(new Set([...breakpoints1.map(bp => bp.x), ...breakpoints2.map(bp => bp.x)]));
+    allXValues.sort((a, b) => a - b);
+
+    const mergedBreakpoints1 = allXValues.map(x => {
+        const point = breakpoints1.find(bp => bp.x === x);
+        return { x, y: point ? point.y : null };
+    });
+
+    const mergedBreakpoints2 = allXValues.map(x => {
+        const point = breakpoints2.find(bp => bp.x === x);
+        return { x, y: point ? point.y : null };
+    });
+
+    return [mergedBreakpoints1, mergedBreakpoints2];
+};
 

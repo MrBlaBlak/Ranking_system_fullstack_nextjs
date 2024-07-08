@@ -4,13 +4,12 @@ import Gamer from '@/app/model/Gamer';
 import updatePlayers from '../utils/updatePlayers'
 import {getRandomStats, getRandomMap} from '../utils/randomValues'
 import calculateMMR from '../utils/calculateMMR'
-import Link from 'next/link'
 import Alert from './Alert'
 import TeamScore from './TeamScore'
 import MapSelect from './MapSelect'
 import SuddenDeathCheckbox from './SuddenDeathCheckbox'
 import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
-
+import ButtonsSection from './ButtonsSection'
 type Props = {
     pickedGamers: string[],
     gamers: Gamer[],
@@ -23,8 +22,6 @@ export type GamerMatchStats = {
     flags: string;
     titans: string;
     gamersId: string;
-    // mmr: number;
-    // handicap: number;
 };
 export type FormValues = {
     team1Stats: GamerMatchStats[];
@@ -183,22 +180,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 </tr>
                 </tbody>
             </table>
-            <div className="flex gap-5">
-                <button disabled={isSubmitting}
-                        type="submit"
-                        className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
-                    {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
-                </button>
-                <Link href="/pickGamers"
-                      className="btn btn-outline btn-error btn-xs sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 ">Go
-                    back
-                </Link>
-                <button type="button"
-                        onClick={handleGetRandomStats}
-                        className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
-                    Random
-                </button>
-            </div>
+            <ButtonsSection isSubmitting={isSubmitting} handleGetRandomStats={handleGetRandomStats}/>
             {isDrawAlert &&
                 <Alert text="This match is a draw."/>
             }
@@ -206,7 +188,6 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
                 <Alert text="You need to check SuddenDeathWinner."/>
             }
         </form>
-
     );
 }
 
