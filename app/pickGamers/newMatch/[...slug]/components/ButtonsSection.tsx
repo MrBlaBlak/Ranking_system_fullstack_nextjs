@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react';
-import Link from 'next/Link'
+import Link from 'next/link'
 type Props = {isSubmitting: boolean,
 handleGetRandomStats: MouseEventHandler<HTMLButtonElement>
 };
