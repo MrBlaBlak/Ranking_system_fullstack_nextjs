@@ -1,11 +1,5 @@
 'use server'
-import Gamer from '@/app/model/Gamer';
-import Match from '@/app/model/Match'
-import Team from '@/app/model/Team'
-import MatchGamer from '@/app/model/MatchGamer'
-import KillsAndCaps from '@/app/model/KillsAndCaps'
-import {MapName} from '@/app/model/Match'
-import {TitanName} from "@/app/model/KillsAndCaps";
+import {gamers, Map_Name, Titan_Name} from '@prisma/client'
 import {FormValues} from '../components/DisplayTeams'
 import {postMatch} from "@/app/api/gamers/prismaActions"
 import {postTeam} from "@/app/api/gamers/prismaActions"
@@ -15,8 +9,8 @@ import {updateGamer} from "@/app/api/gamers/prismaActions"
 import {applyServerHandicap} from "./findMostBalancedTeams"
 import calculateMMR from './calculateMMR'
 
-export default async function updatePlayers(formValues: FormValues, team1: Gamer[], team2: Gamer[]) {
-    
+export default async function updatePlayers(formValues: FormValues, team1: gamers[], team2: gamers[]) {
+
     const server = formValues.server;
     const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
     const team1Stats = formValues.team1Stats;
@@ -25,7 +19,7 @@ export default async function updatePlayers(formValues: FormValues, team1: Gamer
     let team1flagsTotal = 0;
     let team2flagsTotal = 0;
     let whoWon = 0;
-    
+
     // Calculate total flags for each team
     for (let i = 0; i < 5; i++) {
         team1flagsTotal += +(team1Stats[i].flags);
@@ -46,30 +40,39 @@ export default async function updatePlayers(formValues: FormValues, team1: Gamer
             whoWon = 2;
         }
     }
-    const matchForDB: Match = new Match(undefined, MapName[mapPlayed as keyof typeof MapName], server, new Date());
-    const newMatch = await postMatch(matchForDB);
-    
 
-    const team1forDB: Team = new Team();
-    const team2forDB: Team = new Team();
-    team1forDB.flag_advantage = team1flagsTotal - team2flagsTotal;
-    team2forDB.flag_advantage = team2flagsTotal - team1flagsTotal;
-    if (whoWon == 1) {
-        team1forDB.win_or_loose = 1;
-        team2forDB.win_or_loose = 0;
+    const newMatch = await postMatch({
+        map: Map_Name[mapPlayed as keyof typeof Map_Name],
+        server: server,
+        created: new Date()
+    });
+
+    const team1forDBflag_advantage = team1flagsTotal - team2flagsTotal;
+    const team2forDBflag_advantage = team2flagsTotal - team1flagsTotal;
+    let team1forDBwin_or_loose = 0
+    let team2forDBwin_or_loose = 0
+    if (whoWon === 1) {
+        team1forDBwin_or_loose = 1;
+        team2forDBwin_or_loose = 0;
     }
-    if (whoWon == 2) {
-        team1forDB.win_or_loose = 0;
-        team2forDB.win_or_loose = 1;
+    if (whoWon === 2) {
+        team1forDBwin_or_loose = 0;
+        team2forDBwin_or_loose = 1;
     }
-    const newTeam1 = await postTeam(team1forDB);
-    const newTeam2 = await postTeam(team2forDB);
-    
+    const newTeam1 = await postTeam({
+        flag_advantage: team1forDBflag_advantage,
+        win_or_loose: team1forDBwin_or_loose
+    });
+    const newTeam2 = await postTeam({
+        flag_advantage: team2forDBflag_advantage,
+        win_or_loose: team2forDBwin_or_loose
+    });
+
     const [team1New, team2New] = calculateMMR(formValues, team1, team2);
-    
-    for (let i=0;i<5;i++){
-        team1New[i].mmr = Math.round((team1[i].mmr  + applyServerHandicap(server, team1[i].server)) * 10) / 10;
-        team2New[i].mmr = Math.round((team2[i].mmr  + applyServerHandicap(server, team2[i].server)) * 10) / 10;
+
+    for (let i = 0; i < 5; i++) {
+        team1New[i].mmr = Math.round((team1[i].mmr + applyServerHandicap(server, team1[i].server)) * 10) / 10;
+        team2New[i].mmr = Math.round((team2[i].mmr + applyServerHandicap(server, team2[i].server)) * 10) / 10;
     }
 
     for (let i = 0; i < 5; i++) {
@@ -78,14 +81,30 @@ export default async function updatePlayers(formValues: FormValues, team1: Gamer
 
         // Create match gamers for both teams
         const [newMatchGamer1, newMatchGamer2] = await Promise.all([
-            postMatchGamer(new MatchGamer(undefined, team1New[i].id, newMatch.id, newTeam1.id)),
-            postMatchGamer(new MatchGamer(undefined, team2New[i].id, newMatch.id, newTeam2.id))
+            postMatchGamer({
+                gamer_id: team1New[i].id,
+                match_id: newMatch.id,
+                team_id: newTeam1.id}),
+            postMatchGamer({
+                gamer_id: team2New[i].id,
+                match_id: newMatch.id,
+                team_id: newTeam2.id
+            })
         ]);
 
         // Create kills and caps for both teams
         await Promise.all([
-            postKillsAndCaps(new KillsAndCaps(undefined, +team1Stats[i].elims, +team1Stats[i].flags, TitanName[team1Stats[i].titans as keyof typeof TitanName], newMatchGamer1.id)),
-            postKillsAndCaps(new KillsAndCaps(undefined, +team2Stats[i].elims, +team2Stats[i].flags, TitanName[team2Stats[i].titans as keyof typeof TitanName], newMatchGamer2.id))
+            postKillsAndCaps({
+                caps: +team1Stats[i].flags,
+                kills: +team1Stats[i].elims,
+                titan: Titan_Name[team1Stats[i].titans as keyof typeof Titan_Name],
+                match_gamer_id: newMatchGamer1.id
+            }),
+            postKillsAndCaps({
+                caps: +team2Stats[i].flags,
+                kills: +team2Stats[i].elims,
+                titan: Titan_Name[team2Stats[i].titans as keyof typeof Titan_Name],
+                match_gamer_id: newMatchGamer2.id})
         ]);
     }
 

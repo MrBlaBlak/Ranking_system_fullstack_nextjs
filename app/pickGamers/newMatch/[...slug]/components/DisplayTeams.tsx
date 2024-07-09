@@ -1,6 +1,6 @@
 'use client'
-import React, {useState, useEffect, MouseEventHandler} from 'react';
-import Gamer from '@/app/model/Gamer';
+import React, {useState, useEffect} from 'react';
+import {gamers} from '@prisma/client'
 import updatePlayers from '../utils/updatePlayers'
 import {getRandomStats, getRandomMap} from '../utils/randomValues'
 import calculateMMR from '../utils/calculateMMR'
@@ -12,9 +12,9 @@ import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
 import ButtonsSection from './ButtonsSection'
 type Props = {
     pickedGamers: string[],
-    gamers: Gamer[],
-    t1: Gamer[],
-    t2: Gamer[],
+    gamers: gamers[],
+    t1: gamers[],
+    t2: gamers[],
     server: string
 }
 export type GamerMatchStats = {
@@ -33,7 +33,7 @@ export type FormValues = {
     [key: string]: GamerMatchStats[] | string | boolean;
 };
 
-const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
+const DisplayTeams = ({t1, t2, server}: Props) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isDrawAlert, setIsDrawAlert] = useState(false);
@@ -94,12 +94,12 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
 
         }));
     }
-    const updateTeams = (newTeam1: Gamer[], newTeam2: Gamer[]) => {
+    const updateTeams = (newTeam1: gamers[], newTeam2: gamers[]) => {
         for (let i = 0; i < 5; i++) {
-            setTeam1State((prevState: Gamer[]) => {
+            setTeam1State((prevState: gamers[]) => {
                 return newTeam1
             })
-            setTeam2State((prevState: Gamer[]) => {
+            setTeam2State((prevState: gamers[]) => {
                 return newTeam2
             })
         }
@@ -129,7 +129,7 @@ const DisplayTeams = ({pickedGamers, gamers, t1, t2, server}: Props) => {
         } else {
             setSuddenDeathErrorAlert(false);
         }
-        if (!formValues.suddenDeath || isDrawAlert === true) {
+        if (!formValues.suddenDeath || isDrawAlert) {
             setIsDrawAlert(team1Flags === team2Flags);
         }
 

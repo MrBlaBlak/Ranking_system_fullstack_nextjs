@@ -1,11 +1,6 @@
 'use server'
 import prisma from "@/prisma/client"
-import {Titan_Name, Map_Name} from "@prisma/client";
-import Match from "@/app/model/Match";
-import Team from "@/app/model/Team";
-import MatchGamer from "@/app/model/MatchGamer";
-import KillsAndCaps from "@/app/model/KillsAndCaps";
-import Gamer from "@/app/model/Gamer";
+import {Titan_Name, Map_Name, Prisma, gamers} from "@prisma/client";
 
 interface TitanFrequencyStats {
     gamer_id: number;
@@ -320,7 +315,7 @@ export async function getTitanStats(): Promise<TitanStats[]> {
         for (const titan in titanStatsMap) {
             titanStats.push({
                 name: gamer.name,
-                titan: titan as Titan_Name,
+                titan,
                 total_wins: titanStatsMap[titan].total_wins,
                 total_losses: titanStatsMap[titan].total_losses,
             });
@@ -346,42 +341,41 @@ export async function getTitanStats(): Promise<TitanStats[]> {
 //                                                             ORDER BY g.name`
 //     return titanStats
 // }
-export async function updateGamer(gamer: Gamer) {
+export async function updateGamer(gamer: gamers) {
 
     return await prisma.gamers.update({
+        data: gamer,
         where: {
             id: gamer.id
-        },
-        data: gamer
+        }
+
     });
 }
 
-export async function postMatch(match: Match){
+export async function postMatch(match: Prisma.matchesCreateInput){
 
     return await prisma.matches.create({
         data: match
     })
 }
-export async function postTeam(team: Team){
+export async function postTeam(team: Prisma.teamsCreateInput){
 
     return await prisma.teams.create({
         data: team
     })
 }
-export async function postMatchGamer(matchGamer: MatchGamer){
+export async function postMatchGamer(matchGamer: Prisma.match_gamerUncheckedCreateInput){
     return await prisma.match_gamer.create({
         data: matchGamer
     })
 }
-export async function postKillsAndCaps(killsAndCaps: KillsAndCaps){
-    const newKillsAndCaps = await prisma.kills_and_caps.create({
+export async function postKillsAndCaps(killsAndCaps: Prisma.kills_and_capsUncheckedCreateInput){
+    return await prisma.kills_and_caps.create({
         data: killsAndCaps
     })
-    return killsAndCaps
 }
-export async function postGamer(gamer: Gamer){
-    const newGamer = await prisma.gamers.create({
+export async function postGamer(gamer: Prisma.gamersCreateInput){
+    return await prisma.gamers.create({
         data: gamer
     })
-    return gamer
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Gamer from '@/app/model/Gamer'
 import {FormValues, GamerMatchStats} from './DisplayTeams'
-import {titanOptions} from '../utils/mapsAndTitans'
+import {Titan_Name} from "@prisma/client";
 
 type Props = {
     nr: number,
@@ -44,8 +44,11 @@ const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
                                 value={teamStats[index].titans}
                                 onChange={handleInputChange} required>
                             <option value="" style={{display: "none"}}>-Pick Titan-</option>
-                            {titanOptions.map((titan) => <option key={titan.value}
-                                                                 value={titan.value}>{titan.value}</option>)}
+                            {Object.keys(Titan_Name).map((titanName) => (
+                                <option key={titanName} value={titanName}>
+                                    {titanName}
+                                </option>
+                            ))}
                         </select>
                     </td>
                     <td>

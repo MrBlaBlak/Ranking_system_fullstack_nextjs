@@ -1,6 +1,6 @@
-import Weapon from "@/app/model/Weapon"
+import {weapons} from "@prisma/client";
 
-export const calculateDamageBreakpoints = (weapon: Weapon, health: number) => {
+export const calculateDamageBreakpoints = (weapon: weapons) => {
     const dataPoints = [
         {distance: weapon.near_distance, damage: weapon.near_damage},
         {distance: weapon.mid_distance, damage: weapon.mid_damage},
@@ -11,7 +11,7 @@ export const calculateDamageBreakpoints = (weapon: Weapon, health: number) => {
     damageBreakpoints.push({x: 4000, y: weapon.far_damage})
     return damageBreakpoints
 }
-export const calculateTTKBreakpoints = (weapon: Weapon, health: number) => {
+export const calculateTTKBreakpoints = (weapon: weapons, health: number) => {
     const dataPoints = [
 
         {distance: weapon.near_distance, damage: weapon.near_damage},

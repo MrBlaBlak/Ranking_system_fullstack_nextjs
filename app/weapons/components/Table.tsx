@@ -1,12 +1,23 @@
 import React from 'react';
-import Weapon from '../../model/Weapon'
 import Link from 'next/link'
 import GetWeaponImage from './GetWeaponImage'
 import weaponStats from '@/public/data/weapons.json';
+import {weapons} from "@prisma/client";
 type Props = {
 };
 const Table = ({}: Props) => {
-    const weaponProperties = Object.keys(new Weapon(0, '', '', 0, 0, 0, 0, 0, 0, 0)).filter(prop => prop !== 'id');
+    const weaponProperties = Object.keys({
+        id: 0,
+        name: '',
+        weapon_class: '',
+        near_damage: 0,
+        mid_damage: 0,
+        far_damage: 0,
+        near_distance: 0,
+        mid_distance: 0,
+        far_distance: 0,
+        fire_rate: 0
+    }).filter(prop => prop !== 'id');
     return (
         <div className="overflow-x-auto h-dvh">
             <table className="table table-zebra table-sm ">
@@ -32,7 +43,7 @@ const Table = ({}: Props) => {
                             </Link>
                         </td>
                         {weaponProperties.map((property) => (
-                            <td key={property}>{weaponStat[property as keyof Weapon]}</td>
+                            <td key={property}>{weaponStat[property as keyof weapons]}</td>
                         ))}
                     </tr>
                 ))}

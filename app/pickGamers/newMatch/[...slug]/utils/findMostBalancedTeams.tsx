@@ -1,5 +1,5 @@
-import Gamer from '@/app/model/Gamer';
-const calculatePerfectBalance = (gamers: Gamer[]): number => {
+import {gamers} from "@prisma/client";
+const calculatePerfectBalance = (gamers: gamers[]): number => {
     
     return gamers.reduce((sum, gamer) => sum + gamer.mmr, 0) / 2;
 };
@@ -62,14 +62,14 @@ export const applyServerHandicap = (matchServer: string, gamerServer: string) =>
         return handicap;
 
 }
-const findMostBalancedTeams = (gamers: Gamer[], gameServer:string): [Gamer[], Gamer[]] => {
+const findMostBalancedTeams = (gamers: gamers[], gameServer:string): [gamers[], gamers[]] => {
     // console.log(gamers)
     // console.log(gameServer)
     const perfectBalance = calculatePerfectBalance(gamers);
     let bestScoreSoFar = 0;
     let smallestDiff = 1000;
-    let bestTeam1: Gamer[] = [];
-    let bestTeam2: Gamer[] = [];
+    let bestTeam1: gamers[] = [];
+    let bestTeam2: gamers[] = [];
     for (let i = 0; i < 10; i++) {
         gamers[i].mmr = gamers[i].mmr - applyServerHandicap(gameServer, gamers[i].server)
     }
@@ -77,8 +77,8 @@ const findMostBalancedTeams = (gamers: Gamer[], gameServer:string): [Gamer[], Ga
         let mmrCounter = 0;
         let currentDiffFromPerfectBalance = 0;
         let testIf5 = 0;
-        let team1: Gamer[] = [];
-        let team2: Gamer[] = [];
+        let team1: gamers[] = [];
+        let team2: gamers[] = [];
 
         for (let a = 0; a < gamers.length; ++a) {
             if (((i >> a) & 1) === 1) {

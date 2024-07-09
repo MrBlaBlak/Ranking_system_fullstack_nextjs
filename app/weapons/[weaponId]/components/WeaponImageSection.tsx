@@ -1,9 +1,9 @@
 import React from 'react';
 import GetWeaponImage from '../../components/GetWeaponImage'
 import {Rubik_Mono_One} from "next/font/google";
-import Weapon from '@/app/model/Weapon'
+import {weapons} from "@prisma/client";
 
-type Props = {weapon: Weapon};
+type Props = {weapon: weapons};
 
 const inter = Rubik_Mono_One({weight: "400", preload: false,});
 

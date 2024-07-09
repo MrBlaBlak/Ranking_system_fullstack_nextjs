@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import Gamer from '@/app/model/Gamer';
+import {gamers} from '@prisma/client'
 import StoreProvider from '@/app/api/StoreProvider';
 import GamersList from './GamersList';
 import {useRouter} from 'next/navigation'
 
 type Props = {
-    gamers: Gamer[]
+    gamers: gamers[]
 };
 //uncontrolled version of the form
 const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {

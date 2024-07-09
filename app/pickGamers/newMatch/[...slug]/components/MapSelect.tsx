@@ -1,6 +1,7 @@
 import React from 'react';
 import {FormValues} from './DisplayTeams'
-import {titanOptions, mapOptions} from '../utils/mapsAndTitans'
+import {Map_Name} from "@prisma/client";
+
 type Props = {
     formValues: FormValues,
     handleMapChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
@@ -18,7 +19,11 @@ const MapSelect = ({formValues, handleMapChange}: Props) => {
                             value={formValues.mapPlayed}
                             onChange={handleMapChange} required>
                         <option value="" style={{display: "none"}}>-Pick Map-</option>
-                        {mapOptions.map((map) => <option key={map.value} value={map.value}>{map.value}</option>)}
+                        {Object.keys(Map_Name).map((mapName) => (
+                            <option key={mapName} value={mapName}>
+                                {mapName}
+                            </option>
+                        ))}
                     </select>
                 </td>
             </tr>

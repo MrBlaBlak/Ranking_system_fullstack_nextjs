@@ -1,12 +1,11 @@
-
 import React from 'react';
 import BackgroundImage from '../components/BackgroundImage'
 import prisma from '@/prisma/client';
 import StoreWrapperForGamersList from './components/StoreWrapperForGamersList'
-import Gamer from "@/app/model/Gamer";
+import {gamers} from "@prisma/client";
 
 async function Page() {
-    const gamers: Gamer[] = await prisma.gamers.findMany();
+    const gamers: gamers[] = await prisma.gamers.findMany();
     return (
         <>
             <BackgroundImage/>

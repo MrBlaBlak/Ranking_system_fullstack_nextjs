@@ -1,7 +1,6 @@
 import {FormValues} from '../components/DisplayTeams'
-import Gamer from '@/app/model/Gamer';
-import {applyServerHandicap} from "./findMostBalancedTeams"
-const calculateMmr = (formValues: FormValues, team1: Gamer[], team2: Gamer[]): [Gamer[], Gamer[]] => {
+import {gamers} from '@prisma/client'
+const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]): [gamers[], gamers[]] => {
     const suddenDeath = formValues.suddenDeath;
     const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
     const team1Stats = formValues.team1Stats;
