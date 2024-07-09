@@ -1,5 +1,5 @@
 import React from 'react';
-import {findMostFrequentTitanForGamer} from '@/app/api/gamers/routeDump'
+import {findMostFrequentTitanForGamer} from '@/app/api/gamers/prismaActions'
 import Gamer from '@/app/model/Gamer'
 import prisma from '@/prisma/client'
 import GetBadge from './GetBadgeImage'
@@ -77,6 +77,6 @@ async function Page() {
         </>
     );
 }
-;
+
 export default Page;
 export const dynamic = 'force-dynamic'

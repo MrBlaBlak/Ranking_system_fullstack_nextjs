@@ -1,7 +1,7 @@
 'use client';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
-import {setStatsData} from '../api/stats/routeDump'
+import {setStatsData} from '../api/stats/prismaActions'
 
 type Props = {
     isDisabled : boolean,

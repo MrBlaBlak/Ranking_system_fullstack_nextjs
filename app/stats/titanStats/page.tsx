@@ -1,7 +1,5 @@
 import React from 'react';
-import prisma from '@/prisma/client';
-import Gamer from '@/app/model/Gamer';
-import { getTitanStats } from '@/app/api/gamers/routeDump';
+import { getTitanStats } from '@/app/api/gamers/prismaActions';
 import GetTitan from '../GetTitanImage'
 import Link from 'next/link'
 interface TitanStatsDTO {
@@ -16,7 +14,6 @@ interface TitanStats {
 }
 async function Page() {
 
-    const gamers: Gamer[] = await prisma.gamers.findMany();
     const titanStats: TitanStats[] = await getTitanStats();
 
     const gamerStatsList: TitanStatsDTO[] = [];

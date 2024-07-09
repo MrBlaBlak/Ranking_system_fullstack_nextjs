@@ -2,11 +2,10 @@ import React from 'react';
 import Weapon from '../../model/Weapon'
 import Link from 'next/link'
 import GetWeaponImage from './GetWeaponImage'
-
+import weaponStats from '@/public/data/weapons.json';
 type Props = {
-    weaponStats: Weapon[],
 };
-const Table = ({weaponStats}: Props) => {
+const Table = ({}: Props) => {
     const weaponProperties = Object.keys(new Weapon(0, '', '', 0, 0, 0, 0, 0, 0, 0)).filter(prop => prop !== 'id');
     return (
         <div className="overflow-x-auto h-dvh">

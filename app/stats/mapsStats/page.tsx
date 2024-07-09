@@ -1,7 +1,5 @@
 import React from 'react';
-import prisma from '@/prisma/client';
-import Gamer from '@/app/model/Gamer';
-import { getMapStats } from '@/app/api/gamers/routeDump';
+import {getMapStats} from '@/app/api/gamers/prismaActions';
 import GetMap from '../GetMapImage'
 import Link from 'next/link'
 interface MapStats {
@@ -18,7 +16,6 @@ interface MapStatsDTO {
 }
 
 async function Page() {
-    const gamers: Gamer[] = await prisma.gamers.findMany();
     const mapStats: MapStats[] = await getMapStats();
 
     const gamerStatsList: MapStatsDTO[] = [];

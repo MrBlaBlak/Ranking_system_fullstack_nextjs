@@ -1,5 +1,5 @@
 'use client'
-import React, {ReactNode, useState} from 'react';
+import React, {useState} from 'react';
 import Weapon from '@/app/model/Weapon'
 import ChartsSection from "./ChartsSection"
 import ChartsSectionTogether from './ChartsSectionTogether'

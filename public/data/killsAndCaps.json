@@ -1,0 +1,8472 @@
+[
+  {
+    "id": 121,
+    "caps": 1,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 123
+  },
+  {
+    "id": 122,
+    "caps": 2,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 124
+  },
+  {
+    "id": 123,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 125
+  },
+  {
+    "id": 124,
+    "caps": 1,
+    "kills": 45,
+    "titan": "scorch",
+    "match_gamer_id": 126
+  },
+  {
+    "id": 125,
+    "caps": 0,
+    "kills": 13,
+    "titan": "monarch",
+    "match_gamer_id": 127
+  },
+  {
+    "id": 126,
+    "caps": 0,
+    "kills": 34,
+    "titan": "ion",
+    "match_gamer_id": 128
+  },
+  {
+    "id": 127,
+    "caps": 0,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 129
+  },
+  {
+    "id": 128,
+    "caps": 1,
+    "kills": 54,
+    "titan": "northstar",
+    "match_gamer_id": 130
+  },
+  {
+    "id": 129,
+    "caps": 0,
+    "kills": 42,
+    "titan": "legion",
+    "match_gamer_id": 131
+  },
+  {
+    "id": 130,
+    "caps": 0,
+    "kills": 21,
+    "titan": "tone",
+    "match_gamer_id": 132
+  },
+  {
+    "id": 131,
+    "caps": 0,
+    "kills": 32,
+    "titan": "ion",
+    "match_gamer_id": 133
+  },
+  {
+    "id": 132,
+    "caps": 0,
+    "kills": 12,
+    "titan": "tone",
+    "match_gamer_id": 134
+  },
+  {
+    "id": 133,
+    "caps": 1,
+    "kills": 21,
+    "titan": "tone",
+    "match_gamer_id": 135
+  },
+  {
+    "id": 134,
+    "caps": 0,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 136
+  },
+  {
+    "id": 135,
+    "caps": 1,
+    "kills": 21,
+    "titan": "monarch",
+    "match_gamer_id": 137
+  },
+  {
+    "id": 136,
+    "caps": 0,
+    "kills": 41,
+    "titan": "monarch",
+    "match_gamer_id": 138
+  },
+  {
+    "id": 137,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 139
+  },
+  {
+    "id": 138,
+    "caps": 1,
+    "kills": 11,
+    "titan": "ronin",
+    "match_gamer_id": 140
+  },
+  {
+    "id": 139,
+    "caps": 0,
+    "kills": 42,
+    "titan": "ronin",
+    "match_gamer_id": 141
+  },
+  {
+    "id": 140,
+    "caps": 1,
+    "kills": 11,
+    "titan": "legion",
+    "match_gamer_id": 142
+  },
+  {
+    "id": 141,
+    "caps": 1,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 143
+  },
+  {
+    "id": 142,
+    "caps": 1,
+    "kills": 11,
+    "titan": "legion",
+    "match_gamer_id": 144
+  },
+  {
+    "id": 143,
+    "caps": 1,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 145
+  },
+  {
+    "id": 144,
+    "caps": 1,
+    "kills": 31,
+    "titan": "legion",
+    "match_gamer_id": 146
+  },
+  {
+    "id": 145,
+    "caps": 1,
+    "kills": 11,
+    "titan": "monarch",
+    "match_gamer_id": 147
+  },
+  {
+    "id": 146,
+    "caps": 0,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 148
+  },
+  {
+    "id": 147,
+    "caps": 1,
+    "kills": 12,
+    "titan": "tone",
+    "match_gamer_id": 149
+  },
+  {
+    "id": 148,
+    "caps": 0,
+    "kills": 41,
+    "titan": "tone",
+    "match_gamer_id": 150
+  },
+  {
+    "id": 149,
+    "caps": 0,
+    "kills": 12,
+    "titan": "ion",
+    "match_gamer_id": 151
+  },
+  {
+    "id": 150,
+    "caps": 0,
+    "kills": 12,
+    "titan": "ion",
+    "match_gamer_id": 152
+  },
+  {
+    "id": 151,
+    "caps": 1,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 153
+  },
+  {
+    "id": 152,
+    "caps": 1,
+    "kills": 11,
+    "titan": "legion",
+    "match_gamer_id": 154
+  },
+  {
+    "id": 153,
+    "caps": 1,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 155
+  },
+  {
+    "id": 154,
+    "caps": 1,
+    "kills": 31,
+    "titan": "legion",
+    "match_gamer_id": 156
+  },
+  {
+    "id": 155,
+    "caps": 1,
+    "kills": 11,
+    "titan": "monarch",
+    "match_gamer_id": 157
+  },
+  {
+    "id": 156,
+    "caps": 0,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 158
+  },
+  {
+    "id": 157,
+    "caps": 1,
+    "kills": 12,
+    "titan": "tone",
+    "match_gamer_id": 159
+  },
+  {
+    "id": 158,
+    "caps": 0,
+    "kills": 41,
+    "titan": "tone",
+    "match_gamer_id": 160
+  },
+  {
+    "id": 159,
+    "caps": 0,
+    "kills": 12,
+    "titan": "ion",
+    "match_gamer_id": 161
+  },
+  {
+    "id": 160,
+    "caps": 0,
+    "kills": 12,
+    "titan": "ion",
+    "match_gamer_id": 162
+  },
+  {
+    "id": 161,
+    "caps": 1,
+    "kills": 11,
+    "titan": "tone",
+    "match_gamer_id": 163
+  },
+  {
+    "id": 162,
+    "caps": 2,
+    "kills": 11,
+    "titan": "tone",
+    "match_gamer_id": 164
+  },
+  {
+    "id": 163,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 165
+  },
+  {
+    "id": 164,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 166
+  },
+  {
+    "id": 165,
+    "caps": 1,
+    "kills": 12,
+    "titan": "northstar",
+    "match_gamer_id": 167
+  },
+  {
+    "id": 166,
+    "caps": 1,
+    "kills": 42,
+    "titan": "ronin",
+    "match_gamer_id": 168
+  },
+  {
+    "id": 167,
+    "caps": 1,
+    "kills": 21,
+    "titan": "ronin",
+    "match_gamer_id": 169
+  },
+  {
+    "id": 168,
+    "caps": 2,
+    "kills": 32,
+    "titan": "scorch",
+    "match_gamer_id": 170
+  },
+  {
+    "id": 169,
+    "caps": 1,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 171
+  },
+  {
+    "id": 170,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 172
+  },
+  {
+    "id": 171,
+    "caps": 1,
+    "kills": 11,
+    "titan": "tone",
+    "match_gamer_id": 173
+  },
+  {
+    "id": 172,
+    "caps": 2,
+    "kills": 11,
+    "titan": "tone",
+    "match_gamer_id": 174
+  },
+  {
+    "id": 173,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 175
+  },
+  {
+    "id": 174,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 176
+  },
+  {
+    "id": 175,
+    "caps": 1,
+    "kills": 12,
+    "titan": "northstar",
+    "match_gamer_id": 177
+  },
+  {
+    "id": 176,
+    "caps": 1,
+    "kills": 42,
+    "titan": "ronin",
+    "match_gamer_id": 178
+  },
+  {
+    "id": 177,
+    "caps": 1,
+    "kills": 21,
+    "titan": "ronin",
+    "match_gamer_id": 179
+  },
+  {
+    "id": 178,
+    "caps": 2,
+    "kills": 32,
+    "titan": "scorch",
+    "match_gamer_id": 180
+  },
+  {
+    "id": 179,
+    "caps": 1,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 181
+  },
+  {
+    "id": 180,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 182
+  },
+  {
+    "id": 181,
+    "caps": 0,
+    "kills": 31,
+    "titan": "scorch",
+    "match_gamer_id": 183
+  },
+  {
+    "id": 182,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 184
+  },
+  {
+    "id": 183,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 185
+  },
+  {
+    "id": 184,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 186
+  },
+  {
+    "id": 185,
+    "caps": 0,
+    "kills": 30,
+    "titan": "legion",
+    "match_gamer_id": 187
+  },
+  {
+    "id": 186,
+    "caps": 1,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 188
+  },
+  {
+    "id": 187,
+    "caps": 0,
+    "kills": 19,
+    "titan": "legion",
+    "match_gamer_id": 189
+  },
+  {
+    "id": 188,
+    "caps": 1,
+    "kills": 32,
+    "titan": "scorch",
+    "match_gamer_id": 190
+  },
+  {
+    "id": 189,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 191
+  },
+  {
+    "id": 190,
+    "caps": 2,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 192
+  },
+  {
+    "id": 191,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 193
+  },
+  {
+    "id": 192,
+    "caps": 2,
+    "kills": 17,
+    "titan": "northstar",
+    "match_gamer_id": 194
+  },
+  {
+    "id": 193,
+    "caps": 0,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 195
+  },
+  {
+    "id": 194,
+    "caps": 0,
+    "kills": 20,
+    "titan": "tone",
+    "match_gamer_id": 196
+  },
+  {
+    "id": 195,
+    "caps": 2,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 197
+  },
+  {
+    "id": 196,
+    "caps": 0,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 198
+  },
+  {
+    "id": 197,
+    "caps": 2,
+    "kills": 31,
+    "titan": "ion",
+    "match_gamer_id": 199
+  },
+  {
+    "id": 198,
+    "caps": 1,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 200
+  },
+  {
+    "id": 199,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 201
+  },
+  {
+    "id": 200,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 202
+  },
+  {
+    "id": 201,
+    "caps": 1,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 203
+  },
+  {
+    "id": 202,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 204
+  },
+  {
+    "id": 203,
+    "caps": 0,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 205
+  },
+  {
+    "id": 204,
+    "caps": 1,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 206
+  },
+  {
+    "id": 205,
+    "caps": 0,
+    "kills": 18,
+    "titan": "northstar",
+    "match_gamer_id": 207
+  },
+  {
+    "id": 206,
+    "caps": 1,
+    "kills": 32,
+    "titan": "scorch",
+    "match_gamer_id": 208
+  },
+  {
+    "id": 207,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 209
+  },
+  {
+    "id": 208,
+    "caps": 2,
+    "kills": 36,
+    "titan": "legion",
+    "match_gamer_id": 210
+  },
+  {
+    "id": 209,
+    "caps": 2,
+    "kills": 23,
+    "titan": "ion",
+    "match_gamer_id": 211
+  },
+  {
+    "id": 210,
+    "caps": 2,
+    "kills": 25,
+    "titan": "tone",
+    "match_gamer_id": 212
+  },
+  {
+    "id": 211,
+    "caps": 1,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 213
+  },
+  {
+    "id": 212,
+    "caps": 2,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 214
+  },
+  {
+    "id": 213,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 215
+  },
+  {
+    "id": 214,
+    "caps": 0,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 216
+  },
+  {
+    "id": 215,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 217
+  },
+  {
+    "id": 216,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 218
+  },
+  {
+    "id": 217,
+    "caps": 1,
+    "kills": 28,
+    "titan": "tone",
+    "match_gamer_id": 219
+  },
+  {
+    "id": 218,
+    "caps": 1,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 220
+  },
+  {
+    "id": 219,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 221
+  },
+  {
+    "id": 220,
+    "caps": 2,
+    "kills": 38,
+    "titan": "scorch",
+    "match_gamer_id": 222
+  },
+  {
+    "id": 221,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 223
+  },
+  {
+    "id": 222,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 224
+  },
+  {
+    "id": 223,
+    "caps": 2,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 225
+  },
+  {
+    "id": 224,
+    "caps": 0,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 226
+  },
+  {
+    "id": 225,
+    "caps": 1,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 227
+  },
+  {
+    "id": 226,
+    "caps": 0,
+    "kills": 19,
+    "titan": "northstar",
+    "match_gamer_id": 228
+  },
+  {
+    "id": 227,
+    "caps": 0,
+    "kills": 20,
+    "titan": "tone",
+    "match_gamer_id": 229
+  },
+  {
+    "id": 228,
+    "caps": 0,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 230
+  },
+  {
+    "id": 229,
+    "caps": 0,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 231
+  },
+  {
+    "id": 230,
+    "caps": 2,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 232
+  },
+  {
+    "id": 231,
+    "caps": 0,
+    "kills": 16,
+    "titan": "tone",
+    "match_gamer_id": 233
+  },
+  {
+    "id": 232,
+    "caps": 1,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 234
+  },
+  {
+    "id": 233,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ion",
+    "match_gamer_id": 235
+  },
+  {
+    "id": 234,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 236
+  },
+  {
+    "id": 235,
+    "caps": 0,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 237
+  },
+  {
+    "id": 236,
+    "caps": 1,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 238
+  },
+  {
+    "id": 237,
+    "caps": 2,
+    "kills": 38,
+    "titan": "monarch",
+    "match_gamer_id": 239
+  },
+  {
+    "id": 238,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 240
+  },
+  {
+    "id": 239,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 241
+  },
+  {
+    "id": 240,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 242
+  },
+  {
+    "id": 241,
+    "caps": 0,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 243
+  },
+  {
+    "id": 242,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 244
+  },
+  {
+    "id": 243,
+    "caps": 1,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 245
+  },
+  {
+    "id": 244,
+    "caps": 0,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 246
+  },
+  {
+    "id": 245,
+    "caps": 1,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 247
+  },
+  {
+    "id": 246,
+    "caps": 0,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 248
+  },
+  {
+    "id": 247,
+    "caps": 2,
+    "kills": 21,
+    "titan": "tone",
+    "match_gamer_id": 249
+  },
+  {
+    "id": 248,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 250
+  },
+  {
+    "id": 249,
+    "caps": 2,
+    "kills": 34,
+    "titan": "legion",
+    "match_gamer_id": 251
+  },
+  {
+    "id": 250,
+    "caps": 0,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 252
+  },
+  {
+    "id": 251,
+    "caps": 2,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 253
+  },
+  {
+    "id": 252,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 254
+  },
+  {
+    "id": 253,
+    "caps": 0,
+    "kills": 18,
+    "titan": "monarch",
+    "match_gamer_id": 255
+  },
+  {
+    "id": 254,
+    "caps": 2,
+    "kills": 26,
+    "titan": "monarch",
+    "match_gamer_id": 256
+  },
+  {
+    "id": 255,
+    "caps": 1,
+    "kills": 15,
+    "titan": "monarch",
+    "match_gamer_id": 257
+  },
+  {
+    "id": 256,
+    "caps": 2,
+    "kills": 35,
+    "titan": "legion",
+    "match_gamer_id": 258
+  },
+  {
+    "id": 257,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 259
+  },
+  {
+    "id": 258,
+    "caps": 2,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 260
+  },
+  {
+    "id": 259,
+    "caps": 0,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 261
+  },
+  {
+    "id": 260,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 262
+  },
+  {
+    "id": 261,
+    "caps": 1,
+    "kills": 20,
+    "titan": "tone",
+    "match_gamer_id": 263
+  },
+  {
+    "id": 262,
+    "caps": 1,
+    "kills": 20,
+    "titan": "tone",
+    "match_gamer_id": 264
+  },
+  {
+    "id": 263,
+    "caps": 0,
+    "kills": 39,
+    "titan": "legion",
+    "match_gamer_id": 265
+  },
+  {
+    "id": 264,
+    "caps": 1,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 266
+  },
+  {
+    "id": 265,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 267
+  },
+  {
+    "id": 266,
+    "caps": 2,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 268
+  },
+  {
+    "id": 267,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 269
+  },
+  {
+    "id": 268,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 270
+  },
+  {
+    "id": 269,
+    "caps": 1,
+    "kills": 21,
+    "titan": "ronin",
+    "match_gamer_id": 271
+  },
+  {
+    "id": 270,
+    "caps": 1,
+    "kills": 23,
+    "titan": "tone",
+    "match_gamer_id": 272
+  },
+  {
+    "id": 271,
+    "caps": 1,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 273
+  },
+  {
+    "id": 272,
+    "caps": 2,
+    "kills": 31,
+    "titan": "ion",
+    "match_gamer_id": 274
+  },
+  {
+    "id": 273,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 275
+  },
+  {
+    "id": 274,
+    "caps": 2,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 276
+  },
+  {
+    "id": 275,
+    "caps": 2,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 277
+  },
+  {
+    "id": 276,
+    "caps": 1,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 278
+  },
+  {
+    "id": 277,
+    "caps": 0,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 279
+  },
+  {
+    "id": 278,
+    "caps": 2,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 280
+  },
+  {
+    "id": 279,
+    "caps": 2,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 281
+  },
+  {
+    "id": 280,
+    "caps": 0,
+    "kills": 31,
+    "titan": "ronin",
+    "match_gamer_id": 282
+  },
+  {
+    "id": 281,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 283
+  },
+  {
+    "id": 282,
+    "caps": 1,
+    "kills": 21,
+    "titan": "tone",
+    "match_gamer_id": 284
+  },
+  {
+    "id": 283,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 285
+  },
+  {
+    "id": 284,
+    "caps": 1,
+    "kills": 28,
+    "titan": "ronin",
+    "match_gamer_id": 286
+  },
+  {
+    "id": 285,
+    "caps": 2,
+    "kills": 31,
+    "titan": "scorch",
+    "match_gamer_id": 287
+  },
+  {
+    "id": 286,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 288
+  },
+  {
+    "id": 287,
+    "caps": 0,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 289
+  },
+  {
+    "id": 288,
+    "caps": 2,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 290
+  },
+  {
+    "id": 289,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 291
+  },
+  {
+    "id": 290,
+    "caps": 1,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 292
+  },
+  {
+    "id": 291,
+    "caps": 0,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 293
+  },
+  {
+    "id": 292,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 294
+  },
+  {
+    "id": 293,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 295
+  },
+  {
+    "id": 294,
+    "caps": 2,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 296
+  },
+  {
+    "id": 295,
+    "caps": 0,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 297
+  },
+  {
+    "id": 296,
+    "caps": 1,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 298
+  },
+  {
+    "id": 297,
+    "caps": 0,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 299
+  },
+  {
+    "id": 298,
+    "caps": 1,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 300
+  },
+  {
+    "id": 299,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 301
+  },
+  {
+    "id": 300,
+    "caps": 1,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 302
+  },
+  {
+    "id": 301,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 303
+  },
+  {
+    "id": 302,
+    "caps": 0,
+    "kills": 39,
+    "titan": "tone",
+    "match_gamer_id": 304
+  },
+  {
+    "id": 303,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 305
+  },
+  {
+    "id": 304,
+    "caps": 2,
+    "kills": 15,
+    "titan": "legion",
+    "match_gamer_id": 306
+  },
+  {
+    "id": 305,
+    "caps": 2,
+    "kills": 23,
+    "titan": "ion",
+    "match_gamer_id": 307
+  },
+  {
+    "id": 306,
+    "caps": 0,
+    "kills": 24,
+    "titan": "monarch",
+    "match_gamer_id": 308
+  },
+  {
+    "id": 307,
+    "caps": 1,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 309
+  },
+  {
+    "id": 308,
+    "caps": 2,
+    "kills": 38,
+    "titan": "scorch",
+    "match_gamer_id": 310
+  },
+  {
+    "id": 309,
+    "caps": 0,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 311
+  },
+  {
+    "id": 310,
+    "caps": 0,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 312
+  },
+  {
+    "id": 311,
+    "caps": 2,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 313
+  },
+  {
+    "id": 312,
+    "caps": 0,
+    "kills": 38,
+    "titan": "scorch",
+    "match_gamer_id": 314
+  },
+  {
+    "id": 313,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 315
+  },
+  {
+    "id": 314,
+    "caps": 0,
+    "kills": 34,
+    "titan": "ronin",
+    "match_gamer_id": 316
+  },
+  {
+    "id": 315,
+    "caps": 1,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 317
+  },
+  {
+    "id": 316,
+    "caps": 0,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 318
+  },
+  {
+    "id": 317,
+    "caps": 1,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 319
+  },
+  {
+    "id": 318,
+    "caps": 1,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 320
+  },
+  {
+    "id": 319,
+    "caps": 1,
+    "kills": 26,
+    "titan": "legion",
+    "match_gamer_id": 321
+  },
+  {
+    "id": 320,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ronin",
+    "match_gamer_id": 322
+  },
+  {
+    "id": 321,
+    "caps": 2,
+    "kills": 31,
+    "titan": "scorch",
+    "match_gamer_id": 323
+  },
+  {
+    "id": 322,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 324
+  },
+  {
+    "id": 323,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 325
+  },
+  {
+    "id": 324,
+    "caps": 1,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 326
+  },
+  {
+    "id": 325,
+    "caps": 0,
+    "kills": 31,
+    "titan": "ronin",
+    "match_gamer_id": 327
+  },
+  {
+    "id": 326,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 328
+  },
+  {
+    "id": 327,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 329
+  },
+  {
+    "id": 328,
+    "caps": 2,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 330
+  },
+  {
+    "id": 329,
+    "caps": 0,
+    "kills": 38,
+    "titan": "tone",
+    "match_gamer_id": 331
+  },
+  {
+    "id": 330,
+    "caps": 1,
+    "kills": 19,
+    "titan": "ion",
+    "match_gamer_id": 332
+  },
+  {
+    "id": 331,
+    "caps": 0,
+    "kills": 31,
+    "titan": "scorch",
+    "match_gamer_id": 333
+  },
+  {
+    "id": 332,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 334
+  },
+  {
+    "id": 333,
+    "caps": 0,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 335
+  },
+  {
+    "id": 334,
+    "caps": 1,
+    "kills": 30,
+    "titan": "ion",
+    "match_gamer_id": 336
+  },
+  {
+    "id": 335,
+    "caps": 0,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 337
+  },
+  {
+    "id": 336,
+    "caps": 2,
+    "kills": 39,
+    "titan": "legion",
+    "match_gamer_id": 338
+  },
+  {
+    "id": 337,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 339
+  },
+  {
+    "id": 338,
+    "caps": 1,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 340
+  },
+  {
+    "id": 339,
+    "caps": 2,
+    "kills": 38,
+    "titan": "monarch",
+    "match_gamer_id": 341
+  },
+  {
+    "id": 340,
+    "caps": 2,
+    "kills": 35,
+    "titan": "scorch",
+    "match_gamer_id": 342
+  },
+  {
+    "id": 341,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 343
+  },
+  {
+    "id": 342,
+    "caps": 2,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 344
+  },
+  {
+    "id": 343,
+    "caps": 2,
+    "kills": 33,
+    "titan": "tone",
+    "match_gamer_id": 345
+  },
+  {
+    "id": 344,
+    "caps": 1,
+    "kills": 18,
+    "titan": "legion",
+    "match_gamer_id": 346
+  },
+  {
+    "id": 345,
+    "caps": 1,
+    "kills": 20,
+    "titan": "tone",
+    "match_gamer_id": 347
+  },
+  {
+    "id": 346,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 348
+  },
+  {
+    "id": 347,
+    "caps": 0,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 349
+  },
+  {
+    "id": 348,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 350
+  },
+  {
+    "id": 349,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 351
+  },
+  {
+    "id": 350,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 352
+  },
+  {
+    "id": 351,
+    "caps": 1,
+    "kills": 40,
+    "titan": "monarch",
+    "match_gamer_id": 353
+  },
+  {
+    "id": 352,
+    "caps": 2,
+    "kills": 21,
+    "titan": "ronin",
+    "match_gamer_id": 354
+  },
+  {
+    "id": 353,
+    "caps": 1,
+    "kills": 18,
+    "titan": "monarch",
+    "match_gamer_id": 355
+  },
+  {
+    "id": 354,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 356
+  },
+  {
+    "id": 355,
+    "caps": 0,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 357
+  },
+  {
+    "id": 356,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 358
+  },
+  {
+    "id": 357,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 359
+  },
+  {
+    "id": 358,
+    "caps": 2,
+    "kills": 23,
+    "titan": "tone",
+    "match_gamer_id": 360
+  },
+  {
+    "id": 359,
+    "caps": 1,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 361
+  },
+  {
+    "id": 360,
+    "caps": 0,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 362
+  },
+  {
+    "id": 361,
+    "caps": 0,
+    "kills": 40,
+    "titan": "monarch",
+    "match_gamer_id": 363
+  },
+  {
+    "id": 362,
+    "caps": 1,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 364
+  },
+  {
+    "id": 363,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 365
+  },
+  {
+    "id": 364,
+    "caps": 2,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 366
+  },
+  {
+    "id": 365,
+    "caps": 1,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 367
+  },
+  {
+    "id": 366,
+    "caps": 2,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 368
+  },
+  {
+    "id": 367,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 369
+  },
+  {
+    "id": 368,
+    "caps": 0,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 370
+  },
+  {
+    "id": 369,
+    "caps": 0,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 371
+  },
+  {
+    "id": 370,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 372
+  },
+  {
+    "id": 371,
+    "caps": 1,
+    "kills": 34,
+    "titan": "ronin",
+    "match_gamer_id": 373
+  },
+  {
+    "id": 372,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 374
+  },
+  {
+    "id": 373,
+    "caps": 1,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 375
+  },
+  {
+    "id": 374,
+    "caps": 2,
+    "kills": 26,
+    "titan": "legion",
+    "match_gamer_id": 376
+  },
+  {
+    "id": 375,
+    "caps": 1,
+    "kills": 15,
+    "titan": "scorch",
+    "match_gamer_id": 377
+  },
+  {
+    "id": 376,
+    "caps": 1,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 378
+  },
+  {
+    "id": 377,
+    "caps": 1,
+    "kills": 35,
+    "titan": "scorch",
+    "match_gamer_id": 379
+  },
+  {
+    "id": 378,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 380
+  },
+  {
+    "id": 379,
+    "caps": 2,
+    "kills": 31,
+    "titan": "ion",
+    "match_gamer_id": 381
+  },
+  {
+    "id": 380,
+    "caps": 0,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 382
+  },
+  {
+    "id": 381,
+    "caps": 0,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 383
+  },
+  {
+    "id": 382,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 384
+  },
+  {
+    "id": 383,
+    "caps": 0,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 385
+  },
+  {
+    "id": 384,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 386
+  },
+  {
+    "id": 385,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 387
+  },
+  {
+    "id": 386,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 388
+  },
+  {
+    "id": 387,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 389
+  },
+  {
+    "id": 388,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 390
+  },
+  {
+    "id": 389,
+    "caps": 1,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 391
+  },
+  {
+    "id": 390,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 392
+  },
+  {
+    "id": 391,
+    "caps": 0,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 393
+  },
+  {
+    "id": 392,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 394
+  },
+  {
+    "id": 393,
+    "caps": 0,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 395
+  },
+  {
+    "id": 394,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 396
+  },
+  {
+    "id": 395,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 397
+  },
+  {
+    "id": 396,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 398
+  },
+  {
+    "id": 397,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 399
+  },
+  {
+    "id": 398,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 400
+  },
+  {
+    "id": 399,
+    "caps": 1,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 401
+  },
+  {
+    "id": 400,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 402
+  },
+  {
+    "id": 401,
+    "caps": 0,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 403
+  },
+  {
+    "id": 402,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 404
+  },
+  {
+    "id": 403,
+    "caps": 0,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 405
+  },
+  {
+    "id": 404,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 406
+  },
+  {
+    "id": 405,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 407
+  },
+  {
+    "id": 406,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 408
+  },
+  {
+    "id": 407,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 409
+  },
+  {
+    "id": 408,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 410
+  },
+  {
+    "id": 409,
+    "caps": 1,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 411
+  },
+  {
+    "id": 410,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 412
+  },
+  {
+    "id": 411,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 413
+  },
+  {
+    "id": 412,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 414
+  },
+  {
+    "id": 413,
+    "caps": 2,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 415
+  },
+  {
+    "id": 414,
+    "caps": 2,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 416
+  },
+  {
+    "id": 415,
+    "caps": 2,
+    "kills": 18,
+    "titan": "legion",
+    "match_gamer_id": 417
+  },
+  {
+    "id": 416,
+    "caps": 0,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 418
+  },
+  {
+    "id": 417,
+    "caps": 2,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 419
+  },
+  {
+    "id": 418,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ion",
+    "match_gamer_id": 420
+  },
+  {
+    "id": 419,
+    "caps": 1,
+    "kills": 22,
+    "titan": "ion",
+    "match_gamer_id": 421
+  },
+  {
+    "id": 420,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 422
+  },
+  {
+    "id": 421,
+    "caps": 0,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 423
+  },
+  {
+    "id": 422,
+    "caps": 2,
+    "kills": 31,
+    "titan": "ion",
+    "match_gamer_id": 424
+  },
+  {
+    "id": 423,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 425
+  },
+  {
+    "id": 424,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 426
+  },
+  {
+    "id": 425,
+    "caps": 1,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 427
+  },
+  {
+    "id": 426,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 428
+  },
+  {
+    "id": 427,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 429
+  },
+  {
+    "id": 428,
+    "caps": 0,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 430
+  },
+  {
+    "id": 429,
+    "caps": 2,
+    "kills": 40,
+    "titan": "tone",
+    "match_gamer_id": 431
+  },
+  {
+    "id": 430,
+    "caps": 2,
+    "kills": 33,
+    "titan": "monarch",
+    "match_gamer_id": 432
+  },
+  {
+    "id": 431,
+    "caps": 0,
+    "kills": 24,
+    "titan": "northstar",
+    "match_gamer_id": 433
+  },
+  {
+    "id": 432,
+    "caps": 2,
+    "kills": 31,
+    "titan": "ion",
+    "match_gamer_id": 434
+  },
+  {
+    "id": 433,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 435
+  },
+  {
+    "id": 434,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 436
+  },
+  {
+    "id": 435,
+    "caps": 1,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 437
+  },
+  {
+    "id": 436,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 438
+  },
+  {
+    "id": 437,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 439
+  },
+  {
+    "id": 438,
+    "caps": 0,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 440
+  },
+  {
+    "id": 439,
+    "caps": 2,
+    "kills": 40,
+    "titan": "tone",
+    "match_gamer_id": 441
+  },
+  {
+    "id": 440,
+    "caps": 2,
+    "kills": 33,
+    "titan": "monarch",
+    "match_gamer_id": 442
+  },
+  {
+    "id": 441,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 443
+  },
+  {
+    "id": 442,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 444
+  },
+  {
+    "id": 443,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 445
+  },
+  {
+    "id": 444,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 446
+  },
+  {
+    "id": 445,
+    "caps": 2,
+    "kills": 36,
+    "titan": "northstar",
+    "match_gamer_id": 447
+  },
+  {
+    "id": 446,
+    "caps": 1,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 448
+  },
+  {
+    "id": 447,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 449
+  },
+  {
+    "id": 448,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 450
+  },
+  {
+    "id": 449,
+    "caps": 0,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 451
+  },
+  {
+    "id": 450,
+    "caps": 2,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 452
+  },
+  {
+    "id": 451,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 453
+  },
+  {
+    "id": 452,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 454
+  },
+  {
+    "id": 453,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 455
+  },
+  {
+    "id": 454,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 456
+  },
+  {
+    "id": 455,
+    "caps": 2,
+    "kills": 36,
+    "titan": "northstar",
+    "match_gamer_id": 457
+  },
+  {
+    "id": 456,
+    "caps": 1,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 458
+  },
+  {
+    "id": 457,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 459
+  },
+  {
+    "id": 458,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 460
+  },
+  {
+    "id": 459,
+    "caps": 0,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 461
+  },
+  {
+    "id": 460,
+    "caps": 2,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 462
+  },
+  {
+    "id": 461,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 463
+  },
+  {
+    "id": 462,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 464
+  },
+  {
+    "id": 463,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 465
+  },
+  {
+    "id": 464,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 466
+  },
+  {
+    "id": 465,
+    "caps": 2,
+    "kills": 36,
+    "titan": "northstar",
+    "match_gamer_id": 467
+  },
+  {
+    "id": 466,
+    "caps": 1,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 468
+  },
+  {
+    "id": 467,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 469
+  },
+  {
+    "id": 468,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 470
+  },
+  {
+    "id": 469,
+    "caps": 0,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 471
+  },
+  {
+    "id": 470,
+    "caps": 2,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 472
+  },
+  {
+    "id": 471,
+    "caps": 1,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 473
+  },
+  {
+    "id": 472,
+    "caps": 0,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 474
+  },
+  {
+    "id": 473,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 475
+  },
+  {
+    "id": 474,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 476
+  },
+  {
+    "id": 475,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 477
+  },
+  {
+    "id": 476,
+    "caps": 2,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 478
+  },
+  {
+    "id": 477,
+    "caps": 1,
+    "kills": 25,
+    "titan": "northstar",
+    "match_gamer_id": 479
+  },
+  {
+    "id": 478,
+    "caps": 1,
+    "kills": 31,
+    "titan": "ronin",
+    "match_gamer_id": 480
+  },
+  {
+    "id": 479,
+    "caps": 1,
+    "kills": 33,
+    "titan": "tone",
+    "match_gamer_id": 481
+  },
+  {
+    "id": 480,
+    "caps": 1,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 482
+  },
+  {
+    "id": 481,
+    "caps": 1,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 483
+  },
+  {
+    "id": 482,
+    "caps": 0,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 484
+  },
+  {
+    "id": 483,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 485
+  },
+  {
+    "id": 484,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 486
+  },
+  {
+    "id": 485,
+    "caps": 1,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 487
+  },
+  {
+    "id": 486,
+    "caps": 2,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 488
+  },
+  {
+    "id": 487,
+    "caps": 1,
+    "kills": 25,
+    "titan": "northstar",
+    "match_gamer_id": 489
+  },
+  {
+    "id": 488,
+    "caps": 1,
+    "kills": 31,
+    "titan": "ronin",
+    "match_gamer_id": 490
+  },
+  {
+    "id": 489,
+    "caps": 1,
+    "kills": 33,
+    "titan": "tone",
+    "match_gamer_id": 491
+  },
+  {
+    "id": 490,
+    "caps": 1,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 492
+  },
+  {
+    "id": 491,
+    "caps": 1,
+    "kills": 18,
+    "titan": "legion",
+    "match_gamer_id": 493
+  },
+  {
+    "id": 492,
+    "caps": 2,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 494
+  },
+  {
+    "id": 493,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ion",
+    "match_gamer_id": 495
+  },
+  {
+    "id": 494,
+    "caps": 0,
+    "kills": 19,
+    "titan": "ion",
+    "match_gamer_id": 496
+  },
+  {
+    "id": 495,
+    "caps": 0,
+    "kills": 33,
+    "titan": "tone",
+    "match_gamer_id": 497
+  },
+  {
+    "id": 496,
+    "caps": 2,
+    "kills": 33,
+    "titan": "monarch",
+    "match_gamer_id": 498
+  },
+  {
+    "id": 497,
+    "caps": 2,
+    "kills": 25,
+    "titan": "scorch",
+    "match_gamer_id": 499
+  },
+  {
+    "id": 498,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ion",
+    "match_gamer_id": 500
+  },
+  {
+    "id": 499,
+    "caps": 2,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 501
+  },
+  {
+    "id": 500,
+    "caps": 1,
+    "kills": 24,
+    "titan": "legion",
+    "match_gamer_id": 502
+  },
+  {
+    "id": 501,
+    "caps": 1,
+    "kills": 18,
+    "titan": "legion",
+    "match_gamer_id": 503
+  },
+  {
+    "id": 502,
+    "caps": 2,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 504
+  },
+  {
+    "id": 503,
+    "caps": 2,
+    "kills": 32,
+    "titan": "ion",
+    "match_gamer_id": 505
+  },
+  {
+    "id": 504,
+    "caps": 0,
+    "kills": 19,
+    "titan": "ion",
+    "match_gamer_id": 506
+  },
+  {
+    "id": 505,
+    "caps": 0,
+    "kills": 33,
+    "titan": "tone",
+    "match_gamer_id": 507
+  },
+  {
+    "id": 506,
+    "caps": 2,
+    "kills": 33,
+    "titan": "monarch",
+    "match_gamer_id": 508
+  },
+  {
+    "id": 507,
+    "caps": 2,
+    "kills": 25,
+    "titan": "scorch",
+    "match_gamer_id": 509
+  },
+  {
+    "id": 508,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ion",
+    "match_gamer_id": 510
+  },
+  {
+    "id": 509,
+    "caps": 2,
+    "kills": 40,
+    "titan": "ion",
+    "match_gamer_id": 511
+  },
+  {
+    "id": 510,
+    "caps": 1,
+    "kills": 24,
+    "titan": "legion",
+    "match_gamer_id": 512
+  },
+  {
+    "id": 511,
+    "caps": 0,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 513
+  },
+  {
+    "id": 512,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 514
+  },
+  {
+    "id": 513,
+    "caps": 1,
+    "kills": 36,
+    "titan": "legion",
+    "match_gamer_id": 515
+  },
+  {
+    "id": 514,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 516
+  },
+  {
+    "id": 515,
+    "caps": 1,
+    "kills": 22,
+    "titan": "ion",
+    "match_gamer_id": 517
+  },
+  {
+    "id": 516,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 518
+  },
+  {
+    "id": 517,
+    "caps": 1,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 519
+  },
+  {
+    "id": 518,
+    "caps": 2,
+    "kills": 39,
+    "titan": "legion",
+    "match_gamer_id": 520
+  },
+  {
+    "id": 519,
+    "caps": 1,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 521
+  },
+  {
+    "id": 520,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 522
+  },
+  {
+    "id": 521,
+    "caps": 0,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 523
+  },
+  {
+    "id": 522,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 524
+  },
+  {
+    "id": 523,
+    "caps": 1,
+    "kills": 36,
+    "titan": "legion",
+    "match_gamer_id": 525
+  },
+  {
+    "id": 524,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 526
+  },
+  {
+    "id": 525,
+    "caps": 1,
+    "kills": 22,
+    "titan": "ion",
+    "match_gamer_id": 527
+  },
+  {
+    "id": 526,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 528
+  },
+  {
+    "id": 527,
+    "caps": 1,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 529
+  },
+  {
+    "id": 528,
+    "caps": 2,
+    "kills": 39,
+    "titan": "legion",
+    "match_gamer_id": 530
+  },
+  {
+    "id": 529,
+    "caps": 1,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 531
+  },
+  {
+    "id": 530,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 532
+  },
+  {
+    "id": 531,
+    "caps": 2,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 533
+  },
+  {
+    "id": 532,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 534
+  },
+  {
+    "id": 533,
+    "caps": 0,
+    "kills": 18,
+    "titan": "northstar",
+    "match_gamer_id": 535
+  },
+  {
+    "id": 534,
+    "caps": 1,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 536
+  },
+  {
+    "id": 535,
+    "caps": 1,
+    "kills": 24,
+    "titan": "monarch",
+    "match_gamer_id": 537
+  },
+  {
+    "id": 536,
+    "caps": 2,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 538
+  },
+  {
+    "id": 537,
+    "caps": 1,
+    "kills": 39,
+    "titan": "northstar",
+    "match_gamer_id": 539
+  },
+  {
+    "id": 538,
+    "caps": 2,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 540
+  },
+  {
+    "id": 539,
+    "caps": 1,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 541
+  },
+  {
+    "id": 540,
+    "caps": 0,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 542
+  },
+  {
+    "id": 541,
+    "caps": 2,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 543
+  },
+  {
+    "id": 542,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 544
+  },
+  {
+    "id": 543,
+    "caps": 0,
+    "kills": 18,
+    "titan": "northstar",
+    "match_gamer_id": 545
+  },
+  {
+    "id": 544,
+    "caps": 1,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 546
+  },
+  {
+    "id": 545,
+    "caps": 1,
+    "kills": 24,
+    "titan": "monarch",
+    "match_gamer_id": 547
+  },
+  {
+    "id": 546,
+    "caps": 2,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 548
+  },
+  {
+    "id": 547,
+    "caps": 1,
+    "kills": 39,
+    "titan": "northstar",
+    "match_gamer_id": 549
+  },
+  {
+    "id": 548,
+    "caps": 2,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 550
+  },
+  {
+    "id": 549,
+    "caps": 1,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 551
+  },
+  {
+    "id": 550,
+    "caps": 0,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 552
+  },
+  {
+    "id": 551,
+    "caps": 0,
+    "kills": 35,
+    "titan": "monarch",
+    "match_gamer_id": 553
+  },
+  {
+    "id": 552,
+    "caps": 0,
+    "kills": 37,
+    "titan": "ronin",
+    "match_gamer_id": 554
+  },
+  {
+    "id": 553,
+    "caps": 0,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 555
+  },
+  {
+    "id": 554,
+    "caps": 2,
+    "kills": 19,
+    "titan": "legion",
+    "match_gamer_id": 556
+  },
+  {
+    "id": 555,
+    "caps": 1,
+    "kills": 38,
+    "titan": "northstar",
+    "match_gamer_id": 557
+  },
+  {
+    "id": 556,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 558
+  },
+  {
+    "id": 557,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ion",
+    "match_gamer_id": 559
+  },
+  {
+    "id": 558,
+    "caps": 2,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 560
+  },
+  {
+    "id": 559,
+    "caps": 0,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 561
+  },
+  {
+    "id": 560,
+    "caps": 0,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 562
+  },
+  {
+    "id": 561,
+    "caps": 0,
+    "kills": 35,
+    "titan": "monarch",
+    "match_gamer_id": 563
+  },
+  {
+    "id": 562,
+    "caps": 0,
+    "kills": 37,
+    "titan": "ronin",
+    "match_gamer_id": 564
+  },
+  {
+    "id": 563,
+    "caps": 0,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 565
+  },
+  {
+    "id": 564,
+    "caps": 2,
+    "kills": 19,
+    "titan": "legion",
+    "match_gamer_id": 566
+  },
+  {
+    "id": 565,
+    "caps": 1,
+    "kills": 38,
+    "titan": "northstar",
+    "match_gamer_id": 567
+  },
+  {
+    "id": 566,
+    "caps": 2,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 568
+  },
+  {
+    "id": 567,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ion",
+    "match_gamer_id": 569
+  },
+  {
+    "id": 568,
+    "caps": 2,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 570
+  },
+  {
+    "id": 569,
+    "caps": 0,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 571
+  },
+  {
+    "id": 570,
+    "caps": 0,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 572
+  },
+  {
+    "id": 571,
+    "caps": 1,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 573
+  },
+  {
+    "id": 572,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 574
+  },
+  {
+    "id": 573,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 575
+  },
+  {
+    "id": 574,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 576
+  },
+  {
+    "id": 575,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 577
+  },
+  {
+    "id": 576,
+    "caps": 0,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 578
+  },
+  {
+    "id": 577,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 579
+  },
+  {
+    "id": 578,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 580
+  },
+  {
+    "id": 579,
+    "caps": 0,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 581
+  },
+  {
+    "id": 580,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 582
+  },
+  {
+    "id": 581,
+    "caps": 1,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 583
+  },
+  {
+    "id": 582,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 584
+  },
+  {
+    "id": 583,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 585
+  },
+  {
+    "id": 584,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 586
+  },
+  {
+    "id": 585,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 587
+  },
+  {
+    "id": 586,
+    "caps": 0,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 588
+  },
+  {
+    "id": 587,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 589
+  },
+  {
+    "id": 588,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 590
+  },
+  {
+    "id": 589,
+    "caps": 0,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 591
+  },
+  {
+    "id": 590,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 592
+  },
+  {
+    "id": 591,
+    "caps": 1,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 593
+  },
+  {
+    "id": 592,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 594
+  },
+  {
+    "id": 593,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 595
+  },
+  {
+    "id": 594,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 596
+  },
+  {
+    "id": 595,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 597
+  },
+  {
+    "id": 596,
+    "caps": 0,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 598
+  },
+  {
+    "id": 597,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 599
+  },
+  {
+    "id": 598,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 600
+  },
+  {
+    "id": 599,
+    "caps": 0,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 601
+  },
+  {
+    "id": 600,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 602
+  },
+  {
+    "id": 601,
+    "caps": 1,
+    "kills": 32,
+    "titan": "monarch",
+    "match_gamer_id": 603
+  },
+  {
+    "id": 602,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 604
+  },
+  {
+    "id": 603,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 605
+  },
+  {
+    "id": 604,
+    "caps": 1,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 606
+  },
+  {
+    "id": 605,
+    "caps": 2,
+    "kills": 23,
+    "titan": "monarch",
+    "match_gamer_id": 607
+  },
+  {
+    "id": 606,
+    "caps": 0,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 608
+  },
+  {
+    "id": 607,
+    "caps": 0,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 609
+  },
+  {
+    "id": 608,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 610
+  },
+  {
+    "id": 609,
+    "caps": 0,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 611
+  },
+  {
+    "id": 610,
+    "caps": 0,
+    "kills": 30,
+    "titan": "ronin",
+    "match_gamer_id": 612
+  },
+  {
+    "id": 611,
+    "caps": 1,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 613
+  },
+  {
+    "id": 612,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 614
+  },
+  {
+    "id": 613,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 615
+  },
+  {
+    "id": 614,
+    "caps": 0,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 616
+  },
+  {
+    "id": 615,
+    "caps": 2,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 617
+  },
+  {
+    "id": 616,
+    "caps": 0,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 618
+  },
+  {
+    "id": 617,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 619
+  },
+  {
+    "id": 618,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 620
+  },
+  {
+    "id": 619,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 621
+  },
+  {
+    "id": 620,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 622
+  },
+  {
+    "id": 621,
+    "caps": 1,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 623
+  },
+  {
+    "id": 622,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 624
+  },
+  {
+    "id": 623,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 625
+  },
+  {
+    "id": 624,
+    "caps": 0,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 626
+  },
+  {
+    "id": 625,
+    "caps": 2,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 627
+  },
+  {
+    "id": 626,
+    "caps": 0,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 628
+  },
+  {
+    "id": 627,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 629
+  },
+  {
+    "id": 628,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 630
+  },
+  {
+    "id": 629,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 631
+  },
+  {
+    "id": 630,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 632
+  },
+  {
+    "id": 631,
+    "caps": 1,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 633
+  },
+  {
+    "id": 632,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 634
+  },
+  {
+    "id": 633,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 635
+  },
+  {
+    "id": 634,
+    "caps": 0,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 636
+  },
+  {
+    "id": 635,
+    "caps": 2,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 637
+  },
+  {
+    "id": 636,
+    "caps": 0,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 638
+  },
+  {
+    "id": 637,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 639
+  },
+  {
+    "id": 638,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 640
+  },
+  {
+    "id": 639,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 641
+  },
+  {
+    "id": 640,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 642
+  },
+  {
+    "id": 641,
+    "caps": 1,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 643
+  },
+  {
+    "id": 642,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 644
+  },
+  {
+    "id": 643,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 645
+  },
+  {
+    "id": 644,
+    "caps": 0,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 646
+  },
+  {
+    "id": 645,
+    "caps": 2,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 647
+  },
+  {
+    "id": 646,
+    "caps": 0,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 648
+  },
+  {
+    "id": 647,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 649
+  },
+  {
+    "id": 648,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 650
+  },
+  {
+    "id": 649,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 651
+  },
+  {
+    "id": 650,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 652
+  },
+  {
+    "id": 651,
+    "caps": 1,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 653
+  },
+  {
+    "id": 652,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 654
+  },
+  {
+    "id": 653,
+    "caps": 1,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 655
+  },
+  {
+    "id": 654,
+    "caps": 0,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 656
+  },
+  {
+    "id": 655,
+    "caps": 2,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 657
+  },
+  {
+    "id": 656,
+    "caps": 0,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 658
+  },
+  {
+    "id": 657,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 659
+  },
+  {
+    "id": 658,
+    "caps": 0,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 660
+  },
+  {
+    "id": 659,
+    "caps": 0,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 661
+  },
+  {
+    "id": 660,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 662
+  },
+  {
+    "id": 661,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 663
+  },
+  {
+    "id": 662,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 664
+  },
+  {
+    "id": 663,
+    "caps": 2,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 665
+  },
+  {
+    "id": 664,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 666
+  },
+  {
+    "id": 665,
+    "caps": 2,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 667
+  },
+  {
+    "id": 666,
+    "caps": 0,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 668
+  },
+  {
+    "id": 667,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 669
+  },
+  {
+    "id": 668,
+    "caps": 1,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 670
+  },
+  {
+    "id": 669,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 671
+  },
+  {
+    "id": 670,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 672
+  },
+  {
+    "id": 671,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 673
+  },
+  {
+    "id": 672,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 674
+  },
+  {
+    "id": 673,
+    "caps": 2,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 675
+  },
+  {
+    "id": 674,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 676
+  },
+  {
+    "id": 675,
+    "caps": 2,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 677
+  },
+  {
+    "id": 676,
+    "caps": 0,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 678
+  },
+  {
+    "id": 677,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 679
+  },
+  {
+    "id": 678,
+    "caps": 1,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 680
+  },
+  {
+    "id": 679,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 681
+  },
+  {
+    "id": 680,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 682
+  },
+  {
+    "id": 681,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 683
+  },
+  {
+    "id": 682,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 684
+  },
+  {
+    "id": 683,
+    "caps": 2,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 685
+  },
+  {
+    "id": 684,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 686
+  },
+  {
+    "id": 685,
+    "caps": 2,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 687
+  },
+  {
+    "id": 686,
+    "caps": 0,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 688
+  },
+  {
+    "id": 687,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 689
+  },
+  {
+    "id": 688,
+    "caps": 1,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 690
+  },
+  {
+    "id": 689,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 691
+  },
+  {
+    "id": 690,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 692
+  },
+  {
+    "id": 691,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 693
+  },
+  {
+    "id": 692,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 694
+  },
+  {
+    "id": 693,
+    "caps": 2,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 695
+  },
+  {
+    "id": 694,
+    "caps": 2,
+    "kills": 18,
+    "titan": "ronin",
+    "match_gamer_id": 696
+  },
+  {
+    "id": 695,
+    "caps": 2,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 697
+  },
+  {
+    "id": 696,
+    "caps": 0,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 698
+  },
+  {
+    "id": 697,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 699
+  },
+  {
+    "id": 698,
+    "caps": 1,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 700
+  },
+  {
+    "id": 699,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 701
+  },
+  {
+    "id": 700,
+    "caps": 0,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 702
+  },
+  {
+    "id": 701,
+    "caps": 2,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 703
+  },
+  {
+    "id": 702,
+    "caps": 2,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 704
+  },
+  {
+    "id": 703,
+    "caps": 2,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 705
+  },
+  {
+    "id": 704,
+    "caps": 2,
+    "kills": 26,
+    "titan": "monarch",
+    "match_gamer_id": 706
+  },
+  {
+    "id": 705,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ion",
+    "match_gamer_id": 707
+  },
+  {
+    "id": 706,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 708
+  },
+  {
+    "id": 707,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 709
+  },
+  {
+    "id": 708,
+    "caps": 1,
+    "kills": 28,
+    "titan": "tone",
+    "match_gamer_id": 710
+  },
+  {
+    "id": 709,
+    "caps": 2,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 711
+  },
+  {
+    "id": 710,
+    "caps": 1,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 712
+  },
+  {
+    "id": 711,
+    "caps": 2,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 713
+  },
+  {
+    "id": 712,
+    "caps": 2,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 714
+  },
+  {
+    "id": 713,
+    "caps": 2,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 715
+  },
+  {
+    "id": 714,
+    "caps": 2,
+    "kills": 26,
+    "titan": "monarch",
+    "match_gamer_id": 716
+  },
+  {
+    "id": 715,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ion",
+    "match_gamer_id": 717
+  },
+  {
+    "id": 716,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 718
+  },
+  {
+    "id": 717,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 719
+  },
+  {
+    "id": 718,
+    "caps": 1,
+    "kills": 28,
+    "titan": "tone",
+    "match_gamer_id": 720
+  },
+  {
+    "id": 719,
+    "caps": 2,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 721
+  },
+  {
+    "id": 720,
+    "caps": 1,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 722
+  },
+  {
+    "id": 721,
+    "caps": 2,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 723
+  },
+  {
+    "id": 722,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 724
+  },
+  {
+    "id": 723,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 725
+  },
+  {
+    "id": 724,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 726
+  },
+  {
+    "id": 725,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 727
+  },
+  {
+    "id": 726,
+    "caps": 2,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 728
+  },
+  {
+    "id": 727,
+    "caps": 2,
+    "kills": 21,
+    "titan": "monarch",
+    "match_gamer_id": 729
+  },
+  {
+    "id": 728,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 730
+  },
+  {
+    "id": 729,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 731
+  },
+  {
+    "id": 730,
+    "caps": 1,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 732
+  },
+  {
+    "id": 731,
+    "caps": 2,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 733
+  },
+  {
+    "id": 732,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 734
+  },
+  {
+    "id": 733,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 735
+  },
+  {
+    "id": 734,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 736
+  },
+  {
+    "id": 735,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 737
+  },
+  {
+    "id": 736,
+    "caps": 2,
+    "kills": 33,
+    "titan": "northstar",
+    "match_gamer_id": 738
+  },
+  {
+    "id": 737,
+    "caps": 2,
+    "kills": 21,
+    "titan": "monarch",
+    "match_gamer_id": 739
+  },
+  {
+    "id": 738,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 740
+  },
+  {
+    "id": 739,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 741
+  },
+  {
+    "id": 740,
+    "caps": 1,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 742
+  },
+  {
+    "id": 741,
+    "caps": 2,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 743
+  },
+  {
+    "id": 742,
+    "caps": 2,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 744
+  },
+  {
+    "id": 743,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 745
+  },
+  {
+    "id": 744,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 746
+  },
+  {
+    "id": 745,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 747
+  },
+  {
+    "id": 746,
+    "caps": 0,
+    "kills": 36,
+    "titan": "ronin",
+    "match_gamer_id": 748
+  },
+  {
+    "id": 747,
+    "caps": 2,
+    "kills": 24,
+    "titan": "monarch",
+    "match_gamer_id": 749
+  },
+  {
+    "id": 748,
+    "caps": 0,
+    "kills": 30,
+    "titan": "legion",
+    "match_gamer_id": 750
+  },
+  {
+    "id": 749,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 751
+  },
+  {
+    "id": 750,
+    "caps": 2,
+    "kills": 16,
+    "titan": "monarch",
+    "match_gamer_id": 752
+  },
+  {
+    "id": 751,
+    "caps": 2,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 753
+  },
+  {
+    "id": 752,
+    "caps": 2,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 754
+  },
+  {
+    "id": 753,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 755
+  },
+  {
+    "id": 754,
+    "caps": 0,
+    "kills": 17,
+    "titan": "monarch",
+    "match_gamer_id": 756
+  },
+  {
+    "id": 755,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 757
+  },
+  {
+    "id": 756,
+    "caps": 0,
+    "kills": 36,
+    "titan": "ronin",
+    "match_gamer_id": 758
+  },
+  {
+    "id": 757,
+    "caps": 2,
+    "kills": 24,
+    "titan": "monarch",
+    "match_gamer_id": 759
+  },
+  {
+    "id": 758,
+    "caps": 0,
+    "kills": 30,
+    "titan": "legion",
+    "match_gamer_id": 760
+  },
+  {
+    "id": 759,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 761
+  },
+  {
+    "id": 760,
+    "caps": 2,
+    "kills": 16,
+    "titan": "monarch",
+    "match_gamer_id": 762
+  },
+  {
+    "id": 761,
+    "caps": 0,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 763
+  },
+  {
+    "id": 762,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 764
+  },
+  {
+    "id": 763,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 765
+  },
+  {
+    "id": 764,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 766
+  },
+  {
+    "id": 765,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 767
+  },
+  {
+    "id": 766,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 768
+  },
+  {
+    "id": 767,
+    "caps": 0,
+    "kills": 34,
+    "titan": "monarch",
+    "match_gamer_id": 769
+  },
+  {
+    "id": 768,
+    "caps": 2,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 770
+  },
+  {
+    "id": 769,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 771
+  },
+  {
+    "id": 770,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 772
+  },
+  {
+    "id": 771,
+    "caps": 0,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 773
+  },
+  {
+    "id": 772,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 774
+  },
+  {
+    "id": 773,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 775
+  },
+  {
+    "id": 774,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 776
+  },
+  {
+    "id": 775,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 777
+  },
+  {
+    "id": 776,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 778
+  },
+  {
+    "id": 777,
+    "caps": 0,
+    "kills": 34,
+    "titan": "monarch",
+    "match_gamer_id": 779
+  },
+  {
+    "id": 778,
+    "caps": 2,
+    "kills": 24,
+    "titan": "ronin",
+    "match_gamer_id": 780
+  },
+  {
+    "id": 779,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 781
+  },
+  {
+    "id": 780,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 782
+  },
+  {
+    "id": 781,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 783
+  },
+  {
+    "id": 782,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 784
+  },
+  {
+    "id": 783,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 785
+  },
+  {
+    "id": 784,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 786
+  },
+  {
+    "id": 785,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 787
+  },
+  {
+    "id": 786,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 788
+  },
+  {
+    "id": 787,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 789
+  },
+  {
+    "id": 788,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 790
+  },
+  {
+    "id": 789,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 791
+  },
+  {
+    "id": 790,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 792
+  },
+  {
+    "id": 791,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 793
+  },
+  {
+    "id": 792,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 794
+  },
+  {
+    "id": 793,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 795
+  },
+  {
+    "id": 794,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 796
+  },
+  {
+    "id": 795,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 797
+  },
+  {
+    "id": 796,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 798
+  },
+  {
+    "id": 797,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 799
+  },
+  {
+    "id": 798,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 800
+  },
+  {
+    "id": 799,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 801
+  },
+  {
+    "id": 800,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 802
+  },
+  {
+    "id": 801,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 803
+  },
+  {
+    "id": 802,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 804
+  },
+  {
+    "id": 803,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 805
+  },
+  {
+    "id": 804,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 806
+  },
+  {
+    "id": 805,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 807
+  },
+  {
+    "id": 806,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 808
+  },
+  {
+    "id": 807,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 809
+  },
+  {
+    "id": 808,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 810
+  },
+  {
+    "id": 809,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 811
+  },
+  {
+    "id": 810,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 812
+  },
+  {
+    "id": 811,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 813
+  },
+  {
+    "id": 812,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 814
+  },
+  {
+    "id": 813,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 815
+  },
+  {
+    "id": 814,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 816
+  },
+  {
+    "id": 815,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 817
+  },
+  {
+    "id": 816,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 818
+  },
+  {
+    "id": 817,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 819
+  },
+  {
+    "id": 818,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 820
+  },
+  {
+    "id": 819,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 821
+  },
+  {
+    "id": 820,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 822
+  },
+  {
+    "id": 821,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 823
+  },
+  {
+    "id": 822,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 824
+  },
+  {
+    "id": 823,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 825
+  },
+  {
+    "id": 824,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 826
+  },
+  {
+    "id": 825,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 827
+  },
+  {
+    "id": 826,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 828
+  },
+  {
+    "id": 827,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 829
+  },
+  {
+    "id": 828,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 830
+  },
+  {
+    "id": 829,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 831
+  },
+  {
+    "id": 830,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 832
+  },
+  {
+    "id": 831,
+    "caps": 1,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 833
+  },
+  {
+    "id": 832,
+    "caps": 0,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 834
+  },
+  {
+    "id": 833,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 835
+  },
+  {
+    "id": 834,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ronin",
+    "match_gamer_id": 836
+  },
+  {
+    "id": 835,
+    "caps": 0,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 837
+  },
+  {
+    "id": 836,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 838
+  },
+  {
+    "id": 837,
+    "caps": 2,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 839
+  },
+  {
+    "id": 838,
+    "caps": 2,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 840
+  },
+  {
+    "id": 839,
+    "caps": 1,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 841
+  },
+  {
+    "id": 840,
+    "caps": 0,
+    "kills": 27,
+    "titan": "legion",
+    "match_gamer_id": 842
+  },
+  {
+    "id": 841,
+    "caps": 0,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 843
+  },
+  {
+    "id": 842,
+    "caps": 1,
+    "kills": 38,
+    "titan": "tone",
+    "match_gamer_id": 844
+  },
+  {
+    "id": 843,
+    "caps": 2,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 845
+  },
+  {
+    "id": 844,
+    "caps": 0,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 846
+  },
+  {
+    "id": 845,
+    "caps": 2,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 847
+  },
+  {
+    "id": 846,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 848
+  },
+  {
+    "id": 847,
+    "caps": 0,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 849
+  },
+  {
+    "id": 848,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 850
+  },
+  {
+    "id": 849,
+    "caps": 0,
+    "kills": 27,
+    "titan": "northstar",
+    "match_gamer_id": 851
+  },
+  {
+    "id": 850,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 852
+  },
+  {
+    "id": 851,
+    "caps": 0,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 853
+  },
+  {
+    "id": 852,
+    "caps": 1,
+    "kills": 38,
+    "titan": "tone",
+    "match_gamer_id": 854
+  },
+  {
+    "id": 853,
+    "caps": 2,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 855
+  },
+  {
+    "id": 854,
+    "caps": 0,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 856
+  },
+  {
+    "id": 855,
+    "caps": 2,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 857
+  },
+  {
+    "id": 856,
+    "caps": 0,
+    "kills": 29,
+    "titan": "northstar",
+    "match_gamer_id": 858
+  },
+  {
+    "id": 857,
+    "caps": 0,
+    "kills": 18,
+    "titan": "ion",
+    "match_gamer_id": 859
+  },
+  {
+    "id": 858,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 860
+  },
+  {
+    "id": 859,
+    "caps": 0,
+    "kills": 27,
+    "titan": "northstar",
+    "match_gamer_id": 861
+  },
+  {
+    "id": 860,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 862
+  },
+  {
+    "id": 861,
+    "caps": 2,
+    "kills": 34,
+    "titan": "monarch",
+    "match_gamer_id": 863
+  },
+  {
+    "id": 862,
+    "caps": 2,
+    "kills": 34,
+    "titan": "ronin",
+    "match_gamer_id": 864
+  },
+  {
+    "id": 863,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 865
+  },
+  {
+    "id": 864,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 866
+  },
+  {
+    "id": 865,
+    "caps": 1,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 867
+  },
+  {
+    "id": 866,
+    "caps": 2,
+    "kills": 29,
+    "titan": "legion",
+    "match_gamer_id": 868
+  },
+  {
+    "id": 867,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ion",
+    "match_gamer_id": 869
+  },
+  {
+    "id": 868,
+    "caps": 2,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 870
+  },
+  {
+    "id": 869,
+    "caps": 0,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 871
+  },
+  {
+    "id": 870,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 872
+  },
+  {
+    "id": 871,
+    "caps": 2,
+    "kills": 34,
+    "titan": "monarch",
+    "match_gamer_id": 873
+  },
+  {
+    "id": 872,
+    "caps": 2,
+    "kills": 34,
+    "titan": "ronin",
+    "match_gamer_id": 874
+  },
+  {
+    "id": 873,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 875
+  },
+  {
+    "id": 874,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 876
+  },
+  {
+    "id": 875,
+    "caps": 1,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 877
+  },
+  {
+    "id": 876,
+    "caps": 2,
+    "kills": 29,
+    "titan": "legion",
+    "match_gamer_id": 878
+  },
+  {
+    "id": 877,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ion",
+    "match_gamer_id": 879
+  },
+  {
+    "id": 878,
+    "caps": 2,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 880
+  },
+  {
+    "id": 879,
+    "caps": 0,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 881
+  },
+  {
+    "id": 880,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 882
+  },
+  {
+    "id": 881,
+    "caps": 2,
+    "kills": 34,
+    "titan": "monarch",
+    "match_gamer_id": 883
+  },
+  {
+    "id": 882,
+    "caps": 2,
+    "kills": 34,
+    "titan": "ronin",
+    "match_gamer_id": 884
+  },
+  {
+    "id": 883,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 885
+  },
+  {
+    "id": 884,
+    "caps": 1,
+    "kills": 37,
+    "titan": "tone",
+    "match_gamer_id": 886
+  },
+  {
+    "id": 885,
+    "caps": 1,
+    "kills": 16,
+    "titan": "ronin",
+    "match_gamer_id": 887
+  },
+  {
+    "id": 886,
+    "caps": 2,
+    "kills": 29,
+    "titan": "legion",
+    "match_gamer_id": 888
+  },
+  {
+    "id": 887,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ion",
+    "match_gamer_id": 889
+  },
+  {
+    "id": 888,
+    "caps": 2,
+    "kills": 34,
+    "titan": "scorch",
+    "match_gamer_id": 890
+  },
+  {
+    "id": 889,
+    "caps": 0,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 891
+  },
+  {
+    "id": 890,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 892
+  },
+  {
+    "id": 891,
+    "caps": 2,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 893
+  },
+  {
+    "id": 892,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 894
+  },
+  {
+    "id": 893,
+    "caps": 2,
+    "kills": 35,
+    "titan": "scorch",
+    "match_gamer_id": 895
+  },
+  {
+    "id": 894,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 896
+  },
+  {
+    "id": 895,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 897
+  },
+  {
+    "id": 896,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 898
+  },
+  {
+    "id": 897,
+    "caps": 2,
+    "kills": 35,
+    "titan": "legion",
+    "match_gamer_id": 899
+  },
+  {
+    "id": 898,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 900
+  },
+  {
+    "id": 899,
+    "caps": 2,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 901
+  },
+  {
+    "id": 900,
+    "caps": 1,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 902
+  },
+  {
+    "id": 901,
+    "caps": 2,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 903
+  },
+  {
+    "id": 902,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 904
+  },
+  {
+    "id": 903,
+    "caps": 2,
+    "kills": 35,
+    "titan": "scorch",
+    "match_gamer_id": 905
+  },
+  {
+    "id": 904,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 906
+  },
+  {
+    "id": 905,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 907
+  },
+  {
+    "id": 906,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 908
+  },
+  {
+    "id": 907,
+    "caps": 2,
+    "kills": 35,
+    "titan": "legion",
+    "match_gamer_id": 909
+  },
+  {
+    "id": 908,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 910
+  },
+  {
+    "id": 909,
+    "caps": 2,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 911
+  },
+  {
+    "id": 910,
+    "caps": 1,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 912
+  },
+  {
+    "id": 911,
+    "caps": 2,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 913
+  },
+  {
+    "id": 912,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 914
+  },
+  {
+    "id": 913,
+    "caps": 2,
+    "kills": 35,
+    "titan": "scorch",
+    "match_gamer_id": 915
+  },
+  {
+    "id": 914,
+    "caps": 0,
+    "kills": 17,
+    "titan": "tone",
+    "match_gamer_id": 916
+  },
+  {
+    "id": 915,
+    "caps": 0,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 917
+  },
+  {
+    "id": 916,
+    "caps": 0,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 918
+  },
+  {
+    "id": 917,
+    "caps": 2,
+    "kills": 35,
+    "titan": "legion",
+    "match_gamer_id": 919
+  },
+  {
+    "id": 918,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 920
+  },
+  {
+    "id": 919,
+    "caps": 2,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 921
+  },
+  {
+    "id": 920,
+    "caps": 1,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 922
+  },
+  {
+    "id": 921,
+    "caps": 2,
+    "kills": 20,
+    "titan": "monarch",
+    "match_gamer_id": 923
+  },
+  {
+    "id": 922,
+    "caps": 2,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 924
+  },
+  {
+    "id": 923,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 925
+  },
+  {
+    "id": 924,
+    "caps": 0,
+    "kills": 20,
+    "titan": "monarch",
+    "match_gamer_id": 926
+  },
+  {
+    "id": 925,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 927
+  },
+  {
+    "id": 926,
+    "caps": 0,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 928
+  },
+  {
+    "id": 927,
+    "caps": 2,
+    "kills": 32,
+    "titan": "legion",
+    "match_gamer_id": 929
+  },
+  {
+    "id": 928,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 930
+  },
+  {
+    "id": 929,
+    "caps": 2,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 931
+  },
+  {
+    "id": 930,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 932
+  },
+  {
+    "id": 931,
+    "caps": 2,
+    "kills": 20,
+    "titan": "monarch",
+    "match_gamer_id": 933
+  },
+  {
+    "id": 932,
+    "caps": 2,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 934
+  },
+  {
+    "id": 933,
+    "caps": 0,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 935
+  },
+  {
+    "id": 934,
+    "caps": 0,
+    "kills": 20,
+    "titan": "monarch",
+    "match_gamer_id": 936
+  },
+  {
+    "id": 935,
+    "caps": 1,
+    "kills": 32,
+    "titan": "ronin",
+    "match_gamer_id": 937
+  },
+  {
+    "id": 936,
+    "caps": 0,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 938
+  },
+  {
+    "id": 937,
+    "caps": 2,
+    "kills": 32,
+    "titan": "legion",
+    "match_gamer_id": 939
+  },
+  {
+    "id": 938,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 940
+  },
+  {
+    "id": 939,
+    "caps": 2,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 941
+  },
+  {
+    "id": 940,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 942
+  },
+  {
+    "id": 941,
+    "caps": 2,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 943
+  },
+  {
+    "id": 942,
+    "caps": 2,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 944
+  },
+  {
+    "id": 943,
+    "caps": 2,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 945
+  },
+  {
+    "id": 944,
+    "caps": 2,
+    "kills": 19,
+    "titan": "northstar",
+    "match_gamer_id": 946
+  },
+  {
+    "id": 945,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 947
+  },
+  {
+    "id": 946,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 948
+  },
+  {
+    "id": 947,
+    "caps": 0,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 949
+  },
+  {
+    "id": 948,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 950
+  },
+  {
+    "id": 949,
+    "caps": 1,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 951
+  },
+  {
+    "id": 950,
+    "caps": 2,
+    "kills": 37,
+    "titan": "ronin",
+    "match_gamer_id": 952
+  },
+  {
+    "id": 951,
+    "caps": 2,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 953
+  },
+  {
+    "id": 952,
+    "caps": 2,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 954
+  },
+  {
+    "id": 953,
+    "caps": 2,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 955
+  },
+  {
+    "id": 954,
+    "caps": 2,
+    "kills": 19,
+    "titan": "northstar",
+    "match_gamer_id": 956
+  },
+  {
+    "id": 955,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 957
+  },
+  {
+    "id": 956,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 958
+  },
+  {
+    "id": 957,
+    "caps": 0,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 959
+  },
+  {
+    "id": 958,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 960
+  },
+  {
+    "id": 959,
+    "caps": 1,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 961
+  },
+  {
+    "id": 960,
+    "caps": 2,
+    "kills": 37,
+    "titan": "ronin",
+    "match_gamer_id": 962
+  },
+  {
+    "id": 961,
+    "caps": 2,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 963
+  },
+  {
+    "id": 962,
+    "caps": 2,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 964
+  },
+  {
+    "id": 963,
+    "caps": 2,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 965
+  },
+  {
+    "id": 964,
+    "caps": 2,
+    "kills": 19,
+    "titan": "northstar",
+    "match_gamer_id": 966
+  },
+  {
+    "id": 965,
+    "caps": 2,
+    "kills": 19,
+    "titan": "monarch",
+    "match_gamer_id": 967
+  },
+  {
+    "id": 966,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 968
+  },
+  {
+    "id": 967,
+    "caps": 0,
+    "kills": 33,
+    "titan": "ion",
+    "match_gamer_id": 969
+  },
+  {
+    "id": 968,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 970
+  },
+  {
+    "id": 969,
+    "caps": 1,
+    "kills": 27,
+    "titan": "tone",
+    "match_gamer_id": 971
+  },
+  {
+    "id": 970,
+    "caps": 2,
+    "kills": 37,
+    "titan": "ronin",
+    "match_gamer_id": 972
+  },
+  {
+    "id": 971,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 973
+  },
+  {
+    "id": 972,
+    "caps": 0,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 974
+  },
+  {
+    "id": 973,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 975
+  },
+  {
+    "id": 974,
+    "caps": 0,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 976
+  },
+  {
+    "id": 975,
+    "caps": 2,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 977
+  },
+  {
+    "id": 976,
+    "caps": 1,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 978
+  },
+  {
+    "id": 977,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 979
+  },
+  {
+    "id": 978,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 980
+  },
+  {
+    "id": 979,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 981
+  },
+  {
+    "id": 980,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 982
+  },
+  {
+    "id": 981,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 983
+  },
+  {
+    "id": 982,
+    "caps": 0,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 984
+  },
+  {
+    "id": 983,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 985
+  },
+  {
+    "id": 984,
+    "caps": 0,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 986
+  },
+  {
+    "id": 985,
+    "caps": 2,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 987
+  },
+  {
+    "id": 986,
+    "caps": 1,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 988
+  },
+  {
+    "id": 987,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 989
+  },
+  {
+    "id": 988,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 990
+  },
+  {
+    "id": 989,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 991
+  },
+  {
+    "id": 990,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 992
+  },
+  {
+    "id": 991,
+    "caps": 2,
+    "kills": 18,
+    "titan": "scorch",
+    "match_gamer_id": 993
+  },
+  {
+    "id": 992,
+    "caps": 0,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 994
+  },
+  {
+    "id": 993,
+    "caps": 0,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 995
+  },
+  {
+    "id": 994,
+    "caps": 0,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 996
+  },
+  {
+    "id": 995,
+    "caps": 2,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 997
+  },
+  {
+    "id": 996,
+    "caps": 1,
+    "kills": 30,
+    "titan": "tone",
+    "match_gamer_id": 998
+  },
+  {
+    "id": 997,
+    "caps": 1,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 999
+  },
+  {
+    "id": 998,
+    "caps": 2,
+    "kills": 28,
+    "titan": "monarch",
+    "match_gamer_id": 1000
+  },
+  {
+    "id": 999,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1001
+  },
+  {
+    "id": 1000,
+    "caps": 2,
+    "kills": 38,
+    "titan": "ion",
+    "match_gamer_id": 1002
+  },
+  {
+    "id": 1001,
+    "caps": 1,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 1003
+  },
+  {
+    "id": 1002,
+    "caps": 1,
+    "kills": 26,
+    "titan": "legion",
+    "match_gamer_id": 1004
+  },
+  {
+    "id": 1003,
+    "caps": 1,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 1005
+  },
+  {
+    "id": 1004,
+    "caps": 1,
+    "kills": 39,
+    "titan": "tone",
+    "match_gamer_id": 1006
+  },
+  {
+    "id": 1005,
+    "caps": 1,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 1007
+  },
+  {
+    "id": 1006,
+    "caps": 1,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1008
+  },
+  {
+    "id": 1007,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 1009
+  },
+  {
+    "id": 1008,
+    "caps": 1,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 1010
+  },
+  {
+    "id": 1009,
+    "caps": 1,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 1011
+  },
+  {
+    "id": 1010,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1012
+  },
+  {
+    "id": 1011,
+    "caps": 1,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 1013
+  },
+  {
+    "id": 1012,
+    "caps": 1,
+    "kills": 26,
+    "titan": "legion",
+    "match_gamer_id": 1014
+  },
+  {
+    "id": 1013,
+    "caps": 1,
+    "kills": 15,
+    "titan": "ion",
+    "match_gamer_id": 1015
+  },
+  {
+    "id": 1014,
+    "caps": 1,
+    "kills": 39,
+    "titan": "tone",
+    "match_gamer_id": 1016
+  },
+  {
+    "id": 1015,
+    "caps": 1,
+    "kills": 39,
+    "titan": "monarch",
+    "match_gamer_id": 1017
+  },
+  {
+    "id": 1016,
+    "caps": 1,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1018
+  },
+  {
+    "id": 1017,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 1019
+  },
+  {
+    "id": 1018,
+    "caps": 1,
+    "kills": 32,
+    "titan": "northstar",
+    "match_gamer_id": 1020
+  },
+  {
+    "id": 1019,
+    "caps": 1,
+    "kills": 40,
+    "titan": "legion",
+    "match_gamer_id": 1021
+  },
+  {
+    "id": 1020,
+    "caps": 1,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1022
+  },
+  {
+    "id": 1021,
+    "caps": 0,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 1023
+  },
+  {
+    "id": 1022,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ronin",
+    "match_gamer_id": 1024
+  },
+  {
+    "id": 1023,
+    "caps": 1,
+    "kills": 31,
+    "titan": "northstar",
+    "match_gamer_id": 1025
+  },
+  {
+    "id": 1024,
+    "caps": 0,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1026
+  },
+  {
+    "id": 1025,
+    "caps": 0,
+    "kills": 27,
+    "titan": "monarch",
+    "match_gamer_id": 1027
+  },
+  {
+    "id": 1026,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 1028
+  },
+  {
+    "id": 1027,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1029
+  },
+  {
+    "id": 1028,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 1030
+  },
+  {
+    "id": 1029,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 1031
+  },
+  {
+    "id": 1030,
+    "caps": 1,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1032
+  },
+  {
+    "id": 1031,
+    "caps": 0,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 1033
+  },
+  {
+    "id": 1032,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ronin",
+    "match_gamer_id": 1034
+  },
+  {
+    "id": 1033,
+    "caps": 1,
+    "kills": 31,
+    "titan": "northstar",
+    "match_gamer_id": 1035
+  },
+  {
+    "id": 1034,
+    "caps": 0,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1036
+  },
+  {
+    "id": 1035,
+    "caps": 0,
+    "kills": 27,
+    "titan": "monarch",
+    "match_gamer_id": 1037
+  },
+  {
+    "id": 1036,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 1038
+  },
+  {
+    "id": 1037,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1039
+  },
+  {
+    "id": 1038,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 1040
+  },
+  {
+    "id": 1039,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 1041
+  },
+  {
+    "id": 1040,
+    "caps": 1,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1042
+  },
+  {
+    "id": 1041,
+    "caps": 0,
+    "kills": 16,
+    "titan": "northstar",
+    "match_gamer_id": 1043
+  },
+  {
+    "id": 1042,
+    "caps": 1,
+    "kills": 38,
+    "titan": "ronin",
+    "match_gamer_id": 1044
+  },
+  {
+    "id": 1043,
+    "caps": 1,
+    "kills": 31,
+    "titan": "northstar",
+    "match_gamer_id": 1045
+  },
+  {
+    "id": 1044,
+    "caps": 0,
+    "kills": 23,
+    "titan": "northstar",
+    "match_gamer_id": 1046
+  },
+  {
+    "id": 1045,
+    "caps": 0,
+    "kills": 27,
+    "titan": "monarch",
+    "match_gamer_id": 1047
+  },
+  {
+    "id": 1046,
+    "caps": 1,
+    "kills": 28,
+    "titan": "northstar",
+    "match_gamer_id": 1048
+  },
+  {
+    "id": 1047,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1049
+  },
+  {
+    "id": 1048,
+    "caps": 2,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 1050
+  },
+  {
+    "id": 1049,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ronin",
+    "match_gamer_id": 1051
+  },
+  {
+    "id": 1050,
+    "caps": 1,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1052
+  },
+  {
+    "id": 1051,
+    "caps": 2,
+    "kills": 15,
+    "titan": "legion",
+    "match_gamer_id": 1053
+  },
+  {
+    "id": 1052,
+    "caps": 0,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 1054
+  },
+  {
+    "id": 1053,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1055
+  },
+  {
+    "id": 1054,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 1056
+  },
+  {
+    "id": 1055,
+    "caps": 0,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 1057
+  },
+  {
+    "id": 1056,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1058
+  },
+  {
+    "id": 1057,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1059
+  },
+  {
+    "id": 1058,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 1060
+  },
+  {
+    "id": 1059,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1061
+  },
+  {
+    "id": 1060,
+    "caps": 2,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 1062
+  },
+  {
+    "id": 1061,
+    "caps": 2,
+    "kills": 15,
+    "titan": "legion",
+    "match_gamer_id": 1063
+  },
+  {
+    "id": 1062,
+    "caps": 0,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 1064
+  },
+  {
+    "id": 1063,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1065
+  },
+  {
+    "id": 1064,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 1066
+  },
+  {
+    "id": 1065,
+    "caps": 0,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 1067
+  },
+  {
+    "id": 1066,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1068
+  },
+  {
+    "id": 1067,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1069
+  },
+  {
+    "id": 1068,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 1070
+  },
+  {
+    "id": 1069,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1071
+  },
+  {
+    "id": 1070,
+    "caps": 2,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 1072
+  },
+  {
+    "id": 1071,
+    "caps": 2,
+    "kills": 15,
+    "titan": "legion",
+    "match_gamer_id": 1073
+  },
+  {
+    "id": 1072,
+    "caps": 0,
+    "kills": 16,
+    "titan": "legion",
+    "match_gamer_id": 1074
+  },
+  {
+    "id": 1073,
+    "caps": 2,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1075
+  },
+  {
+    "id": 1074,
+    "caps": 1,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 1076
+  },
+  {
+    "id": 1075,
+    "caps": 0,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 1077
+  },
+  {
+    "id": 1076,
+    "caps": 2,
+    "kills": 39,
+    "titan": "scorch",
+    "match_gamer_id": 1078
+  },
+  {
+    "id": 1077,
+    "caps": 1,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1079
+  },
+  {
+    "id": 1078,
+    "caps": 0,
+    "kills": 37,
+    "titan": "northstar",
+    "match_gamer_id": 1080
+  },
+  {
+    "id": 1079,
+    "caps": 1,
+    "kills": 19,
+    "titan": "tone",
+    "match_gamer_id": 1081
+  },
+  {
+    "id": 1080,
+    "caps": 2,
+    "kills": 34,
+    "titan": "northstar",
+    "match_gamer_id": 1082
+  },
+  {
+    "id": 1081,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1083
+  },
+  {
+    "id": 1082,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1084
+  },
+  {
+    "id": 1083,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 1085
+  },
+  {
+    "id": 1084,
+    "caps": 2,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1086
+  },
+  {
+    "id": 1085,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1087
+  },
+  {
+    "id": 1086,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 1088
+  },
+  {
+    "id": 1087,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 1089
+  },
+  {
+    "id": 1088,
+    "caps": 0,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1090
+  },
+  {
+    "id": 1089,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1091
+  },
+  {
+    "id": 1090,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 1092
+  },
+  {
+    "id": 1091,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1093
+  },
+  {
+    "id": 1092,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1094
+  },
+  {
+    "id": 1093,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 1095
+  },
+  {
+    "id": 1094,
+    "caps": 2,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1096
+  },
+  {
+    "id": 1095,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1097
+  },
+  {
+    "id": 1096,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 1098
+  },
+  {
+    "id": 1097,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 1099
+  },
+  {
+    "id": 1098,
+    "caps": 0,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1100
+  },
+  {
+    "id": 1099,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1101
+  },
+  {
+    "id": 1100,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 1102
+  },
+  {
+    "id": 1101,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1103
+  },
+  {
+    "id": 1102,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1104
+  },
+  {
+    "id": 1103,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 1105
+  },
+  {
+    "id": 1104,
+    "caps": 2,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1106
+  },
+  {
+    "id": 1105,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1107
+  },
+  {
+    "id": 1106,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 1108
+  },
+  {
+    "id": 1107,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 1109
+  },
+  {
+    "id": 1108,
+    "caps": 0,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1110
+  },
+  {
+    "id": 1109,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1111
+  },
+  {
+    "id": 1110,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 1112
+  },
+  {
+    "id": 1111,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1113
+  },
+  {
+    "id": 1112,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1114
+  },
+  {
+    "id": 1113,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 1115
+  },
+  {
+    "id": 1114,
+    "caps": 2,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1116
+  },
+  {
+    "id": 1115,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1117
+  },
+  {
+    "id": 1116,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 1118
+  },
+  {
+    "id": 1117,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 1119
+  },
+  {
+    "id": 1118,
+    "caps": 0,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1120
+  },
+  {
+    "id": 1119,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1121
+  },
+  {
+    "id": 1120,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 1122
+  },
+  {
+    "id": 1121,
+    "caps": 2,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1123
+  },
+  {
+    "id": 1122,
+    "caps": 2,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1124
+  },
+  {
+    "id": 1123,
+    "caps": 0,
+    "kills": 39,
+    "titan": "ion",
+    "match_gamer_id": 1125
+  },
+  {
+    "id": 1124,
+    "caps": 2,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1126
+  },
+  {
+    "id": 1125,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1127
+  },
+  {
+    "id": 1126,
+    "caps": 2,
+    "kills": 26,
+    "titan": "northstar",
+    "match_gamer_id": 1128
+  },
+  {
+    "id": 1127,
+    "caps": 0,
+    "kills": 15,
+    "titan": "ronin",
+    "match_gamer_id": 1129
+  },
+  {
+    "id": 1128,
+    "caps": 0,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1130
+  },
+  {
+    "id": 1129,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1131
+  },
+  {
+    "id": 1130,
+    "caps": 0,
+    "kills": 22,
+    "titan": "ronin",
+    "match_gamer_id": 1132
+  },
+  {
+    "id": 1131,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1133
+  },
+  {
+    "id": 1132,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1134
+  },
+  {
+    "id": 1133,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1135
+  },
+  {
+    "id": 1134,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1136
+  },
+  {
+    "id": 1135,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1137
+  },
+  {
+    "id": 1136,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1138
+  },
+  {
+    "id": 1137,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1139
+  },
+  {
+    "id": 1138,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1140
+  },
+  {
+    "id": 1139,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1141
+  },
+  {
+    "id": 1140,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1142
+  },
+  {
+    "id": 1141,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1143
+  },
+  {
+    "id": 1142,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1144
+  },
+  {
+    "id": 1143,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1145
+  },
+  {
+    "id": 1144,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1146
+  },
+  {
+    "id": 1145,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1147
+  },
+  {
+    "id": 1146,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1148
+  },
+  {
+    "id": 1147,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1149
+  },
+  {
+    "id": 1148,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1150
+  },
+  {
+    "id": 1149,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1151
+  },
+  {
+    "id": 1150,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1152
+  },
+  {
+    "id": 1151,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1153
+  },
+  {
+    "id": 1152,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1154
+  },
+  {
+    "id": 1153,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1155
+  },
+  {
+    "id": 1154,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1156
+  },
+  {
+    "id": 1155,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1157
+  },
+  {
+    "id": 1156,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1158
+  },
+  {
+    "id": 1157,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1159
+  },
+  {
+    "id": 1158,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1160
+  },
+  {
+    "id": 1159,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1161
+  },
+  {
+    "id": 1160,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1162
+  },
+  {
+    "id": 1161,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1163
+  },
+  {
+    "id": 1162,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1164
+  },
+  {
+    "id": 1163,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1165
+  },
+  {
+    "id": 1164,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1166
+  },
+  {
+    "id": 1165,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1167
+  },
+  {
+    "id": 1166,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1168
+  },
+  {
+    "id": 1167,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1169
+  },
+  {
+    "id": 1168,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1170
+  },
+  {
+    "id": 1169,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1171
+  },
+  {
+    "id": 1170,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1172
+  },
+  {
+    "id": 1171,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1173
+  },
+  {
+    "id": 1172,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1174
+  },
+  {
+    "id": 1173,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1175
+  },
+  {
+    "id": 1174,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1176
+  },
+  {
+    "id": 1175,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1177
+  },
+  {
+    "id": 1176,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1178
+  },
+  {
+    "id": 1177,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1179
+  },
+  {
+    "id": 1178,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1180
+  },
+  {
+    "id": 1179,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1181
+  },
+  {
+    "id": 1180,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1182
+  },
+  {
+    "id": 1181,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1183
+  },
+  {
+    "id": 1182,
+    "caps": 2,
+    "kills": 15,
+    "titan": "tone",
+    "match_gamer_id": 1184
+  },
+  {
+    "id": 1183,
+    "caps": 0,
+    "kills": 23,
+    "titan": "scorch",
+    "match_gamer_id": 1185
+  },
+  {
+    "id": 1184,
+    "caps": 0,
+    "kills": 25,
+    "titan": "legion",
+    "match_gamer_id": 1186
+  },
+  {
+    "id": 1185,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1187
+  },
+  {
+    "id": 1186,
+    "caps": 2,
+    "kills": 31,
+    "titan": "tone",
+    "match_gamer_id": 1188
+  },
+  {
+    "id": 1187,
+    "caps": 2,
+    "kills": 26,
+    "titan": "ronin",
+    "match_gamer_id": 1189
+  },
+  {
+    "id": 1188,
+    "caps": 0,
+    "kills": 40,
+    "titan": "scorch",
+    "match_gamer_id": 1190
+  },
+  {
+    "id": 1189,
+    "caps": 2,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1191
+  },
+  {
+    "id": 1190,
+    "caps": 1,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1192
+  },
+  {
+    "id": 1191,
+    "caps": 1,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 1193
+  },
+  {
+    "id": 1192,
+    "caps": 2,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1194
+  },
+  {
+    "id": 1193,
+    "caps": 0,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 1195
+  },
+  {
+    "id": 1194,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1196
+  },
+  {
+    "id": 1195,
+    "caps": 2,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1197
+  },
+  {
+    "id": 1196,
+    "caps": 1,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1198
+  },
+  {
+    "id": 1197,
+    "caps": 0,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1199
+  },
+  {
+    "id": 1198,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 1200
+  },
+  {
+    "id": 1199,
+    "caps": 2,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 1201
+  },
+  {
+    "id": 1200,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 1202
+  },
+  {
+    "id": 1201,
+    "caps": 1,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 1203
+  },
+  {
+    "id": 1202,
+    "caps": 2,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1204
+  },
+  {
+    "id": 1203,
+    "caps": 0,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 1205
+  },
+  {
+    "id": 1204,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1206
+  },
+  {
+    "id": 1205,
+    "caps": 2,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1207
+  },
+  {
+    "id": 1206,
+    "caps": 1,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1208
+  },
+  {
+    "id": 1207,
+    "caps": 0,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1209
+  },
+  {
+    "id": 1208,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 1210
+  },
+  {
+    "id": 1209,
+    "caps": 2,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 1211
+  },
+  {
+    "id": 1210,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 1212
+  },
+  {
+    "id": 1211,
+    "caps": 1,
+    "kills": 18,
+    "titan": "tone",
+    "match_gamer_id": 1213
+  },
+  {
+    "id": 1212,
+    "caps": 2,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1214
+  },
+  {
+    "id": 1213,
+    "caps": 0,
+    "kills": 34,
+    "titan": "tone",
+    "match_gamer_id": 1215
+  },
+  {
+    "id": 1214,
+    "caps": 1,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1216
+  },
+  {
+    "id": 1215,
+    "caps": 2,
+    "kills": 20,
+    "titan": "ronin",
+    "match_gamer_id": 1217
+  },
+  {
+    "id": 1216,
+    "caps": 1,
+    "kills": 22,
+    "titan": "scorch",
+    "match_gamer_id": 1218
+  },
+  {
+    "id": 1217,
+    "caps": 0,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1219
+  },
+  {
+    "id": 1218,
+    "caps": 1,
+    "kills": 17,
+    "titan": "ronin",
+    "match_gamer_id": 1220
+  },
+  {
+    "id": 1219,
+    "caps": 2,
+    "kills": 26,
+    "titan": "scorch",
+    "match_gamer_id": 1221
+  },
+  {
+    "id": 1220,
+    "caps": 1,
+    "kills": 33,
+    "titan": "scorch",
+    "match_gamer_id": 1222
+  },
+  {
+    "id": 1221,
+    "caps": 2,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 1223
+  },
+  {
+    "id": 1222,
+    "caps": 0,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1224
+  },
+  {
+    "id": 1223,
+    "caps": 2,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 1225
+  },
+  {
+    "id": 1224,
+    "caps": 0,
+    "kills": 27,
+    "titan": "scorch",
+    "match_gamer_id": 1226
+  },
+  {
+    "id": 1225,
+    "caps": 0,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 1227
+  },
+  {
+    "id": 1226,
+    "caps": 2,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1228
+  },
+  {
+    "id": 1227,
+    "caps": 0,
+    "kills": 32,
+    "titan": "scorch",
+    "match_gamer_id": 1229
+  },
+  {
+    "id": 1228,
+    "caps": 0,
+    "kills": 40,
+    "titan": "ronin",
+    "match_gamer_id": 1230
+  },
+  {
+    "id": 1229,
+    "caps": 1,
+    "kills": 26,
+    "titan": "ion",
+    "match_gamer_id": 1232
+  },
+  {
+    "id": 1230,
+    "caps": 2,
+    "kills": 39,
+    "titan": "tone",
+    "match_gamer_id": 1231
+  },
+  {
+    "id": 1231,
+    "caps": 1,
+    "kills": 37,
+    "titan": "legion",
+    "match_gamer_id": 1233
+  },
+  {
+    "id": 1232,
+    "caps": 0,
+    "kills": 23,
+    "titan": "legion",
+    "match_gamer_id": 1234
+  },
+  {
+    "id": 1233,
+    "caps": 1,
+    "kills": 16,
+    "titan": "monarch",
+    "match_gamer_id": 1235
+  },
+  {
+    "id": 1234,
+    "caps": 0,
+    "kills": 85,
+    "titan": "legion",
+    "match_gamer_id": 1236
+  },
+  {
+    "id": 1235,
+    "caps": 2,
+    "kills": 23,
+    "titan": "ronin",
+    "match_gamer_id": 1238
+  },
+  {
+    "id": 1236,
+    "caps": 0,
+    "kills": 20,
+    "titan": "monarch",
+    "match_gamer_id": 1237
+  },
+  {
+    "id": 1237,
+    "caps": 2,
+    "kills": 27,
+    "titan": "ronin",
+    "match_gamer_id": 1240
+  },
+  {
+    "id": 1238,
+    "caps": 0,
+    "kills": 18,
+    "titan": "monarch",
+    "match_gamer_id": 1239
+  },
+  {
+    "id": 1239,
+    "caps": 2,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1242
+  },
+  {
+    "id": 1240,
+    "caps": 2,
+    "kills": 24,
+    "titan": "scorch",
+    "match_gamer_id": 1241
+  },
+  {
+    "id": 1241,
+    "caps": 0,
+    "kills": 39,
+    "titan": "legion",
+    "match_gamer_id": 1244
+  },
+  {
+    "id": 1242,
+    "caps": 1,
+    "kills": 36,
+    "titan": "ronin",
+    "match_gamer_id": 1243
+  },
+  {
+    "id": 1243,
+    "caps": 2,
+    "kills": 25,
+    "titan": "monarch",
+    "match_gamer_id": 1246
+  },
+  {
+    "id": 1244,
+    "caps": 2,
+    "kills": 36,
+    "titan": "legion",
+    "match_gamer_id": 1245
+  },
+  {
+    "id": 1245,
+    "caps": 1,
+    "kills": 22,
+    "titan": "legion",
+    "match_gamer_id": 1248
+  },
+  {
+    "id": 1246,
+    "caps": 1,
+    "kills": 28,
+    "titan": "scorch",
+    "match_gamer_id": 1247
+  },
+  {
+    "id": 1247,
+    "caps": 2,
+    "kills": 36,
+    "titan": "scorch",
+    "match_gamer_id": 1250
+  },
+  {
+    "id": 1248,
+    "caps": 2,
+    "kills": 88,
+    "titan": "legion",
+    "match_gamer_id": 1249
+  },
+  {
+    "id": 1249,
+    "caps": 2,
+    "kills": 24,
+    "titan": "tone",
+    "match_gamer_id": 1252
+  },
+  {
+    "id": 1250,
+    "caps": 2,
+    "kills": 36,
+    "titan": "monarch",
+    "match_gamer_id": 1251
+  },
+  {
+    "id": 1251,
+    "caps": 2,
+    "kills": 24,
+    "titan": "legion",
+    "match_gamer_id": 1253
+  },
+  {
+    "id": 1252,
+    "caps": 0,
+    "kills": 39,
+    "titan": "northstar",
+    "match_gamer_id": 1254
+  },
+  {
+    "id": 1253,
+    "caps": 1,
+    "kills": 30,
+    "titan": "legion",
+    "match_gamer_id": 1255
+  },
+  {
+    "id": 1254,
+    "caps": 1,
+    "kills": 28,
+    "titan": "legion",
+    "match_gamer_id": 1256
+  },
+  {
+    "id": 1255,
+    "caps": 1,
+    "kills": 30,
+    "titan": "monarch",
+    "match_gamer_id": 1257
+  },
+  {
+    "id": 1256,
+    "caps": 1,
+    "kills": 25,
+    "titan": "northstar",
+    "match_gamer_id": 1258
+  },
+  {
+    "id": 1257,
+    "caps": 2,
+    "kills": 20,
+    "titan": "ion",
+    "match_gamer_id": 1260
+  },
+  {
+    "id": 1258,
+    "caps": 1,
+    "kills": 35,
+    "titan": "northstar",
+    "match_gamer_id": 1259
+  },
+  {
+    "id": 1259,
+    "caps": 2,
+    "kills": 30,
+    "titan": "legion",
+    "match_gamer_id": 1261
+  },
+  {
+    "id": 1260,
+    "caps": 1,
+    "kills": 37,
+    "titan": "scorch",
+    "match_gamer_id": 1262
+  },
+  {
+    "id": 1261,
+    "caps": 0,
+    "kills": 32,
+    "titan": "tone",
+    "match_gamer_id": 1264
+  },
+  {
+    "id": 1262,
+    "caps": 0,
+    "kills": 29,
+    "titan": "ion",
+    "match_gamer_id": 1263
+  },
+  {
+    "id": 1263,
+    "caps": 1,
+    "kills": 29,
+    "titan": "tone",
+    "match_gamer_id": 1265
+  },
+  {
+    "id": 1264,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ronin",
+    "match_gamer_id": 1266
+  },
+  {
+    "id": 1265,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 1267
+  },
+  {
+    "id": 1266,
+    "caps": 0,
+    "kills": 19,
+    "titan": "scorch",
+    "match_gamer_id": 1268
+  },
+  {
+    "id": 1267,
+    "caps": 2,
+    "kills": 35,
+    "titan": "tone",
+    "match_gamer_id": 1270
+  },
+  {
+    "id": 1268,
+    "caps": 0,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 1269
+  },
+  {
+    "id": 1269,
+    "caps": 0,
+    "kills": 28,
+    "titan": "ion",
+    "match_gamer_id": 1272
+  },
+  {
+    "id": 1270,
+    "caps": 1,
+    "kills": 24,
+    "titan": "legion",
+    "match_gamer_id": 1271
+  },
+  {
+    "id": 1271,
+    "caps": 1,
+    "kills": 21,
+    "titan": "scorch",
+    "match_gamer_id": 1273
+  },
+  {
+    "id": 1272,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1274
+  },
+  {
+    "id": 1273,
+    "caps": 0,
+    "kills": 22,
+    "titan": "monarch",
+    "match_gamer_id": 1275
+  },
+  {
+    "id": 1274,
+    "caps": 0,
+    "kills": 40,
+    "titan": "tone",
+    "match_gamer_id": 1276
+  },
+  {
+    "id": 1275,
+    "caps": 1,
+    "kills": 21,
+    "titan": "ion",
+    "match_gamer_id": 1277
+  },
+  {
+    "id": 1276,
+    "caps": 1,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 1278
+  },
+  {
+    "id": 1277,
+    "caps": 2,
+    "kills": 32,
+    "titan": "legion",
+    "match_gamer_id": 1279
+  },
+  {
+    "id": 1278,
+    "caps": 2,
+    "kills": 24,
+    "titan": "legion",
+    "match_gamer_id": 1280
+  },
+  {
+    "id": 1279,
+    "caps": 2,
+    "kills": 20,
+    "titan": "scorch",
+    "match_gamer_id": 1281
+  },
+  {
+    "id": 1280,
+    "caps": 1,
+    "kills": 33,
+    "titan": "ronin",
+    "match_gamer_id": 1282
+  },
+  {
+    "id": 1281,
+    "caps": 2,
+    "kills": 21,
+    "titan": "legion",
+    "match_gamer_id": 1284
+  },
+  {
+    "id": 1282,
+    "caps": 2,
+    "kills": 21,
+    "titan": "tone",
+    "match_gamer_id": 1283
+  },
+  {
+    "id": 1283,
+    "caps": 1,
+    "kills": 33,
+    "titan": "legion",
+    "match_gamer_id": 1286
+  },
+  {
+    "id": 1284,
+    "caps": 2,
+    "kills": 17,
+    "titan": "legion",
+    "match_gamer_id": 1285
+  },
+  {
+    "id": 1285,
+    "caps": 0,
+    "kills": 35,
+    "titan": "legion",
+    "match_gamer_id": 1288
+  },
+  {
+    "id": 1286,
+    "caps": 0,
+    "kills": 16,
+    "titan": "ion",
+    "match_gamer_id": 1287
+  },
+  {
+    "id": 1287,
+    "caps": 0,
+    "kills": 22,
+    "titan": "northstar",
+    "match_gamer_id": 1290
+  },
+  {
+    "id": 1288,
+    "caps": 2,
+    "kills": 26,
+    "titan": "tone",
+    "match_gamer_id": 1289
+  },
+  {
+    "id": 1289,
+    "caps": 1,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 1291
+  },
+  {
+    "id": 1290,
+    "caps": 2,
+    "kills": 39,
+    "titan": "northstar",
+    "match_gamer_id": 1292
+  },
+  {
+    "id": 1291,
+    "caps": 1,
+    "kills": 30,
+    "titan": "scorch",
+    "match_gamer_id": 1294
+  },
+  {
+    "id": 1292,
+    "caps": 0,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 1293
+  },
+  {
+    "id": 1293,
+    "caps": 1,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1295
+  },
+  {
+    "id": 1294,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1296
+  },
+  {
+    "id": 1295,
+    "caps": 2,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 1297
+  },
+  {
+    "id": 1296,
+    "caps": 2,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1298
+  },
+  {
+    "id": 1297,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1300
+  },
+  {
+    "id": 1298,
+    "caps": 1,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 1299
+  },
+  {
+    "id": 1299,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 1301
+  },
+  {
+    "id": 1300,
+    "caps": 1,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 1302
+  },
+  {
+    "id": 1301,
+    "caps": 0,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 1304
+  },
+  {
+    "id": 1302,
+    "caps": 1,
+    "kills": 30,
+    "titan": "scorch",
+    "match_gamer_id": 1303
+  },
+  {
+    "id": 1303,
+    "caps": 1,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1305
+  },
+  {
+    "id": 1304,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1306
+  },
+  {
+    "id": 1305,
+    "caps": 2,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 1307
+  },
+  {
+    "id": 1306,
+    "caps": 2,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1308
+  },
+  {
+    "id": 1307,
+    "caps": 1,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 1309
+  },
+  {
+    "id": 1308,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1310
+  },
+  {
+    "id": 1309,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 1311
+  },
+  {
+    "id": 1310,
+    "caps": 1,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 1312
+  },
+  {
+    "id": 1311,
+    "caps": 0,
+    "kills": 25,
+    "titan": "ion",
+    "match_gamer_id": 1314
+  },
+  {
+    "id": 1312,
+    "caps": 1,
+    "kills": 30,
+    "titan": "scorch",
+    "match_gamer_id": 1313
+  },
+  {
+    "id": 1313,
+    "caps": 1,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1315
+  },
+  {
+    "id": 1314,
+    "caps": 1,
+    "kills": 27,
+    "titan": "ion",
+    "match_gamer_id": 1316
+  },
+  {
+    "id": 1315,
+    "caps": 2,
+    "kills": 37,
+    "titan": "monarch",
+    "match_gamer_id": 1317
+  },
+  {
+    "id": 1316,
+    "caps": 2,
+    "kills": 36,
+    "titan": "ion",
+    "match_gamer_id": 1318
+  },
+  {
+    "id": 1317,
+    "caps": 1,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 1319
+  },
+  {
+    "id": 1318,
+    "caps": 2,
+    "kills": 21,
+    "titan": "northstar",
+    "match_gamer_id": 1320
+  },
+  {
+    "id": 1319,
+    "caps": 1,
+    "kills": 20,
+    "titan": "northstar",
+    "match_gamer_id": 1321
+  },
+  {
+    "id": 1320,
+    "caps": 1,
+    "kills": 36,
+    "titan": "tone",
+    "match_gamer_id": 1322
+  },
+  {
+    "id": 1321,
+    "caps": 1,
+    "kills": 26,
+    "titan": "monarch",
+    "match_gamer_id": 1323
+  },
+  {
+    "id": 1322,
+    "caps": 1,
+    "kills": 30,
+    "titan": "northstar",
+    "match_gamer_id": 1324
+  },
+  {
+    "id": 1323,
+    "caps": 2,
+    "kills": 15,
+    "titan": "northstar",
+    "match_gamer_id": 1325
+  },
+  {
+    "id": 1324,
+    "caps": 0,
+    "kills": 31,
+    "titan": "legion",
+    "match_gamer_id": 1326
+  },
+  {
+    "id": 1325,
+    "caps": 2,
+    "kills": 35,
+    "titan": "ronin",
+    "match_gamer_id": 1327
+  },
+  {
+    "id": 1326,
+    "caps": 1,
+    "kills": 17,
+    "titan": "scorch",
+    "match_gamer_id": 1328
+  },
+  {
+    "id": 1327,
+    "caps": 2,
+    "kills": 29,
+    "titan": "monarch",
+    "match_gamer_id": 1329
+  },
+  {
+    "id": 1328,
+    "caps": 2,
+    "kills": 34,
+    "titan": "legion",
+    "match_gamer_id": 1330
+  },
+  {
+    "id": 1329,
+    "caps": 1,
+    "kills": 20,
+    "titan": "legion",
+    "match_gamer_id": 1331
+  },
+  {
+    "id": 1330,
+    "caps": 2,
+    "kills": 29,
+    "titan": "scorch",
+    "match_gamer_id": 1332
+  }
+]

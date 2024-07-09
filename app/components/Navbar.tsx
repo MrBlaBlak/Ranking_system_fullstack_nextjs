@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import LoadDataButton from './LoadDataButton'
 import LoadGamersButton from './LoadGamersButton'
-import {checkIfDataExist, checkIfGamersExist} from '../api/stats/routeDump';
+import {checkIfDataExist, checkIfGamersExist} from '../api/stats/prismaActions';
 import WingmanImage from '@/public/images/weapons/Wingman.webp'
 import Image from 'next/image'
 import {Rubik_Mono_One} from "next/font/google";

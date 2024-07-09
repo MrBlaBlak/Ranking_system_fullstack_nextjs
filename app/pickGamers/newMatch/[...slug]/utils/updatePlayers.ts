@@ -7,13 +7,11 @@ import KillsAndCaps from '@/app/model/KillsAndCaps'
 import {MapName} from '@/app/model/Match'
 import {TitanName} from "@/app/model/KillsAndCaps";
 import {FormValues} from '../components/DisplayTeams'
-import {GamerMatchStats} from "../components/DisplayTeams";
-import {postMatch} from "@/app/api/gamers/routeDump"
-import {postTeam} from "@/app/api/gamers/routeDump"
-import {postMatchGamer} from "@/app/api/gamers/routeDump"
-import {postKillsAndCaps} from "@/app/api/gamers/routeDump"
-import {postGamer} from "@/app/api/gamers/routeDump"
-import {updateGamer} from "@/app/api/gamers/routeDump"
+import {postMatch} from "@/app/api/gamers/prismaActions"
+import {postTeam} from "@/app/api/gamers/prismaActions"
+import {postMatchGamer} from "@/app/api/gamers/prismaActions"
+import {postKillsAndCaps} from "@/app/api/gamers/prismaActions"
+import {updateGamer} from "@/app/api/gamers/prismaActions"
 import {applyServerHandicap} from "./findMostBalancedTeams"
 import calculateMMR from './calculateMMR'
 

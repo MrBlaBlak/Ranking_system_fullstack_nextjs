@@ -1,15 +1,15 @@
 
-import {checkIfGamersExist, setGamersData} from '../api/stats/routeDump'
-import React, {useState, useEffect} from 'react';
+import {setGamersData} from '../api/stats/prismaActions'
+import React, {useState} from 'react';
 type Props = {
     isDisabled: boolean,
     setGamersLoaded: Function
 };
 const LoadGamersButton: React.FC<Props> = ({isDisabled, setGamersLoaded}) => {
     const [isAlertVisible, setAlertVisible] = useState(false);
-    const handleClick = () => {
+    const handleClick = async () => {
         if (!isDisabled) {
-            setGamersData();
+            await setGamersData();
             setGamersLoaded();
             setAlertVisible(true);
         }

@@ -1,0 +1,1212 @@
+[
+  {
+    "id": 15,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 16,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 17,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 18,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 19,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 20,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 21,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 22,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 23,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 24,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 25,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 26,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 27,
+    "flag_advantage": -4,
+    "win_or_loose": 0
+  },
+  {
+    "id": 28,
+    "flag_advantage": 4,
+    "win_or_loose": 1
+  },
+  {
+    "id": 29,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 30,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 31,
+    "flag_advantage": -4,
+    "win_or_loose": 0
+  },
+  {
+    "id": 32,
+    "flag_advantage": 4,
+    "win_or_loose": 1
+  },
+  {
+    "id": 33,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 34,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 35,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 36,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 37,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 38,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 39,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 40,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 41,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 42,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 43,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 44,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 45,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 46,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 47,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 48,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 49,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 50,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 51,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 52,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 53,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 54,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 55,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 56,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 57,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 58,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 59,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 60,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 61,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 62,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 63,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 64,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 65,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 66,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 67,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 68,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 69,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 70,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 71,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 72,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 73,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 74,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 75,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 76,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 77,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 78,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 79,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 80,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 81,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 82,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 83,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 84,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 85,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 86,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 87,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 88,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 89,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 90,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 91,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 92,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 93,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 94,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 95,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 96,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 97,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 98,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 99,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 100,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 101,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 102,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 103,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 104,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 105,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 106,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 107,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 108,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 109,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 110,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 111,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 112,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 113,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 114,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 115,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 116,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 117,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 118,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 119,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 120,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 121,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 122,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 123,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 124,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 125,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 126,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 127,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 128,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 129,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 130,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 131,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 132,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 133,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 134,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 135,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 136,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 137,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 138,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 139,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 140,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 141,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 142,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 143,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 144,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 145,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 146,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 147,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 148,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 149,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 150,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 151,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 152,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 153,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 154,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 155,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 156,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 157,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 158,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 159,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 160,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 161,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 162,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 163,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 164,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 165,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 166,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 167,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 168,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 169,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 170,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 171,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 172,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 173,
+    "flag_advantage": 5,
+    "win_or_loose": 1
+  },
+  {
+    "id": 174,
+    "flag_advantage": -5,
+    "win_or_loose": 0
+  },
+  {
+    "id": 175,
+    "flag_advantage": 4,
+    "win_or_loose": 1
+  },
+  {
+    "id": 176,
+    "flag_advantage": -4,
+    "win_or_loose": 0
+  },
+  {
+    "id": 177,
+    "flag_advantage": 4,
+    "win_or_loose": 1
+  },
+  {
+    "id": 178,
+    "flag_advantage": -4,
+    "win_or_loose": 0
+  },
+  {
+    "id": 179,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 180,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 181,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 182,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 183,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 184,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 185,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 186,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 187,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 188,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 189,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 190,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 191,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 192,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 193,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 194,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 195,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 196,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 197,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 198,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 199,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 200,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 201,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 202,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 203,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 204,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 205,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 206,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 207,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 208,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 209,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 210,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 211,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 212,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 213,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 214,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 215,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 216,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 217,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 218,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 219,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 220,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 221,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 222,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 223,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 224,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 225,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 226,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 227,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 228,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 229,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 230,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 231,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 232,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 233,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 234,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 235,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 236,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 237,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 238,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 239,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 240,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 241,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 242,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 243,
+    "flag_advantage": 3,
+    "win_or_loose": 1
+  },
+  {
+    "id": 244,
+    "flag_advantage": -3,
+    "win_or_loose": 0
+  },
+  {
+    "id": 245,
+    "flag_advantage": -1,
+    "win_or_loose": 0
+  },
+  {
+    "id": 246,
+    "flag_advantage": 1,
+    "win_or_loose": 1
+  },
+  {
+    "id": 247,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 248,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 249,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 250,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 251,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 252,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 253,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  },
+  {
+    "id": 254,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 255,
+    "flag_advantage": -2,
+    "win_or_loose": 0
+  },
+  {
+    "id": 256,
+    "flag_advantage": 2,
+    "win_or_loose": 1
+  }
+]

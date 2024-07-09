@@ -1,7 +1,5 @@
 import React from 'react';
-import prisma from '@/prisma/client';
-import Gamer from '@/app/model/Gamer';
-import { getCapsStats } from '@/app/api/gamers/routeDump';
+import {getCapsStats} from '@/app/api/gamers/prismaActions';
 import GetMap from '../GetMapImage'
 import Link from 'next/link';
 interface CapsStats {
@@ -16,7 +14,6 @@ interface CapsStatsDTO {
     mapStats: Record<string, { totalCaps: number; totalGames: number; maxCaps: number; averageCaps: number }>;
 }
 async function Page() {
-    const gamers: Gamer[] = await prisma.gamers.findMany();
     const resultsCaps: CapsStats[] = await getCapsStats();
     const mapOrder: string[] = ["boomtown", "exo", "eden", "drydock", "angel", "colony", "glitch"];
     const gamerStatsList: CapsStatsDTO[] = [];
