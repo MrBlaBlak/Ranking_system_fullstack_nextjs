@@ -44,7 +44,7 @@ const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
                                 value={teamStats[index].titans}
                                 onChange={handleInputChange} required>
                             <option value="" style={{display: "none"}}>-Pick Titan-</option>
-                            {Object.keys(Titan_Name).map((titanName) => (
+                            {Object.keys(Titan_Name).filter(titanName => titanName !== "none").map((titanName) => (
                                 <option key={titanName} value={titanName}>
                                     {titanName}
                                 </option>
