@@ -10,7 +10,7 @@ const SuddenDeathWhoWonRadioButton = ({nr, formValues, handleRadioChange}: Props
     return (
         <td>
             <input
-                className="radio radio-xs"
+                className="radio radio-xs bg-zinc-700"
                 type="radio"
                 id={`team${nr}WinRadio`}
                 name="suddenDeathWhoWon"
@@ -19,7 +19,7 @@ const SuddenDeathWhoWonRadioButton = ({nr, formValues, handleRadioChange}: Props
                 onChange={handleRadioChange}
                 checked={formValues.suddenDeathWhoWon === `team${nr}`}
             />{' '}
-            Team{nr} Win
+            <label htmlFor={`team${nr}WinRadio`}>Team{nr}Win</label>
         </td>)
 };
 export default SuddenDeathWhoWonRadioButton;

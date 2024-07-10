@@ -7,8 +7,8 @@ export const getRandomValue = (min: number, max: number) => {
  export const getRandomStats = () => ({
      elims: getRandomValue(15, 40).toString(),
      flags: getRandomValue(0, 2).toString(),
-     titans: titanOptions[getRandomValue(0, titanOptions.length - 1)]
+     titans: titanOptions[getRandomValue(0, titanOptions.length - 2)]
  });
  export const getRandomMap = () => ({
-     mapPlayed: mapOptions[getRandomValue(0, mapOptions.length - 1)]
+     mapPlayed: mapOptions[getRandomValue(0, mapOptions.length - 2)]
  })

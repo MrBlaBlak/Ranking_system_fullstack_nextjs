@@ -10,7 +10,7 @@ const SuddenDeathCheckbox = ({formValues, isDraw, enableSDWinner}: Props) => {
         <td>
             <input className="checkbox checkbox-xs" onChange={enableSDWinner} type="checkbox"
                    id="suddenDeath" name="suddenDeath" disabled={!isDraw}
-                   checked={formValues.suddenDeath}/> Sudden Death
+                   checked={formValues.suddenDeath}/> <label htmlFor="suddenDeath">SuddenDeath</label>
         </td>
     )
 };

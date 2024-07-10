@@ -10,6 +10,7 @@ import MapSelect from './MapSelect'
 import SuddenDeathCheckbox from './SuddenDeathCheckbox'
 import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
 import ButtonsSection from './ButtonsSection'
+
 type Props = {
     pickedGamers: string[],
     gamers: gamers[],
@@ -163,16 +164,14 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <table>
+            <table className="border-separate border-spacing-x-2 border-spacing-y-1">
                 <TeamScore nr={1} team={team1} formValues={formValues} handleInputChange={handleInputChange}/>
                 <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange}/>
                 <tbody>
                 <MapSelect formValues={formValues} handleMapChange={handleMapChange}/>
-                <tr>
-                    <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
-                    <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues} handleRadioChange={handleRadioChange}/>
-                    <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues} handleRadioChange={handleRadioChange}/>
-                </tr>
+                <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
+                <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues} handleRadioChange={handleRadioChange}/>
+                <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues} handleRadioChange={handleRadioChange}/>
                 <tr>
                     <td>
                         <input type="hidden" name="server" value={server}/>

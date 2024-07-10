@@ -5,7 +5,7 @@ handleGetRandomStats: MouseEventHandler<HTMLButtonElement>
 };
 const ButtonsSection = ({isSubmitting, handleGetRandomStats}: Props) => {
     return (
-        <div className="flex gap-5">
+        <div className="flex justify-center gap-5">
             <button disabled={isSubmitting}
                     type="submit"
                     className="btn btn-outline btn-success btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Submit
