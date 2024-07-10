@@ -169,9 +169,11 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
                 <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange}/>
                 <tbody>
                 <MapSelect formValues={formValues} handleMapChange={handleMapChange}/>
-                <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
-                <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues} handleRadioChange={handleRadioChange}/>
-                <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues} handleRadioChange={handleRadioChange}/>
+                <tr>
+                    <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
+                    <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues} handleRadioChange={handleRadioChange}/>
+                    <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues} handleRadioChange={handleRadioChange}/>
+                </tr>
                 <tr>
                     <td>
                         <input type="hidden" name="server" value={server}/>

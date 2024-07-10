@@ -19,7 +19,7 @@ const MapSelect = ({formValues, handleMapChange}: Props) => {
                             value={formValues.mapPlayed}
                             onChange={handleMapChange} required>
                         <option value="" style={{display: "none"}}>-Pick Map-</option>
-                        {Object.keys(Map_Name).map((mapName) => (
+                        {Object.keys(Map_Name).filter(mapName => mapName !== "none").map((mapName) => (
                             <option key={mapName} value={mapName}>
                                 {mapName}
                             </option>
