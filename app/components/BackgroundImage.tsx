@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PilotBackgroundPhoto from '@/public/images/background/bg1920.png';
+import PilotBackgroundPhoto from '@/public/images/background/bg1920_2.png';
 type Props = {
     classProperties?: string;
 }
