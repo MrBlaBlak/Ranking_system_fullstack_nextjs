@@ -32,7 +32,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="relative flex left-8 sm:left-20 md:left-32 lg:left-40 xl:left-1/4 p-4 ">
+            <nav className="relative flex left-8 sm:left-20 md:left-32 lg:left-40 xl:left-1/4 mt-4 p-4 ">
                 <ul className="flex flex-col space-y-4 text-white">
                     <Link href="/pickGamers"
                           className={"btn btn-neutral btn-md lg:btn-lg max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 hover:text-gray-300 transition duration-300 " + (isGamersDataNotLoaded ? 'btn-disabled' : '')}>Start
@@ -51,8 +51,8 @@ function Navbar() {
                     <Link href="/stats/titanStats"
                           className="btn btn-neutral btn-md lg:btn-lg max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60  hover:text-gray-300 transition duration-300">Titan
                         Stats</Link>
-                    <LoadDataButton isDisabled={isDataLoaded} setDataLoadedTrue={setDataLoadedTrue}/>
-                    <LoadGamersButton isDisabled={isGamersDataLoaded} setGamersLoaded={setGamersDataLoaded}/>
+                    {!isDataLoaded && <LoadDataButton isDisabled={isDataLoaded} setDataLoadedTrue={setDataLoadedTrue}/>}
+                    {!isGamersDataLoaded && <LoadGamersButton isDisabled={isGamersDataLoaded} setGamersLoaded={setGamersDataLoaded}/>}
                 </ul>
                 <div className="flex flex-col text-right">
                     <Link href="/weapons" className="hover-image">
