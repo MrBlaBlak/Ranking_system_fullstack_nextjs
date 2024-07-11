@@ -2,9 +2,9 @@ import React from 'react';
 import DisplayTeams from './components/DisplayTeams'
 import {gamers} from "@prisma/client";
 import prisma from '@/prisma/client';
-import BackgroundImage from '@/app/components/BackgroundImage'
+import BackgroundImage from '@/app/components/shared/BackgroundImage'
 import findMostBalancedTeams from './utils/findMostBalancedTeams'
-import Stars from '@/app/components/Stars'
+import Stars from '@/app/components/shared/Stars'
 
 interface Props {
     params: { slug: string[] }
