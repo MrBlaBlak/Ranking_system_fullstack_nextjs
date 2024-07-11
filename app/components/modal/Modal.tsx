@@ -10,6 +10,7 @@ const Modal = ({}: Props) => {
     const [finishedTalking, setFinishedTalking] = useState(false);
     const [needHelp, setNeedHelp]= useState(false);
     const [counter, setCounter] = useState(0);
+    const [isWaiting, setIsWaiting] = useState(false)
     const textList = [["Welcome to Titanfall 2 ranking system.", "I can be your guide on this page.", "Do you need my help?"],["Alright lets go then"]]
     return (<>
         {/* Button to open the modal */}
@@ -20,9 +21,9 @@ const Modal = ({}: Props) => {
             <div className="fixed inset-0 z-50 flex items-center justify-center">
                 <div className="fixed inset-0 bg-black opacity-80"></div>
                 <dialog open className="modal-box relative z-10">
-                    <ChatBubble setFinishedTalking={setFinishedTalking} textList={textList[counter]} />
+                    <ChatBubble setIsModalOpen={setIsModalOpen} setFinishedTalking={setFinishedTalking} setCounter={setCounter} textList={textList[counter]} isWaiting={isWaiting} setIsWaiting={setIsWaiting}/>
                     <div className="modal-action gap-x-2 ">
-                        <ButtonsSection closeModal={() => setIsModalOpen(false)} finishedTalking={finishedTalking} setNeedHelp={setNeedHelp} setCounter={setCounter} />
+                        <ButtonsSection setIsModalOpen={setIsModalOpen} finishedTalking={finishedTalking} setNeedHelp={setNeedHelp} setIsWaiting={setIsWaiting}/>
                     </div>
 
                 </dialog>

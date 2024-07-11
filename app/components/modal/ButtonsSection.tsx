@@ -1,16 +1,16 @@
 import React, {MouseEventHandler} from 'react';
 
 type Props = {
-    closeModal: MouseEventHandler<HTMLButtonElement>,
+    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
     finishedTalking: boolean,
     setNeedHelp: React.Dispatch<React.SetStateAction<boolean>>,
-    setCounter: React.Dispatch<React.SetStateAction<number>>;
+    setIsWaiting: React.Dispatch<React.SetStateAction<boolean>>,
 };
 
-const ButtonsSection = ({closeModal, finishedTalking, setNeedHelp, setCounter}: Props) => {
+const ButtonsSection = ({setIsModalOpen, finishedTalking, setNeedHelp, setIsWaiting}: Props) => {
     const handleClick = () => {
         setNeedHelp(true);
-        setCounter(prevState => prevState + 1)
+        setIsWaiting(false);
     }
 
     return (
@@ -19,7 +19,7 @@ const ButtonsSection = ({closeModal, finishedTalking, setNeedHelp, setCounter}: 
                 <button className="btn btn-outline btn-success min-w-20" onClick={handleClick}>Yes</button>
                 <button className="btn btn-outline btn-error min-w-20">No</button>
             </>}
-            <button className="btn btn-outline min-w-20" onClick={closeModal}>Close</button>
+            <button className="btn btn-outline min-w-20" onClick={() => setIsModalOpen(false)}>Close</button>
         </>
     )
 };

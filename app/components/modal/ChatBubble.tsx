@@ -5,9 +5,12 @@ import TypingEffect from "@/app/components/modal/TypingEffect";
 type Props = {
     setFinishedTalking: React.Dispatch<React.SetStateAction<boolean>>,
     textList: string[],
-
+    setCounter: React.Dispatch<React.SetStateAction<number>>,
+    isWaiting: boolean,
+    setIsWaiting: React.Dispatch<React.SetStateAction<boolean>>,
+    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
 };
-const ChatBubble = ({setFinishedTalking, textList}: Props) => {
+const ChatBubble = ({setFinishedTalking, textList, setCounter, isWaiting, setIsWaiting, setIsModalOpen}: Props) => {
     return (
         <div>
             <div className="chat chat-end ">
@@ -22,7 +25,11 @@ const ChatBubble = ({setFinishedTalking, textList}: Props) => {
                         typingSpeed={20}
                         deletingSpeed={20}
                         setFinishedTalking={setFinishedTalking}
-                        /></div>
+                        setCounter={setCounter}
+                        isWaiting={isWaiting}
+                        setIsWaiting={setIsWaiting}
+                        setIsModalOpen={setIsModalOpen}
+                    /></div>
             </div>
         </div>)
 };
