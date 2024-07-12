@@ -66,9 +66,6 @@ function Navbar() {
                         <p className={`text-white  ${inter.className}`}>Weapons</p>
                 </Link>
             </div>
-
-
-
         </>
     );
 }

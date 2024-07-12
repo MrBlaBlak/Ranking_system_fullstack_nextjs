@@ -2,7 +2,6 @@
 import {gamers} from "@prisma/client";
 import React from 'react';
 import {disableSelectedOption} from '@/app/redux/selectedOptionsSlice';
-import {State} from '@/app/redux/selectedOptionsSlice';
 import {useAppDispatch, useAppSelector} from '@/app/redux/hooks'
 import Link from 'next/link'
 import {AppDispatch} from "@/app/redux/store";
@@ -11,10 +10,10 @@ type Props = {
 };
 const GamersList: React.FC<Props> = ({gamers}) => {
     const dispatch = useAppDispatch<AppDispatch>();
-    const selectedOptions = useAppSelector((state: State) => state.selectedOptions.selectedOptions);
+    const selectedOptions = useAppSelector((state) => state.selectedOptions.selectedOptions);
 
     const handleSelectChange = (index: number, value: string) => {
-        dispatch(disableSelectedOption(index, value));
+        dispatch(disableSelectedOption({index, value}));
     };
     const handleRandomSelect = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
@@ -22,10 +21,9 @@ const GamersList: React.FC<Props> = ({gamers}) => {
             .sort(() => 0.5 - Math.random())
             .slice(0, 10)
             .map(gamer => gamer.name);
-        console.log(randomPlayers)
-        randomPlayers.forEach((player, index) => {
-            dispatch(disableSelectedOption(index, player));
-            console.log(selectedOptions)
+
+        randomPlayers.forEach((value, index) => {
+            dispatch(disableSelectedOption({index, value}));
         });
     };
     const gamersTable: string [] = new Array(10).fill({});

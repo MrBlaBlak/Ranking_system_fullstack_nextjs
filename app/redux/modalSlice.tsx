@@ -20,7 +20,7 @@ const modalSlice = createSlice({
             state.needHelp = action.payload;
         },
         setCounter: (state, action) => {
-            state.counter = action.payload;
+            state.counter = action.payload + state.counter;
         },
         setIsWaiting: (state, action) => {
             state.isWaiting = action.payload;

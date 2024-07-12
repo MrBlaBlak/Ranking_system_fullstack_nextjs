@@ -1,17 +1,15 @@
 'use client'
 import React, {useEffect, useState} from 'react';
+import {useAppDispatch, useAppSelector} from "@/app/redux/hooks";
+import {AppDispatch} from "@/app/redux/store";
+import {setCounter, setFinishedTalking, setIsModalOpen, setIsWaiting} from "@/app/redux/modalSlice";
 
 
 type Props = {
-    textList: string[];
+    textList: string[][];
     period: number;
     typingSpeed?: number;
     deletingSpeed?: number;
-    setFinishedTalking: React.Dispatch<React.SetStateAction<boolean>>;
-    isWaiting: boolean;
-    setCounter: React.Dispatch<React.SetStateAction<number>>
-    setIsWaiting: React.Dispatch<React.SetStateAction<boolean>>
-    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const TypingEffect = ({
@@ -19,25 +17,19 @@ const TypingEffect = ({
                           period,
                           typingSpeed = 20,
                           deletingSpeed = 40,
-                          setFinishedTalking,
-                          isWaiting,
-                          setCounter,
-                          setIsWaiting,
-                          setIsModalOpen
-
                       }: Props) => {
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
     const [delta, setDelta] = useState(typingSpeed);
-
+    const dispatch = useAppDispatch<AppDispatch>();
+    const {isWaiting, counter} = useAppSelector(state => state.modal)
     useEffect(() => {
 
         const handleTyping = () => {
             if (!isWaiting) {
-                const i = loopNum % textList.length;
-                const fullTxt = textList[i];
-
+                const i = loopNum % textList[counter].length;
+                const fullTxt = textList[counter][i];
                 if (isDeleting) {
                     setText(fullTxt.substring(0, text.length - 1));
                     setDelta(deletingSpeed);
@@ -46,28 +38,30 @@ const TypingEffect = ({
                     setDelta(typingSpeed);
                 }
                 if (!isDeleting && text === fullTxt) {
-                    if ((loopNum === textList.length - 1 || textList.length === 1) && !isDeleting) {
-                        setFinishedTalking(true);
+                    if ((loopNum === textList[counter].length - 1) && (textList.length - 1 !== counter)) {
+                        dispatch(setFinishedTalking(true));
                         setIsDeleting(true);
-                        setIsWaiting(true);
+                        dispatch(setIsWaiting(true));
                         return;
                     }
                     setIsDeleting(true);
                     setDelta(period);
                 } else if (isDeleting && text === '') {
-                    if ((loopNum === textList.length - 1 || textList.length === 1) && isDeleting) {
-                        setCounter(prevState => prevState + 1)
-                    }
-
                     setIsDeleting(false);
                     setLoopNum(loopNum + 1);
                     setDelta(period / 4);
+                    if ((loopNum === textList[counter].length - 1) && (textList.length - 1 === counter)) {
+                        dispatch(setIsModalOpen(false))
+                    }
+                    if ((loopNum === textList[counter].length - 1)) {
+                        dispatch(setCounter(1))
+                        setLoopNum(0)
+                    }
+
                 }
             }
         };
-
         const ticker = setTimeout(handleTyping, delta);
-
         return () => clearTimeout(ticker);
     }, [text, isDeleting, textList]);
 

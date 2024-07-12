@@ -1,31 +1,29 @@
 'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import ChatBubble from "@/app/components/modal/ChatBubble";
 import ButtonsSection from "@/app/components/modal/ButtonsSection";
-
+import {setIsModalOpen} from '@/app/redux/modalSlice';
+import {useAppDispatch, useAppSelector} from "@/app/redux/hooks";
+import {AppDispatch} from "@/app/redux/store";
 
 type Props = {};
 const Modal = ({}: Props) => {
-    const [isModalOpen, setIsModalOpen] = useState(true);
-    const [finishedTalking, setFinishedTalking] = useState(false);
-    const [needHelp, setNeedHelp]= useState(false);
-    const [counter, setCounter] = useState(0);
-    const [isWaiting, setIsWaiting] = useState(false)
+
+    const dispatch = useAppDispatch<AppDispatch>();
+    const { isModalOpen } = useAppSelector((state) => state.modal);
     const textList = [["Welcome to Titanfall 2 ranking system.", "I can be your guide on this page.", "Do you need my help?"],["Alright lets go then"]]
     return (<>
         {/* Button to open the modal */}
-        <button className=" btn btn-error" onClick={() => setIsModalOpen(true)}>Open Modal</button>
-
+        <button className=" btn btn-error" onClick={() => dispatch(setIsModalOpen(true))}>Open Modal</button>
         {/* Modal and Overlay */}
         {isModalOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center">
                 <div className="fixed inset-0 bg-black opacity-80"></div>
                 <dialog open className="modal-box relative z-10">
-                    <ChatBubble setIsModalOpen={setIsModalOpen} setFinishedTalking={setFinishedTalking} setCounter={setCounter} textList={textList[counter]} isWaiting={isWaiting} setIsWaiting={setIsWaiting}/>
+                    <ChatBubble textList={textList} />
                     <div className="modal-action gap-x-2 ">
-                        <ButtonsSection setIsModalOpen={setIsModalOpen} finishedTalking={finishedTalking} setNeedHelp={setNeedHelp} setIsWaiting={setIsWaiting}/>
+                        <ButtonsSection />
                     </div>
-
                 </dialog>
             </div>
         )}
