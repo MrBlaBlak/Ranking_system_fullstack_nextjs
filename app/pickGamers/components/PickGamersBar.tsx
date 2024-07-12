@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {gamers} from '@prisma/client'
-import StoreProvider from '@/app/api/StoreProvider';
+import StoreProvider from '@/app/StoreProvider';
 import GamersList from './GamersList';
 import {useRouter} from 'next/navigation'
 
@@ -9,7 +9,7 @@ type Props = {
     gamers: gamers[]
 };
 //uncontrolled version of the form
-const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {
+const PickGamersBar: React.FC<Props> = ({gamers}) => {
     const router = useRouter();
     
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,13 +20,9 @@ const StoreWrapperForGamersList: React.FC<Props> = ({gamers}) => {
         router.push(slugurl)
     }
     return (
-        <>
-                <StoreProvider>
                     <form className="flex flex-col gap-y-1" onSubmit={handleSubmit}>
                         <GamersList gamers={gamers}></GamersList>
                     </form>
-                </StoreProvider>
-        </>
     );
 }
-export default StoreWrapperForGamersList;
+export default PickGamersBar;

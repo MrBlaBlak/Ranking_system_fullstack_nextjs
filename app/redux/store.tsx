@@ -1,13 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit'
-import disableSelectedOptionReducer from './reducers'
+import {configureStore} from '@reduxjs/toolkit'
+import disableSelectedOptionReducer from './selectedOptionsSlice'
+import modalReducer from './modalSlice'
+
 export const makeStore = () => {
     return configureStore({
-        reducer: disableSelectedOptionReducer
+        reducer:{
+            modal: modalReducer,
+            selectedOptions: disableSelectedOptionReducer,
+        }
     })
 }
 
-// Infer the type of makeStore
 export type AppStore = ReturnType<typeof makeStore>
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<AppStore['getState']>
 export type AppDispatch = AppStore['dispatch']
