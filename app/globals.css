@@ -11,10 +11,6 @@
   transform: scale(1.1);
 }
 
-body {
-  /*color: rgb(var(--foreground-rgb));*/
- /*padding: 1rem;*/
-}
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);

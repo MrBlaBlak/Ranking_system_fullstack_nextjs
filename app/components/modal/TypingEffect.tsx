@@ -50,12 +50,14 @@ const TypingEffect = ({
                     setIsDeleting(false);
                     setLoopNum(loopNum + 1);
                     setDelta(period / 4);
-                    if ((loopNum === textList[counter].length - 1) && (textList.length - 1 === counter)) {
-                        dispatch(setIsModalOpen(false))
-                    }
                     if ((loopNum === textList[counter].length - 1)) {
                         dispatch(setCounter(1))
                         setLoopNum(0)
+                    }
+                    if ((loopNum === textList[counter].length - 1) && (textList.length - 1 === counter)) {
+                        dispatch(setCounter(0))
+                        dispatch(setIsWaiting(false))
+                        dispatch(setIsModalOpen(false))
                     }
 
                 }

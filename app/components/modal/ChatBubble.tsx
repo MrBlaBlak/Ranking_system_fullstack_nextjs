@@ -1,11 +1,10 @@
 import React from 'react';
 import Avatar from './Avatar'
-import TypingEffect from "@/app/components/modal/TypingEffect";
 
 type Props = {
-    textList: string[][],
+    children: React.ReactNode
 };
-const ChatBubble = ({textList}: Props) => {
+const ChatBubble = ({children}: Props) => {
     return (
         <div>
             <div className="chat chat-end ">
@@ -14,12 +13,7 @@ const ChatBubble = ({textList}: Props) => {
                     Jake
                 </div>
                 <div className="chat-bubble">
-                    <TypingEffect
-                        textList={textList}
-                        period={2000}
-                        typingSpeed={20}
-                        deletingSpeed={20}
-                    /></div>
+                    {children}</div>
             </div>
         </div>)
 };
