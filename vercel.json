@@ -3,5 +3,7 @@
     "app/api/**/*.ts": {
       "maxDuration": 20
     }
-  }
+  },
+  "regions": ["fra1"]
+
 }
