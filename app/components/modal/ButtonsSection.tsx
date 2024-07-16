@@ -12,15 +12,15 @@ const ButtonsSection = () => {
     const dispatch = useAppDispatch<AppDispatch>();
     const {finishedTalking} = useAppSelector((state) => state.modal);
 
-    const handleClick = () => {
-        dispatch(setNeedHelp(true));
+    const handleClick = (isNeedingForHelp: boolean) => {
+        dispatch(setNeedHelp(isNeedingForHelp));
         dispatch(setIsWaiting(false));
     }
     return (
         <>
             {finishedTalking && <>
-                <button className="btn btn-outline btn-success min-w-20" onClick={handleClick}>Yes</button>
-                <button className="btn btn-outline btn-error min-w-20">No</button>
+                <button className="btn btn-outline btn-success min-w-20" onClick={() =>handleClick(true)}>Yes</button>
+                <button className="btn btn-outline btn-error min-w-20" onClick={() =>handleClick(false)}>No</button>
             </>}
             <button className="btn btn-outline min-w-20" onClick={() => dispatch(setIsModalOpen(false))}>Close</button>
         </>
