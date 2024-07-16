@@ -44,7 +44,6 @@ export default async function updatePlayers(formValues: FormValues, team1: gamer
     const newMatch = await postMatch({
         map: Map_Name[mapPlayed as keyof typeof Map_Name],
         server: server,
-        created: new Date()
     });
 
     const team1forDBflag_advantage = team1flagsTotal - team2flagsTotal;
