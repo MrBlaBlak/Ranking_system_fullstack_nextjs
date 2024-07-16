@@ -22,8 +22,8 @@ model kills_and_caps {
   caps           Int
   kills          Int
   titan          Titan_Name?
-  match_gamer_id Int         @unique(map: "UK_f34p42nipgi334fgahcpwc7hu")
-  match_gamer    match_gamer @relation(fields: [match_gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKtd2tjb6kpg1unyfjxqckingg8")
+  match_gamer_id Int         @unique
+  match_gamer    match_gamer @relation(fields: [match_gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model match_gamer {
@@ -32,18 +32,18 @@ model match_gamer {
   match_id       Int?
   team_id        Int?
   kills_and_caps kills_and_caps?
-  teams          teams?          @relation(fields: [team_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK1ds5km99di58335h0art5ddsj")
-  gamers         gamers?         @relation(fields: [gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKd4u9abhd09u33swxfvswa231k")
-  matches        matches?        @relation(fields: [match_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKg8cvpyt5dgciuklm33offk1do")
+  teams          teams?          @relation(fields: [team_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  gamers         gamers?         @relation(fields: [gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  matches        matches?        @relation(fields: [match_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 
-  @@index([team_id], map: "IDX_1ds5km99di58335h0art5ddsj")
-  @@index([gamer_id], map: "IDX_d4u9abhd09u33swxfvswa231k")
-  @@index([match_id], map: "IDX_g8cvpyt5dgciuklm33offk1do")
+  @@index([team_id])
+  @@index([gamer_id])
+  @@index([match_id])
 }
 
 model matches {
   id          Int           @id @default(autoincrement())
-  created     DateTime      @db.Timestamp(6)
+  created     DateTime      @default(now())
   map         Map_Name
   server      String        @db.VarChar(255)
   match_gamer match_gamer[]

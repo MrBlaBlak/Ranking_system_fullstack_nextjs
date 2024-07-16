@@ -1,739 +1,616 @@
 [
   {
     "id": 6,
-    "created": "2024-03-04 18:19:45.546000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 7,
-    "created": "2024-03-04 18:23:45.432000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 8,
-    "created": "2024-03-04 21:19:08.024000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 9,
-    "created": "2024-03-05 11:52:19.367000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 10,
-    "created": "2024-03-05 11:56:28.671000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 11,
-    "created": "2024-03-05 11:56:47.217000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 12,
-    "created": "2024-03-07 13:42:50.488000",
     "map": "eden",
     "server": "NY"
   },
   {
     "id": 13,
-    "created": "2024-03-07 13:44:39.213000",
     "map": "eden",
     "server": "NY"
   },
   {
     "id": 14,
-    "created": "2024-03-07 19:43:01.155000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 15,
-    "created": "2024-03-08 20:42:17.991000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 16,
-    "created": "2024-03-08 20:47:08.946000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 17,
-    "created": "2024-03-08 20:47:30.542000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 18,
-    "created": "2024-03-08 20:50:23.836000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 19,
-    "created": "2024-03-08 20:52:51.928000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 20,
-    "created": "2024-03-08 20:53:22.155000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 21,
-    "created": "2024-03-08 20:53:50.361000",
     "map": "eden",
     "server": "NY"
   },
   {
     "id": 22,
-    "created": "2024-03-08 20:54:33.615000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 23,
-    "created": "2024-03-08 20:55:19.269000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 24,
-    "created": "2024-03-12 10:07:01.809000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 25,
-    "created": "2024-03-12 10:10:42.838000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 26,
-    "created": "2024-03-12 13:08:52.240000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 27,
-    "created": "2024-03-12 13:10:27.347000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 28,
-    "created": "2024-03-12 13:12:51.994000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 29,
-    "created": "2024-03-25 12:42:07.048000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 30,
-    "created": "2024-03-26 14:43:14.778000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 31,
-    "created": "2024-03-26 14:43:40.284000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 32,
-    "created": "2024-03-28 14:47:47.874000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 33,
-    "created": "2024-04-10 12:04:52.660000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 34,
-    "created": "2024-04-15 14:44:51.886000",
     "map": "eden",
     "server": "NY"
   },
   {
     "id": 35,
-    "created": "2024-04-15 14:44:56.866000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 36,
-    "created": "2024-04-15 14:44:59.045000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 37,
-    "created": "2024-04-15 14:45:02.827000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 38,
-    "created": "2024-04-15 14:45:05.880000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 39,
-    "created": "2024-04-15 14:45:07.097000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 40,
-    "created": "2024-04-15 14:45:10.934000",
     "map": "glitch",
     "server": "NY"
   },
   {
     "id": 41,
-    "created": "2024-04-15 14:45:13.197000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 42,
-    "created": "2024-04-15 14:45:13.672000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 43,
-    "created": "2024-04-15 14:45:17.511000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 44,
-    "created": "2024-04-15 14:45:17.874000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 45,
-    "created": "2024-04-15 14:45:20.835000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 46,
-    "created": "2024-04-15 14:45:21.242000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 47,
-    "created": "2024-04-15 14:45:57.153000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 48,
-    "created": "2024-04-15 14:45:58.451000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 49,
-    "created": "2024-04-15 14:46:01.243000",
     "map": "eden",
     "server": "NY"
   },
   {
     "id": 50,
-    "created": "2024-04-15 14:46:02.584000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 51,
-    "created": "2024-04-15 14:46:06.216000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 52,
-    "created": "2024-04-15 14:46:08.046000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 53,
-    "created": "2024-04-15 14:46:13.213000",
     "map": "glitch",
     "server": "NY"
   },
   {
     "id": 54,
-    "created": "2024-04-15 14:46:13.384000",
     "map": "glitch",
     "server": "NY"
   },
   {
     "id": 55,
-    "created": "2024-04-15 14:46:14.989000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 56,
-    "created": "2024-04-15 14:46:15.325000",
     "map": "colony",
     "server": "NY"
   },
   {
     "id": 57,
-    "created": "2024-04-15 14:46:18.014000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 58,
-    "created": "2024-04-15 14:46:18.169000",
     "map": "angel",
     "server": "NY"
   },
   {
     "id": 59,
-    "created": "2024-04-15 14:46:19.932000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 60,
-    "created": "2024-04-15 14:46:20.070000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 61,
-    "created": "2024-04-15 14:46:20.246000",
     "map": "drydock",
     "server": "NY"
   },
   {
     "id": 62,
-    "created": "2024-04-15 14:46:29.205000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 63,
-    "created": "2024-04-15 14:46:29.360000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 64,
-    "created": "2024-04-15 14:46:31.958000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 65,
-    "created": "2024-04-15 14:46:32.084000",
     "map": "boomtown",
     "server": "NY"
   },
   {
     "id": 66,
-    "created": "2024-04-15 14:47:06.626000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 67,
-    "created": "2024-04-15 14:47:06.779000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 68,
-    "created": "2024-04-15 14:47:09.187000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 69,
-    "created": "2024-04-15 14:47:09.308000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 70,
-    "created": "2024-04-15 14:47:12.882000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 71,
-    "created": "2024-04-15 14:47:13.061000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 72,
-    "created": "2024-04-15 14:47:16.599000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 73,
-    "created": "2024-04-15 14:47:16.756000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 74,
-    "created": "2024-04-15 14:47:19.304000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 75,
-    "created": "2024-04-15 14:47:19.475000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 76,
-    "created": "2024-04-15 14:47:19.839000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 77,
-    "created": "2024-04-15 14:47:19.996000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 78,
-    "created": "2024-04-15 14:47:20.143000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 79,
-    "created": "2024-04-15 14:47:20.321000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 80,
-    "created": "2024-04-15 14:47:22.529000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 81,
-    "created": "2024-04-15 14:47:22.858000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 82,
-    "created": "2024-04-15 14:47:25.197000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 83,
-    "created": "2024-04-15 14:47:25.356000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 84,
-    "created": "2024-04-15 14:47:25.644000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 85,
-    "created": "2024-04-15 14:47:28.122000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 86,
-    "created": "2024-04-15 14:47:28.231000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 87,
-    "created": "2024-04-15 14:47:28.392000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 88,
-    "created": "2024-04-15 14:48:11.983000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 89,
-    "created": "2024-04-15 14:48:12.121000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 90,
-    "created": "2024-04-15 14:48:15.052000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 91,
-    "created": "2024-04-15 14:48:15.220000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 92,
-    "created": "2024-04-15 14:48:15.356000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 93,
-    "created": "2024-04-15 14:48:17.997000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 94,
-    "created": "2024-04-15 14:48:18.143000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 95,
-    "created": "2024-04-15 14:48:18.286000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 96,
-    "created": "2024-04-15 14:48:21.354000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 97,
-    "created": "2024-04-15 14:48:21.500000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 98,
-    "created": "2024-04-15 14:48:23.465000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 99,
-    "created": "2024-04-15 14:48:23.602000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 100,
-    "created": "2024-04-15 14:48:23.779000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 101,
-    "created": "2024-04-15 14:48:26.761000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 102,
-    "created": "2024-04-15 14:48:26.879000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 103,
-    "created": "2024-04-15 14:48:27.029000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 104,
-    "created": "2024-04-15 14:48:29.552000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 105,
-    "created": "2024-04-15 14:48:29.695000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 106,
-    "created": "2024-04-15 14:48:29.821000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 107,
-    "created": "2024-04-15 14:48:29.972000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 108,
-    "created": "2024-04-15 14:48:30.102000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 109,
-    "created": "2024-04-15 14:48:32.688000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 110,
-    "created": "2024-04-15 14:48:32.843000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 111,
-    "created": "2024-04-15 14:48:36.310000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 112,
-    "created": "2024-04-15 14:48:36.478000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 113,
-    "created": "2024-04-15 14:48:36.713000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 114,
-    "created": "2024-04-15 14:48:36.852000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 115,
-    "created": "2024-04-15 14:48:38.866000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 116,
-    "created": "2024-04-15 14:48:39.018000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 117,
-    "created": "2024-04-15 14:48:39.210000",
     "map": "glitch",
     "server": "EU"
   },
   {
     "id": 118,
-    "created": "2024-07-01 16:23:31.246000",
     "map": "drydock",
     "server": "EU"
   },
   {
     "id": 119,
-    "created": "2024-07-01 16:26:36.870000",
     "map": "exo",
     "server": "EU"
   },
   {
     "id": 120,
-    "created": "2024-07-01 16:27:33.469000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 121,
-    "created": "2024-07-02 16:34:23.374000",
     "map": "exo",
     "server": "NY"
   },
   {
     "id": 122,
-    "created": "2024-07-06 20:19:24.337000",
     "map": "angel",
     "server": "EU"
   },
   {
     "id": 123,
-    "created": "2024-07-07 12:37:28.547000",
     "map": "boomtown",
     "server": "EU"
   },
   {
     "id": 124,
-    "created": "2024-07-08 11:00:22.728000",
     "map": "colony",
     "server": "EU"
   },
   {
     "id": 125,
-    "created": "2024-07-08 15:08:46.803000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 126,
-    "created": "2024-07-08 15:08:55.759000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 127,
-    "created": "2024-07-08 15:09:22.863000",
     "map": "eden",
     "server": "EU"
   },
   {
     "id": 128,
-    "created": "2024-07-08 16:06:52.515000",
     "map": "exo",
     "server": "EU"
   }

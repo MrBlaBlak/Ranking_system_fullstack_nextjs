@@ -72,25 +72,25 @@ CREATE TABLE "weapons" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "UK_f34p42nipgi334fgahcpwc7hu" ON "kills_and_caps"("match_gamer_id");
+CREATE UNIQUE INDEX "kills_and_caps_match_gamer_id_key" ON "kills_and_caps"("match_gamer_id");
 
 -- CreateIndex
-CREATE INDEX "IDX_1ds5km99di58335h0art5ddsj" ON "match_gamer"("team_id");
+CREATE INDEX "match_gamer_team_id_idx" ON "match_gamer"("team_id");
 
 -- CreateIndex
-CREATE INDEX "IDX_d4u9abhd09u33swxfvswa231k" ON "match_gamer"("gamer_id");
+CREATE INDEX "match_gamer_gamer_id_idx" ON "match_gamer"("gamer_id");
 
 -- CreateIndex
-CREATE INDEX "IDX_g8cvpyt5dgciuklm33offk1do" ON "match_gamer"("match_id");
+CREATE INDEX "match_gamer_match_id_idx" ON "match_gamer"("match_id");
 
 -- AddForeignKey
-ALTER TABLE "kills_and_caps" ADD CONSTRAINT "FKtd2tjb6kpg1unyfjxqckingg8" FOREIGN KEY ("match_gamer_id") REFERENCES "match_gamer"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "kills_and_caps" ADD CONSTRAINT "kills_and_caps_match_gamer_id_fkey" FOREIGN KEY ("match_gamer_id") REFERENCES "match_gamer"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE "match_gamer" ADD CONSTRAINT "FK1ds5km99di58335h0art5ddsj" FOREIGN KEY ("team_id") REFERENCES "teams"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "match_gamer" ADD CONSTRAINT "match_gamer_team_id_fkey" FOREIGN KEY ("team_id") REFERENCES "teams"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE "match_gamer" ADD CONSTRAINT "FKd4u9abhd09u33swxfvswa231k" FOREIGN KEY ("gamer_id") REFERENCES "gamers"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "match_gamer" ADD CONSTRAINT "match_gamer_gamer_id_fkey" FOREIGN KEY ("gamer_id") REFERENCES "gamers"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE "match_gamer" ADD CONSTRAINT "FKg8cvpyt5dgciuklm33offk1do" FOREIGN KEY ("match_id") REFERENCES "matches"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "match_gamer" ADD CONSTRAINT "match_gamer_match_id_fkey" FOREIGN KEY ("match_id") REFERENCES "matches"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;

@@ -10,19 +10,17 @@ import {Titan_Name, Map_Name} from ".prisma/client";
 
 export async function setStatsData() {
     try {
+
         const mapNameConversion: { [key: string]: Map_Name } = Object.fromEntries(
             Object.entries(Map_Name).map(([key, value]) => [key, value])
         );
-        const filteredMatchesJson = matchesJson.filter(match => mapNameConversion[match.map.toUpperCase()]); // Filter based on mapNameConversion
+        const filteredMatchesJson = matchesJson.filter(match => mapNameConversion[match.map]); // Filter based on mapNameConversion
 
         const transformedMatchesJson = filteredMatchesJson.map(match => ({
             ...match,
-            map: mapNameConversion[match.map.toUpperCase()], // Use mapNameConversion for map property
+            map: mapNameConversion[match.map], // Use mapNameConversion for map property
         }));
-
-        await prisma.matches.createMany({
-            data: transformedMatchesJson
-        });
+        console.log(transformedMatchesJson)
         await prisma.matches.createMany({
             data: transformedMatchesJson,
         });
