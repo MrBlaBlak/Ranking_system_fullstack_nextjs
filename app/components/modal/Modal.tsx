@@ -10,7 +10,7 @@ type Props = {};
 const Modal = ({}: Props) => {
 
     const { isModalOpen } = useAppSelector((state) => state.modal);
-    const textList = [["Welcome to Titanfall 2 ranking system.", "I can be your guide on this page.", "Do you need my help?"],["Alright lets go then"]]
+    const textList = [["Welcome to Titanfall 2 ranking system.", "I can be your guide on this page.", "Do you need my help?"],["As you wish"]]
     return (<>
         {/* Modal and Overlay */}
         {isModalOpen && (

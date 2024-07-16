@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model gamers {
@@ -35,14 +36,14 @@ model match_gamer {
   gamers         gamers?         @relation(fields: [gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKd4u9abhd09u33swxfvswa231k")
   matches        matches?        @relation(fields: [match_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FKg8cvpyt5dgciuklm33offk1do")
 
-  @@index([team_id], map: "FK1ds5km99di58335h0art5ddsj")
-  @@index([gamer_id], map: "FKd4u9abhd09u33swxfvswa231k")
-  @@index([match_id], map: "FKg8cvpyt5dgciuklm33offk1do")
+  @@index([team_id], map: "IDX_1ds5km99di58335h0art5ddsj")
+  @@index([gamer_id], map: "IDX_d4u9abhd09u33swxfvswa231k")
+  @@index([match_id], map: "IDX_g8cvpyt5dgciuklm33offk1do")
 }
 
 model matches {
   id          Int           @id @default(autoincrement())
-  created     DateTime      @db.DateTime(6)
+  created     DateTime      @db.Timestamp(6)
   map         Map_Name
   server      String        @db.VarChar(255)
   match_gamer match_gamer[]

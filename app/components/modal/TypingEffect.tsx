@@ -49,7 +49,7 @@ const TypingEffect = ({
                 } else if (isDeleting && text === '') {
                     setIsDeleting(false);
                     setLoopNum(loopNum + 1);
-                    setDelta(period / 4);
+                    setDelta(period / 6);
                     if ((loopNum === textList[counter].length - 1)) {
                         dispatch(setCounter(1))
                         setLoopNum(0)
