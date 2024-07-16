@@ -1,4 +1,3 @@
-'use server'
 import {gamers, Map_Name, Titan_Name} from '@prisma/client'
 import {FormValues} from '../components/DisplayTeams'
 import {postMatch} from "@/app/api/gamers/prismaActions"
