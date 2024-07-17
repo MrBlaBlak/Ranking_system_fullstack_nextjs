@@ -1,6 +1,7 @@
 import {FormValues} from '../components/DisplayTeams'
 import {gamers} from '@prisma/client'
-const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]): [gamers[], gamers[]] => {
+import {Updater} from "use-immer";
+const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[], setTeam1State: Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>, setTeam2State:  Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>): [number[], number[]] => {
     const suddenDeath = formValues.suddenDeath;
     const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
     const team1Stats = formValues.team1Stats;
@@ -10,6 +11,8 @@ const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]):
     let whoWon = 0;
     let streak = 0;
     let streak2 = 0;
+    const points1Array  = [];
+    const points2Array  = [];
 
     for (let i = 0; i < 5; i++) {
         team1flagsTotal += +(team1Stats[i].flags);
@@ -23,7 +26,7 @@ const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]):
     } else {
         if (!suddenDeathWhoWon) {
             // res.status(200).json({team1: team1gamers, team2: team2gamers, server});
-             return [team1, team2]
+             return [[0,0,0,0,0], [0,0,0,0,0]]
         } else if (suddenDeathWhoWon === 'team1') {
             whoWon = 1;
         } else if (suddenDeathWhoWon === 'team2') {
@@ -70,8 +73,12 @@ const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]):
                 points2 = -0.5;
                 //update last ten; suddenDeath result is not counted neither as win or loss for last 10
             } else {
-                team1[i].lastTen = (parseInt(team1[i].lastTen, 2) >> 1 | 512).toString(2);
-                team2[i].lastTen = (parseInt(team2[i].lastTen, 2) >> 1).toString(2);
+                setTeam1State(draft => {
+                    draft[i].lastTen = (parseInt(draft[i].lastTen, 2) >> 1 | 512).toString(2)
+                });
+                setTeam2State(draft => {
+                    draft[i].lastTen = (parseInt(draft[i].lastTen, 2) >> 1).toString(2)
+                });
             }
         }
 
@@ -85,19 +92,26 @@ const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[]):
                 points2 = 0.5;
                 //update last ten; suddenDeath result is not counted neither as win or loss for last 10
             } else {
-                team1[i].lastTen = (parseInt(team1[i].lastTen, 2) >> 1).toString(2);
-                team2[i].lastTen = (parseInt(team2[i].lastTen, 2) >> 1 | 512).toString(2);
+                setTeam1State(draft => {
+                    draft[i].lastTen = (parseInt(draft[i].lastTen, 2) >> 1).toString(2)
+                });
+                setTeam2State(draft => {
+                    draft[i].lastTen = (parseInt(draft[i].lastTen, 2) >> 1 | 512).toString(2)
+                });
             }
         }
        
-        team1[i].mmr = Math.round((team1[i].mmr + points ) * 10) / 10;
-        team2[i].mmr = Math.round((team2[i].mmr + points2 ) * 10) / 10;
-
-
+        setTeam1State(draft => {
+            draft[i].mmr = Math.round((draft[i].mmr + points) * 10) / 10
+        });
+        setTeam2State(draft => {
+            draft[i].mmr = Math.round((draft[i].mmr + points2) * 10) / 10
+        });
+        points1Array.push(points)
+        points2Array.push(points2)
         streak = 0;
         streak2 = 0;
-
     }
-    return [team1, team2];
+    return [points1Array, points2Array];
 }
 export default calculateMmr;

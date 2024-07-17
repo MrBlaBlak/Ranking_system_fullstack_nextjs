@@ -7,7 +7,6 @@ import {postMatchGamer} from "@/app/api/gamers/prismaActions"
 import {postKillsAndCaps} from "@/app/api/gamers/prismaActions"
 import {updateGamer} from "@/app/api/gamers/prismaActions"
 import {applyServerHandicap} from "./findMostBalancedTeams"
-import calculateMMR from './calculateMMR'
 
 export default async function updatePlayers(formValues: FormValues, team1: gamers[], team2: gamers[]) {
 
@@ -67,25 +66,24 @@ export default async function updatePlayers(formValues: FormValues, team1: gamer
         win_or_loose: team2forDBwin_or_loose
     });
 
-    const [team1New, team2New] = calculateMMR(formValues, team1, team2);
 
     for (let i = 0; i < 5; i++) {
-        team1New[i].mmr = Math.round((team1[i].mmr + applyServerHandicap(server, team1[i].server)) * 10) / 10;
-        team2New[i].mmr = Math.round((team2[i].mmr + applyServerHandicap(server, team2[i].server)) * 10) / 10;
+        team1[i].mmr = Math.round((team1[i].mmr + applyServerHandicap(server, team1[i].server)) * 10) / 10;
+        team2[i].mmr = Math.round((team2[i].mmr + applyServerHandicap(server, team2[i].server)) * 10) / 10;
     }
 
     for (let i = 0; i < 5; i++) {
         // Update gamers in both teams
-        await Promise.all([updateGamer(team1New[i]), updateGamer(team2New[i])]);
+        await Promise.all([updateGamer(team1[i]), updateGamer(team2[i])]);
 
         // Create match gamers for both teams
         const [newMatchGamer1, newMatchGamer2] = await Promise.all([
             postMatchGamer({
-                gamer_id: team1New[i].id,
+                gamer_id: team1[i].id,
                 match_id: newMatch.id,
                 team_id: newTeam1.id}),
             postMatchGamer({
-                gamer_id: team2New[i].id,
+                gamer_id: team2[i].id,
                 match_id: newMatch.id,
                 team_id: newTeam2.id
             })

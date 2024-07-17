@@ -10,6 +10,7 @@ import MapSelect from './MapSelect'
 import SuddenDeathCheckbox from './SuddenDeathCheckbox'
 import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
 import ButtonsSection from './ButtonsSection'
+import { useImmer } from "use-immer";
 
 type Props = {
     pickedGamers: string[],
@@ -37,11 +38,12 @@ export type FormValues = {
 const DisplayTeams = ({t1, t2, server}: Props) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [mmrDifferences, setMMRDifferences] = useState<{[key: string]: number}>({});
     const [isDrawAlert, setIsDrawAlert] = useState(false);
     const [suddenDeathErrorAlert, setSuddenDeathErrorAlert] = useState(false);
     const [isDraw, setIsDraw] = useState(false);
-    const [team1, setTeam1State] = useState(t1);
-    const [team2, setTeam2State] = useState(t2);
+    const [team1, setTeam1State] = useImmer(t1);
+    const [team2, setTeam2State] = useImmer(t2);
     const [formValues, setFormValues] = useState<FormValues>({
         team1Stats: Array.from({length: 5}, (_, index) => ({
             elims: "",
@@ -135,9 +137,17 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
         }
 
         setIsSubmitting(true);
-        await updatePlayers({...formValues}, [...team1], [...team2]);
-        const [newTeam1, newTeam2] = calculateMMR({...formValues}, [...team1], [...team2]);
-        updateTeams(newTeam1, newTeam2);
+        const [pointsTeam1, pointsTeam2] = calculateMMR(formValues, team1, team2, setTeam1State, setTeam2State);
+        const mmrDiffs: {[key: string]: number} = {};
+        team1.forEach((player, index) => {
+            mmrDiffs[player.id] = pointsTeam1[index];
+        });
+        team2.forEach((player, index) => {
+            mmrDiffs[player.id] = pointsTeam2[index];
+        });
+        // Set MMR differences state
+        setMMRDifferences(mmrDiffs);
+        await updatePlayers(formValues, team1, team2);
         setIsSubmitting(false);
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
@@ -165,8 +175,8 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
     return (
         <form onSubmit={handleSubmit}>
             <table className="border-separate border-spacing-x-2 border-spacing-y-1">
-                <TeamScore nr={1} team={team1} formValues={formValues} handleInputChange={handleInputChange}/>
-                <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange}/>
+                <TeamScore nr={1} team={team1} formValues={formValues} handleInputChange={handleInputChange} mmrDifferences={mmrDifferences}/>
+                <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange} mmrDifferences={mmrDifferences}/>
                 <tbody>
                 <MapSelect formValues={formValues} handleMapChange={handleMapChange}/>
                 <tr>

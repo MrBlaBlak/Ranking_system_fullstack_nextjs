@@ -85,4 +85,26 @@ html {
 
   }
 }
+.mmr-diff {
+  position: relative;
+  animation: floatFade 6s ease-in-out;
+}
 
+.mmr-diff.increase {
+  color: green;
+}
+
+.mmr-diff.decrease {
+  color: red;
+}
+
+@keyframes floatFade {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+  }
+}

@@ -7,9 +7,10 @@ type Props = {
     nr: number,
     team: gamers[],
     formValues: FormValues,
-    handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void;
+    handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
+    mmrDifferences: {[key: string]: number},
 }
-const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
+const TeamScore = ({nr, team, formValues, handleInputChange, mmrDifferences}: Props) => {
     const teamStatsKey = `team${nr}Stats` as keyof FormValues;
     const teamStats = formValues[teamStatsKey] as GamerMatchStats[];
     return (
@@ -53,6 +54,11 @@ const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
                     </td>
                     <td>
                         <input type="hidden" name={`team${nr}Stats-${index}-gamersId`} value={gamer.id}/>
+                    </td>
+                    <td>
+                            <div className={`mmr-diff opacity-0  ${mmrDifferences[gamer.id] > 0 ? 'increase' : 'decrease'}`}>
+                                {mmrDifferences[gamer.id] > 0 ? `+${mmrDifferences[gamer.id]}` : mmrDifferences[gamer.id]}
+                            </div>
                     </td>
                 </tr>
             ))}
