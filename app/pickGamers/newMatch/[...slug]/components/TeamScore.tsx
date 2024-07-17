@@ -55,11 +55,7 @@ const TeamScore = ({nr, team, formValues, handleInputChange, mmrDifferences}: Pr
                     <td>
                         <input type="hidden" name={`team${nr}Stats-${index}-gamersId`} value={gamer.id}/>
                     </td>
-                    <td>
-                            <div className={`mmr-diff opacity-0  ${mmrDifferences[gamer.id] > 0 ? 'increase' : 'decrease'}`}>
-                                {mmrDifferences[gamer.id] > 0 ? `+${mmrDifferences[gamer.id]}` : mmrDifferences[gamer.id]}
-                            </div>
-                    </td>
+
                 </tr>
             ))}
             </tbody>
