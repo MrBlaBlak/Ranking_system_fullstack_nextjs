@@ -3,7 +3,6 @@ import {gamers} from "@prisma/client";
 import React from 'react';
 import {disableSelectedOption} from '@/app/redux/selectedOptionsSlice';
 import {useAppDispatch, useAppSelector} from '@/app/redux/hooks'
-import Link from 'next/link'
 import {AppDispatch} from "@/app/redux/store";
 
 type Props = {
@@ -16,21 +15,11 @@ const GamersList: React.FC<Props> = ({gamers}) => {
     const handleSelectChange = (index: number, value: string) => {
         dispatch(disableSelectedOption({index, value}));
     };
-    const handleRandomSelect = (e: React.MouseEvent<HTMLElement>) => {
-        e.preventDefault();
-        const randomPlayers = [...gamers]
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 10)
-            .map(gamer => gamer.name);
 
-        randomPlayers.forEach((value, index) => {
-            dispatch(disableSelectedOption({index, value}));
-        });
-    };
     const gamersTable: string [] = new Array(10).fill({});
     return (
-        <>
 
+        <div className="flex flex-col gap-y-1">
             {gamersTable.map((elem, index) => (
                     <select key={index}
                             id={`selectGamer${index}`}
@@ -63,20 +52,8 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                 <option value="EU">EU</option>
                 <option value="NY">NY</option>
             </select>
-            <button type="submit"
-                    className="btn btn-success max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md  hover:text-gray-300 transition duration-300 mb-1">
-                Create teams
-            </button>
-            <button type="button"
-                    onClick={handleRandomSelect}
-                    className="btn btn-primary max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm md:btn-md hover:text-gray-300 transition duration-300 mb-1">
-                Randomize Players
-            </button>
-            <Link href="/"
-                  className="btn btn-neutral max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 btn-sm sm:btn-sm md:btn-md  hover:text-gray-300 transition duration-300 ">
-                Go back
-            </Link>
-        </>
+        </div>
+
     );
 }
 

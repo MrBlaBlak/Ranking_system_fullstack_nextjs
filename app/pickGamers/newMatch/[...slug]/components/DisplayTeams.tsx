@@ -44,7 +44,7 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
     const [isDraw, setIsDraw] = useState(false);
     const [team1, setTeam1State] = useImmer(t1);
     const [team2, setTeam2State] = useImmer(t2);
-    const [formValues, setFormValues] = useState<FormValues>({
+    const [formValues, setFormValues] = useImmer<FormValues>({
         team1Stats: Array.from({length: 5}, (_, index) => ({
             elims: "",
             flags: "",
@@ -68,11 +68,10 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
         const isDraw = team1Flags === team2Flags;
         setIsDraw(() => {
             if (!isDraw) {
-                setFormValues((prevState) => ({
-                    ...prevState,
-                    suddenDeath: false,
-                    suddenDeathWhoWon: ''
-                }))
+                setFormValues((draft) => {
+                    draft.suddenDeath = false;
+                    draft.suddenDeathWhoWon = ''
+                })
             }
             return isDraw;
         });
@@ -81,46 +80,33 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
 
     const handleGetRandomStats = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
+        setFormValues((draft) => {
 
-        setFormValues((prevState) => ({
-            ...prevState,
-            team1Stats: prevState.team1Stats.map(stats => ({
+            draft.team1Stats = draft.team1Stats.map(stats => ({
                 ...stats,
                 ...getRandomStats(),
-            })),
+            }));
 
-            team2Stats: prevState.team2Stats.map(stats => ({
+            draft.team2Stats = draft.team2Stats.map(stats => ({
                 ...stats,
                 ...getRandomStats(),
-            })),
-            ...getRandomMap()
+            }));
+            draft.mapPlayed = getRandomMap().mapPlayed;
 
-        }));
+        });
     }
-    const updateTeams = (newTeam1: gamers[], newTeam2: gamers[]) => {
-        for (let i = 0; i < 5; i++) {
-            setTeam1State((prevState: gamers[]) => {
-                return newTeam1
-            })
-            setTeam2State((prevState: gamers[]) => {
-                return newTeam2
-            })
-        }
 
-    }
     const enableSDWinner = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormValues((prevState) => ({
-            ...prevState,
-            suddenDeath: e.target.checked,
-            suddenDeathWhoWon: e.target.checked ? prevState.suddenDeathWhoWon : ''
-        }));
+        setFormValues((draft) => {
+            draft.suddenDeath = e.target.checked;
+            draft.suddenDeathWhoWon = e.target.checked ? draft.suddenDeathWhoWon : ''
+        });
     };
 
     const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormValues((prevValues) => ({
-            ...prevValues,
-            suddenDeathWhoWon: e.target.value
-        }));
+        setFormValues((draft) => {
+            draft.suddenDeathWhoWon = e.target.value
+        });
     };
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -154,24 +140,21 @@ const DisplayTeams = ({t1, t2, server}: Props) => {
         const {name, value} = e.target;
         const [team, index, field] = name.split('-');
 
-        setFormValues(prevValues => ({
-            ...prevValues,
-            [team]: (prevValues[team] as GamerMatchStats[]).map((player: GamerMatchStats, i: number) =>
+        setFormValues(draft => {
+            draft[team] = (draft[team] as GamerMatchStats[]).map((player: GamerMatchStats, i: number) =>
                 i === parseInt(index)
                     ? {...player, [field]: value}
                     : player
-            ),
-        }));
+            )
+        });
     };
     const handleMapChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;
-        setFormValues(prevValues => ({
-                ...prevValues,
-                [name]: value
-            })
+        setFormValues(draft => {
+                draft[name] = value;
+            }
         );
     };
-
     return (
         <form onSubmit={handleSubmit}>
             <table className="border-separate border-spacing-x-2 border-spacing-y-1">
