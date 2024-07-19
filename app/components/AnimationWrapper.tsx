@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from "@/app/components/Navbar";
 import WeaponLink from "@/app/components/WeaponLink";
 import Guide from "@/app/components/Guide";
@@ -10,9 +10,13 @@ import {textsMain} from "@/public/data/guideTexts"
 type Props = {};
 const AnimationWrapper = ({}: Props) => {
     const {isModalOpen} = useAppSelector((state) => state.modal);
+    useEffect(()=>{
+        setIsClient(true)
+    },[])
+    const [isClient, setIsClient] = useState(false)
     return (
         <>
-            {!isModalOpen &&
+            {isClient && !isModalOpen &&
                 <motion.div initial={{opacity: 0}}
                             whileInView={{opacity: 1}}>
                     <nav className="relative flex justify-center pt-20 max-h-screen">

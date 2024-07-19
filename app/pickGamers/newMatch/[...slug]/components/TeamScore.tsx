@@ -1,6 +1,6 @@
 import React from 'react';
 import {gamers} from "@prisma/client";
-import {FormValues, GamerMatchStats} from './DisplayTeams'
+import {FormValues, GamerMatchStats} from './TableSection'
 import {Titan_Name} from "@prisma/client";
 
 type Props = {

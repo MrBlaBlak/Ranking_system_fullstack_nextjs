@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormValues} from './DisplayTeams'
+import {FormValues} from './TableSection'
 import {Map_Name} from "@prisma/client";
 
 type Props = {

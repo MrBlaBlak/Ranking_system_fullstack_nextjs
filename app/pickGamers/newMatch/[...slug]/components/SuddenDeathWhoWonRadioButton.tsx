@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormValues} from "./DisplayTeams";
+import {FormValues} from "./TableSection";
 
 type Props = {
     nr: number

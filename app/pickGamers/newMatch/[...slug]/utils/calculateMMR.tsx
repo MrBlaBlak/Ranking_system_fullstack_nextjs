@@ -1,4 +1,4 @@
-import {FormValues} from '../components/DisplayTeams'
+import {FormValues} from '../components/TableSection'
 import {gamers} from '@prisma/client'
 import {Updater} from "use-immer";
 const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[], setTeam1State: Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>, setTeam2State:  Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>): [number[], number[]] => {

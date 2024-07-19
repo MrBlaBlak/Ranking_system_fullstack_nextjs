@@ -2,15 +2,21 @@
 import React, {useEffect, useState} from 'react';
 import ChatBubble from "@/app/components/modal/ChatBubble";
 import ButtonsSection from "@/app/components/modal/ButtonsSection";
-import {useAppSelector} from "@/app/redux/hooks";
+import {useAppDispatch, useAppSelector} from "@/app/redux/hooks";
 import TypingEffect from "@/app/components/modal/TypingEffect";
+import {AppDispatch} from "@/app/redux/store";
+import {setIsModalOpen} from "@/app/redux/modalSlice";
 
 
 type Props = {};
 const Modal = ({}: Props) => {
+    const dispatch = useAppDispatch<AppDispatch>();
     let hasBeenRejectedBefore;
     if (typeof window !== "undefined") {
         hasBeenRejectedBefore = localStorage.getItem("rejected")
+        if(hasBeenRejectedBefore){
+            dispatch(setIsModalOpen(false))
+        }
     }
     useEffect(()=>{
         setIsClient(true)
@@ -20,10 +26,10 @@ const Modal = ({}: Props) => {
     const textList = [["Welcome to Titanfall 2 ranking system.", "I can be your guide on this page.", "Do you need my help?"], ["As you wish"]]
     return (<>
         {/* Modal and Overlay */}
-        {isModalOpen &&(<>
+        {isClient && !hasBeenRejectedBefore && isModalOpen &&(<>
             <div className="fixed inset-0 z-50 flex items-center justify-center">
                 <div className="fixed inset-0 bg-black opacity-80"></div>
-                {isClient && hasBeenRejectedBefore &&  (
+                {  (
 
                     <dialog open className="modal-box relative z-10">
                         <ChatBubble>

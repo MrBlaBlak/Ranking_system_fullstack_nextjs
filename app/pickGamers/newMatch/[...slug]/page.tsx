@@ -1,5 +1,5 @@
 import React from 'react';
-import DisplayTeams from './components/DisplayTeams'
+import TableSection from './components/TableSection'
 import {gamers} from "@prisma/client";
 import prisma from '@/prisma/client';
 import BackgroundImage from '@/app/components/shared/BackgroundImage'
@@ -29,12 +29,8 @@ async function NewMatchPage({params: {slug}}: Props) {
         <>
             <Stars/>
             <BackgroundImage classProperties={"invisible lg:visible"}/>
-
-            <div
-                className="relative left-2 top-2 sm:left-8 sm:top-8 md:left-32 lg:left-40 xl:left-60 p-4 rounded-lg max-w-xl bg-base-200">
-                <DisplayTeams pickedGamers={slug} gamers={gamers} t1={localTeam1} t2={localTeam2}
-                              server={localServer}/>
-            </div>
+            <TableSection pickedGamers={slug} gamers={gamers} t1={localTeam1} t2={localTeam2}
+                          server={localServer}/>
         </>
 
     );
