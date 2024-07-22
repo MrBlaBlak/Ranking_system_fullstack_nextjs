@@ -36,7 +36,10 @@ const Guide = ({texts}: Props) => {
                             <button
                                 key={index}
                                 className={`join-item btn btn-xs ${activeButtonIndex === index ? 'btn-active' : ''}`}
-                                onClick={() => setActiveButtonIndex(index)}
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    setActiveButtonIndex(index)
+                                }}
                             >
                                 {index + 1}
                             </button>

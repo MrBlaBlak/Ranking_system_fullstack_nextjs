@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import Navbar from "@/app/components/Navbar";
 import WeaponLink from "@/app/components/WeaponLink";
-import Guide from "@/app/components/Guide";
+import Guide from "@/app/components/shared/Guide";
 import {motion} from "framer-motion"
 import {useAppSelector} from "@/app/redux/hooks";
 import {textsMain} from "@/public/data/guideTexts"

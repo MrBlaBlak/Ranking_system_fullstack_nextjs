@@ -6,7 +6,7 @@ import {useAppDispatch} from "@/app/redux/hooks";
 import {AppDispatch} from "@/app/redux/store";
 import {gamers} from '@prisma/client'
 import {textsPickGamers} from "@/public/data/guideTexts";
-import Guide from "@/app/components/Guide";
+import Guide from "@/app/components/shared/Guide";
 
 type Props = { gamers: gamers[] };
 const ButtonsSection = ({gamers}: Props) => {

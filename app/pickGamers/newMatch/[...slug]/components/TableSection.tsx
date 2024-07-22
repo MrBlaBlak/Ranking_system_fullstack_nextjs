@@ -12,6 +12,8 @@ import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
 import ButtonsSection from './ButtonsSection'
 import {useImmer} from "use-immer";
 import {FormValues, GamerMatchStats} from "@/zod/zodSchemas";
+import Guide from "@/app/components/shared/Guide";
+import {textsSubmitMatch} from "@/public/data/guideTexts";
 
 type Props = {
     pickedGamers: string[],
@@ -142,37 +144,42 @@ const TableSection = ({t1, t2, server}: Props) => {
         );
     };
     return (
-        <div className="relative left-2 top-2 sm:left-8 sm:top-8 md:left-32 lg:left-40 xl:left-60 p-4 rounded-lg max-w-xl bg-base-200">
-            <form onSubmit={handleSubmit}>
-                <table className="border-separate border-spacing-x-2 border-spacing-y-1">
-                    <TeamScore nr={1} team={team1} formValues={formValues} handleInputChange={handleInputChange}
-                               mmrDifferences={mmrDifferences}/>
-                    <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange}
-                               mmrDifferences={mmrDifferences}/>
-                    <tbody>
-                    <MapSelect formValues={formValues} handleMapChange={handleMapChange}/>
-                    <tr>
-                        <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw} enableSDWinner={enableSDWinner}/>
-                        <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues}
-                                                      handleRadioChange={handleRadioChange}/>
-                        <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues}
-                                                      handleRadioChange={handleRadioChange}/>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="hidden" name="server" value={server}/>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <ButtonsSection isSubmitting={isSubmitting} handleGetRandomStats={handleGetRandomStats}/>
-                {isDrawAlert &&
-                    <Alert text="This match is a draw."/>
-                }
-                {suddenDeathErrorAlert &&
-                    <Alert text="You need to check SuddenDeathWinner."/>
-                }
-            </form>
+        <div
+            className="relative left-2 top-2 sm:left-8 sm:top-8 md:left-32 lg:left-40 xl:left-60 p-4 rounded-lg max-w-fit bg-base-200">
+            <div className="flex flex-row">
+                <form onSubmit={handleSubmit}>
+                    <table className="border-separate border-spacing-x-2 border-spacing-y-1">
+                        <TeamScore nr={1} team={team1} formValues={formValues} handleInputChange={handleInputChange}
+                                   mmrDifferences={mmrDifferences}/>
+                        <TeamScore nr={2} team={team2} formValues={formValues} handleInputChange={handleInputChange}
+                                   mmrDifferences={mmrDifferences}/>
+                        <tbody>
+                        <MapSelect formValues={formValues} handleMapChange={handleMapChange}/>
+                        <tr>
+                            <SuddenDeathCheckbox formValues={formValues} isDraw={isDraw}
+                                                 enableSDWinner={enableSDWinner}/>
+                            <SuddenDeathWhoWonRadioButton nr={1} formValues={formValues}
+                                                          handleRadioChange={handleRadioChange}/>
+                            <SuddenDeathWhoWonRadioButton nr={2} formValues={formValues}
+                                                          handleRadioChange={handleRadioChange}/>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="server" value={server}/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ButtonsSection isSubmitting={isSubmitting} handleGetRandomStats={handleGetRandomStats}/>
+                    {isDrawAlert &&
+                        <Alert text="This match is a draw."/>
+                    }
+                    {suddenDeathErrorAlert &&
+                        <Alert text="You need to check SuddenDeathWinner."/>
+                    }
+                </form>
+                <Guide texts={textsSubmitMatch}/>
+            </div>
         </div>
     );
 }

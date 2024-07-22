@@ -1,6 +1,5 @@
 import React, { MouseEventHandler } from 'react';
 import Link from 'next/link'
-import HelpButton from "@/app/components/shared/HelpButton";
 type Props = {isSubmitting: boolean,
 handleGetRandomStats: MouseEventHandler<HTMLButtonElement>
 };
@@ -21,7 +20,6 @@ const ButtonsSection = ({isSubmitting, handleGetRandomStats}: Props) => {
                     className="btn btn-outline btn-accent btn-xs  sm:btn-xs md:btn-sm lg:btn-md hover:text-gray-300 transition duration-300 pr-5">Get
                 Random
             </button>
-            <HelpButton/>
         </div>
     )
 };
