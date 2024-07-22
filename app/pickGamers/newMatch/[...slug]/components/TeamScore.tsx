@@ -1,6 +1,6 @@
 import React from 'react';
 import {gamers} from "@prisma/client";
-import {FormValues, GamerMatchStats} from './TableSection'
+import {FormValues, GamerMatchStats} from "@/zod/zodSchemas";
 import {Titan_Name} from "@prisma/client";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
     mmrDifferences: {[key: string]: number},
 }
-const TeamScore = ({nr, team, formValues, handleInputChange, mmrDifferences}: Props) => {
+const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
     const teamStatsKey = `team${nr}Stats` as keyof FormValues;
     const teamStats = formValues[teamStatsKey] as GamerMatchStats[];
     return (

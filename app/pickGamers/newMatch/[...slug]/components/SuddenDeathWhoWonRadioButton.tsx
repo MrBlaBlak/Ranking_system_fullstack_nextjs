@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormValues} from "./TableSection";
+import {FormValues} from "@/zod/zodSchemas";
 
 type Props = {
     nr: number
