@@ -1,20 +1,25 @@
 'use server'
 import {gamers, Map_Name, Titan_Name} from '@prisma/client'
-import {FormValues} from '../components/TableSection'
+
 import {postMatch} from "@/app/api/gamers/prismaActions"
 import {postTeam} from "@/app/api/gamers/prismaActions"
 import {postMatchGamer} from "@/app/api/gamers/prismaActions"
 import {postKillsAndCaps} from "@/app/api/gamers/prismaActions"
 import {updateGamer} from "@/app/api/gamers/prismaActions"
 import {applyServerHandicap} from "./findMostBalancedTeams"
+import {FormSchema} from "@/zod/zodSchemas";
 
-export default async function updatePlayers(formValues: FormValues, team1: gamers[], team2: gamers[]) {
-
-    const server = formValues.server;
-    const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
-    const team1Stats = formValues.team1Stats;
-    const team2Stats = formValues.team2Stats;
-    const mapPlayed = formValues.mapPlayed;
+export default async function updatePlayers(formValues: unknown, team1: gamers[], team2: gamers[]) {
+    const validatedForm = FormSchema.safeParse(formValues);
+    if (!validatedForm.success) {
+        console.error(validatedForm.error)
+        return;
+    }
+    const server = validatedForm.data.server;
+    const suddenDeathWhoWon = validatedForm.data.suddenDeathWhoWon;
+    const team1Stats = validatedForm.data.team1Stats;
+    const team2Stats = validatedForm.data.team2Stats;
+    const mapPlayed = validatedForm.data.mapPlayed;
     let team1flagsTotal = 0;
     let team2flagsTotal = 0;
     let whoWon = 0;
@@ -81,7 +86,8 @@ export default async function updatePlayers(formValues: FormValues, team1: gamer
             postMatchGamer({
                 gamer_id: team1[i].id,
                 match_id: newMatch.id,
-                team_id: newTeam1.id}),
+                team_id: newTeam1.id
+            }),
             postMatchGamer({
                 gamer_id: team2[i].id,
                 match_id: newMatch.id,
@@ -101,7 +107,8 @@ export default async function updatePlayers(formValues: FormValues, team1: gamer
                 caps: +team2Stats[i].flags,
                 kills: +team2Stats[i].elims,
                 titan: Titan_Name[team2Stats[i].titans as keyof typeof Titan_Name],
-                match_gamer_id: newMatchGamer2.id})
+                match_gamer_id: newMatchGamer2.id
+            })
         ]);
     }
 

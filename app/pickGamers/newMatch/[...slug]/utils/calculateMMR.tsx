@@ -1,11 +1,16 @@
-import {FormValues} from '../components/TableSection'
+import {FormSchema} from '@/zod/zodSchemas'
 import {gamers} from '@prisma/client'
 import {Updater} from "use-immer";
-const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[], setTeam1State: Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>, setTeam2State:  Updater<{id: number, lastTen: string, mmr: number, name: string, server: string}[]>): [number[], number[]] => {
-    const suddenDeath = formValues.suddenDeath;
-    const suddenDeathWhoWon = formValues.suddenDeathWhoWon;
-    const team1Stats = formValues.team1Stats;
-    const team2Stats = formValues.team2Stats;
+const calculateMmr = (formValues: unknown, team1: gamers[], team2: gamers[], setTeam1State: Updater<gamers[]>, setTeam2State:  Updater<gamers[]>): [number[], number[]] => {
+    const validatedForm = FormSchema.safeParse(formValues);
+    if(!validatedForm.success){
+        console.error(validatedForm.error)
+        return [[0,0,0,0,0], [0,0,0,0,0]];
+    }
+    const suddenDeath = validatedForm.data.suddenDeath;
+    const suddenDeathWhoWon = validatedForm.data.suddenDeathWhoWon;
+    const team1Stats = validatedForm.data.team1Stats;
+    const team2Stats = validatedForm.data.team2Stats;
     let team1flagsTotal = 0;
     let team2flagsTotal = 0;
     let whoWon = 0;
@@ -25,7 +30,6 @@ const calculateMmr = (formValues: FormValues, team1: gamers[], team2: gamers[], 
         whoWon = 2;
     } else {
         if (!suddenDeathWhoWon) {
-            // res.status(200).json({team1: team1gamers, team2: team2gamers, server});
              return [[0,0,0,0,0], [0,0,0,0,0]]
         } else if (suddenDeathWhoWon === 'team1') {
             whoWon = 1;

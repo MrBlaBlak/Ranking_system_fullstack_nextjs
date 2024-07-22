@@ -7,7 +7,7 @@ import teamsJson from '@/public/data/teams.json';
 import matchGamersJson from '@/public/data/matchGamers.json';
 import killsAndCapsJson from '@/public/data/killsAndCaps.json';
 import {Titan_Name, Map_Name} from ".prisma/client";
-import {gamerSchema, matchGamerSchema} from "@/zod/zod";
+import {gamerSchema, MatchGamerSchema} from "@/zod/zodSchemas";
 export async function setStatsData() {
     try {
 
@@ -70,7 +70,7 @@ export async function setWeaponsData() {
 
 export async function checkIfDataExist() {
     try {
-        const validatedResult = matchGamerSchema.safeParse(await prisma.match_gamer.findFirst()) ;
+        const validatedResult = MatchGamerSchema.safeParse(await prisma.match_gamer.findFirst()) ;
         if(!validatedResult.success){
             console.error(validatedResult.error)
             return false;

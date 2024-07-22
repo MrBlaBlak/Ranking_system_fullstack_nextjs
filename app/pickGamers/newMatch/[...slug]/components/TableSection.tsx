@@ -11,6 +11,7 @@ import SuddenDeathCheckbox from './SuddenDeathCheckbox'
 import SuddenDeathWhoWonRadioButton from "./SuddenDeathWhoWonRadioButton";
 import ButtonsSection from './ButtonsSection'
 import {useImmer} from "use-immer";
+import {FormValues, GamerMatchStats} from "@/zod/zodSchemas";
 
 type Props = {
     pickedGamers: string[],
@@ -19,21 +20,6 @@ type Props = {
     t2: gamers[],
     server: string
 }
-export type GamerMatchStats = {
-    elims: string;
-    flags: string;
-    titans: string;
-    gamersId: string;
-};
-export type FormValues = {
-    team1Stats: GamerMatchStats[];
-    team2Stats: GamerMatchStats[];
-    mapPlayed: string;
-    suddenDeath: boolean;
-    suddenDeathWhoWon: string;
-    server: string;
-    [key: string]: GamerMatchStats[] | string | boolean;
-};
 
 const TableSection = ({t1, t2, server}: Props) => {
 
