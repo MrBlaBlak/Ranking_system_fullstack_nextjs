@@ -7,7 +7,7 @@ import teamsJson from '@/public/data/teams.json';
 import matchGamersJson from '@/public/data/matchGamers.json';
 import killsAndCapsJson from '@/public/data/killsAndCaps.json';
 import {Titan_Name, Map_Name} from ".prisma/client";
-
+import {gamerSchema, matchGamerSchema} from "@/zod/zod";
 export async function setStatsData() {
     try {
 
@@ -70,8 +70,12 @@ export async function setWeaponsData() {
 
 export async function checkIfDataExist() {
     try {
-        const result = await prisma.match_gamer.findFirst();
-        return result !== null;
+        const validatedResult = matchGamerSchema.safeParse(await prisma.match_gamer.findFirst()) ;
+        if(!validatedResult.success){
+            console.error(validatedResult.error)
+            return false;
+        }
+        return validatedResult.data !== null;
     } catch (error) {
         console.error('Error checking data existence:', error);
         return false;
@@ -80,8 +84,12 @@ export async function checkIfDataExist() {
 
 export async function checkIfGamersExist() {
     try {
-        const result = await prisma.gamers.findFirst();
-        return result !== null;
+        const validatedResult = gamerSchema.safeParse(await prisma.gamers.findFirst());
+        if(!validatedResult.success){
+            console.error(validatedResult.error)
+            return false;
+        }
+        return validatedResult.data !== null;
     } catch (error) {
         console.error('Error checking data existence:', error);
         return false;
