@@ -117,7 +117,7 @@ const TableSection = ({t1, t2, server}: Props) => {
         setIsSubmitting(true);
         const [pointsTeam1, pointsTeam2, newTeam1, newTeam2] = calculateMMR(formValues, team1, team2);
         await updatePlayers(formValues, newTeam1, newTeam2);
-        setIsSubmitting(false);
+        setIsSubmitting(false); //end submitting
 
         //updating teams and setting mrrDiffs
         updateTeams(newTeam1, newTeam2);

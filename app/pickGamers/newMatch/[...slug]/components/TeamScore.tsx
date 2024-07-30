@@ -8,9 +8,9 @@ type Props = {
     team: gamers[],
     formValues: FormValues,
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
-    mmrDifferences: {[key: string]: number},
+    mmrDifferences: { [key: string]: number },
 }
-const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
+const TeamScore = ({nr, team, formValues, handleInputChange, mmrDifferences}: Props) => {
     const teamStatsKey = `team${nr}Stats` as keyof FormValues;
     const teamStats = formValues[teamStatsKey] as GamerMatchStats[];
     return (
@@ -25,6 +25,18 @@ const TeamScore = ({nr, team, formValues, handleInputChange}: Props) => {
                 <tr key={gamer.id}>
                     <td>{gamer.name}</td>
                     <td>{gamer.mmr}</td>
+                    <td>
+
+                        {mmrDifferences[gamer.id] !== undefined && (
+                            <div>
+                                <div key={gamer.mmr}
+                                     className={`mmr-diff opacity-0 ${mmrDifferences[gamer.id] > 0 ? 'increase' : 'decrease'}`}>
+                                    {mmrDifferences[gamer.id] > 0 ? `+${mmrDifferences[gamer.id]}` : mmrDifferences[gamer.id]}
+                                </div>
+                                <div className="particletext bubbles"></div>
+                            </div>
+                        )}
+                    </td>
                     <td>
                         <input className="input input-bordered input-xs w-full max-w-xs"
                                name={`team${nr}Stats-${index}-elims`}

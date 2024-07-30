@@ -14,5 +14,5 @@ export const textsSubmitMatch  = [
     "You get extra amount of point for last 10 games win%: \\n 7-8 wins - 1.2 points for a win \\n 9-10 wins - 1.5 points for win \\n 0-1 wins - -1.5 points for a loss \\n 2-3 wins - - 1.2 points for a loss",
     "You get extra amount of point for finishing a match with extra flag advantage: \\n 1 flag advantage - no extra points \\n with each successive flag you gain extra 0.2 point (and lose accordingly) \\n \\n When the game reaches SD state teams can only score/lose 0.5 points for win/loss.",
     "Ping handicap: \\n Handicap is based on average ping to non-native server when played on that server: \\n 95-115 (-5 points) \\n 115-135 (-6 points) \\n  135-155 (-7 points) \\n 155-175 (-8 points) \\n 175-195 (-10 points) \\n 195+ (-12 points) ",
-    "Tiers \\n bronze <= 570 points \\n silver 570.1-580 points \\n gold 580.1-590 points \\n platinum 590.1-600 points \\n diamond 600.1-610 points \\n masters > 610 points"
+    "Tiers: \\n bronze <= 570 points \\n silver 570.1-580 points \\n gold 580.1-590 points \\n platinum 590.1-600 points \\n diamond 600.1-610 points \\n masters > 610 points"
 ];
