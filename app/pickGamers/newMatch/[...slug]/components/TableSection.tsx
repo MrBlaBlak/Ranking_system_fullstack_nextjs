@@ -16,8 +16,6 @@ import Guide from "@/app/components/shared/Guide";
 import {textsSubmitMatch} from "@/public/data/guideTexts";
 
 type Props = {
-    pickedGamers: string[],
-    gamers: gamers[],
     t1: gamers[],
     t2: gamers[],
     server: string
@@ -30,8 +28,8 @@ const TableSection = ({t1, t2, server}: Props) => {
     const [isDrawAlert, setIsDrawAlert] = useState(false);
     const [suddenDeathErrorAlert, setSuddenDeathErrorAlert] = useState(false);
     const [isDraw, setIsDraw] = useState(false);
-    const [team1, setTeam1State] = useImmer(t1);
-    const [team2, setTeam2State] = useImmer(t2);
+    const [team1, setTeam1State] = useState(t1);
+    const [team2, setTeam2State] = useState(t2);
     const [formValues, setFormValues] = useImmer<FormValues>({
         team1Stats: Array.from({length: 5}, (_, index) => ({
             elims: "",
@@ -96,9 +94,14 @@ const TableSection = ({t1, t2, server}: Props) => {
             draft.suddenDeathWhoWon = e.target.value
         });
     };
-
+    const updateTeams = (newTeam1: gamers[], newTeam2: gamers[]) => {
+            setTeam1State(() => newTeam1)
+            setTeam2State(() => newTeam2)
+    }
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        //checking if SD conditions are met
         const team1Flags = formValues.team1Stats.reduce((acc, player) => acc + Number(player.flags), 0);
         const team2Flags = formValues.team2Stats.reduce((acc, player) => acc + Number(player.flags), 0);
         if (formValues.suddenDeath && formValues.suddenDeathWhoWon === '') {
@@ -110,8 +113,14 @@ const TableSection = ({t1, t2, server}: Props) => {
             setIsDrawAlert(team1Flags === team2Flags);
         }
 
+        //starting the data submitting process
         setIsSubmitting(true);
-        const [pointsTeam1, pointsTeam2] = calculateMMR(formValues, team1, team2, setTeam1State, setTeam2State);
+        const [pointsTeam1, pointsTeam2, newTeam1, newTeam2] = calculateMMR(formValues, team1, team2);
+        await updatePlayers(formValues, newTeam1, newTeam2);
+        setIsSubmitting(false);
+
+        //updating teams and setting mrrDiffs
+        updateTeams(newTeam1, newTeam2);
         const mmrDiffs: { [key: string]: number } = {};
         team1.forEach((player, index) => {
             mmrDiffs[player.id] = pointsTeam1[index];
@@ -119,10 +128,7 @@ const TableSection = ({t1, t2, server}: Props) => {
         team2.forEach((player, index) => {
             mmrDiffs[player.id] = pointsTeam2[index];
         });
-        // Set MMR differences state
         setMMRDifferences(mmrDiffs);
-        await updatePlayers(formValues, team1, team2);
-        setIsSubmitting(false);
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const {name, value} = e.target;

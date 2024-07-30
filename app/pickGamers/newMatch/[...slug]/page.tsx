@@ -23,13 +23,13 @@ async function NewMatchPage({params: {slug}}: Props) {
             selectedGamers.push(matchingGamer);
         }
     });
-    const [localTeam1, localTeam2] = findMostBalancedTeams(selectedGamers, localServer);
+    const [team1, team2] = findMostBalancedTeams(selectedGamers, localServer);
 
     return (
         <>
             <Stars/>
             <BackgroundImage classProperties={"invisible lg:visible"}/>
-            <TableSection pickedGamers={slug} gamers={gamers} t1={localTeam1} t2={localTeam2}
+            <TableSection t1={team1} t2={team2}
                           server={localServer}/>
         </>
 
