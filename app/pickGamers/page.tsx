@@ -10,9 +10,11 @@ async function Page() {
     const gamers: gamers[] = await prisma.gamers.findMany();
     return (
         <>
-            <Stars/>
-            <BackgroundImage/>
-            <PickGamersBar gamers={gamers}/>
+            <div className="h-dvh overflow-scroll">
+                <Stars/>
+                <BackgroundImage/>
+                <PickGamersBar gamers={gamers}/>
+            </div>
         </>
     );
 }

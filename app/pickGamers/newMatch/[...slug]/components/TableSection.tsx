@@ -1,8 +1,8 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {gamers} from '@prisma/client'
 import updatePlayers from '../utils/updatePlayers'
-import {getRandomStats, getRandomMap} from '../utils/randomValues'
+import {getRandomMap, getRandomStats} from '../utils/randomValues'
 import calculateMMR from '../utils/calculateMMR'
 import Alert from './Alert'
 import TeamScore from './TeamScore'
@@ -151,7 +151,7 @@ const TableSection = ({t1, t2, server}: Props) => {
     };
     return (
         <div
-            className="relative left-2 top-2 sm:left-8 sm:top-8 md:left-32 lg:left-40 xl:left-60 p-4 rounded-lg max-w-fit bg-base-200">
+            className="relative top-0 sm:top-8 -translate-x-1/2 left-1/2  p-4 rounded-lg max-w-fit bg-base-200">
             <div className="flex flex-row">
                 <form onSubmit={handleSubmit}>
                     <table className="border-separate border-spacing-x-2 border-spacing-y-1">
@@ -184,7 +184,9 @@ const TableSection = ({t1, t2, server}: Props) => {
                         <Alert text="You need to check SuddenDeathWinner."/>
                     }
                 </form>
-                <Guide texts={textsSubmitMatch}/>
+                <div className="hidden xs:display">
+                    <Guide texts={textsSubmitMatch}/>
+                </div>
             </div>
         </div>
     );

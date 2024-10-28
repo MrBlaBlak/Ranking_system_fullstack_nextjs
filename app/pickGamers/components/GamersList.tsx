@@ -24,7 +24,7 @@ const GamersList: React.FC<Props> = ({gamers}) => {
                     <select key={index}
                             id={`selectGamer${index}`}
                             value={selectedOptions[index]}
-                            className="select max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 select-sm md:select-md"
+                            className="select max-w-36 sm:max-w-40 md:max-w-44 lg:max-w-60 select-xs sm:select-sm md:select-sm lg:select-md"
                             onChange={(e) => handleSelectChange(index, e.target.value)}
                             required
                     >

@@ -27,10 +27,12 @@ async function NewMatchPage({params: {slug}}: Props) {
 
     return (
         <>
-            <Stars/>
-            <BackgroundImage classProperties={"invisible lg:visible"}/>
-            <TableSection t1={team1} t2={team2}
-                          server={localServer}/>
+            <div className="h-dvh overflow-scroll">
+                <Stars/>
+                <BackgroundImage classProperties={"invisible lg:visible"}/>
+                <TableSection t1={team1} t2={team2}
+                              server={localServer}/>
+            </div>
         </>
 
     );
