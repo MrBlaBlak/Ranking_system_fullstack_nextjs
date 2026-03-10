@@ -10,11 +10,7 @@ export const metadata: Metadata = {
     description: 'Created with NextJS',
 }
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode
-}) {
+export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html data-theme="dark" lang="en">
         <StoreProvider>

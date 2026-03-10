@@ -16,7 +16,7 @@ const ChartsSection = ({weaponId, weaponsData}: Props) => {
         throw new Error('Weapon not found');
     }
     const weapon: weapons = weaponData;
-    const [health, setHealth] = useState(125);
+    const [health, setHealth] = useState(120);
     
     const damageBreakpoints = calculateDamageBreakpoints(weapon);
     const ttkBreakpoints = calculateTTKBreakpoints(weapon, health);

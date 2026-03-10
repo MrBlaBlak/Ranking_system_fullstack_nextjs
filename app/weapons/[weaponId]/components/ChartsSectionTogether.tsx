@@ -11,7 +11,7 @@ type Props = {
     weaponsIdToCompare: number[]
 };
 const ChartsSectionTogether = ({weaponsData, weaponsIdToCompare}: Props) => {
-    const [health, setHealth] = useState(125);
+    const [health, setHealth] = useState(120);
     const damageBreakpoints: {x:number, y:number}[][] =[];
     const ttkBreakpoints: {x:number, y:number}[][] =[];
     const weapons: weapons[]=[]

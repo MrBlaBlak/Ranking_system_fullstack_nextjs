@@ -1,19 +1,16 @@
 import {weapons} from "@prisma/client";
 
 export const calculateDamageBreakpoints = (weapon: weapons) => {
-    const dataPoints = [
-        {distance: weapon.near_distance, damage: weapon.near_damage},
-        {distance: weapon.mid_distance, damage: weapon.mid_damage},
-        {distance: weapon.far_distance, damage: weapon.far_damage},
-    ];
-    const damageBreakpoints = dataPoints.map(point => ({x: point.distance, y: point.damage}))
-    damageBreakpoints.unshift({x: 0, y: weapon.near_damage});
-    damageBreakpoints.push({x: 4000, y: weapon.far_damage})
-    return damageBreakpoints
+    return [
+        {x: 0, y: weapon.near_damage},
+        {x: weapon.near_distance, y: weapon.near_damage},
+        {x: weapon.mid_distance, y: weapon.mid_damage},
+        {x: weapon.far_distance, y: weapon.far_damage},
+        {x: 4000, y: weapon.far_damage}
+    ]
 }
 export const calculateTTKBreakpoints = (weapon: weapons, health: number) => {
     const dataPoints = [
-
         {distance: weapon.near_distance, damage: weapon.near_damage},
         {distance: weapon.mid_distance, damage: weapon.mid_damage},
         {distance: weapon.far_distance, damage: weapon.far_damage},
@@ -41,7 +38,7 @@ export const calculateTTKBreakpoints = (weapon: weapons, health: number) => {
     const fireRatePerSecond = weapon.fire_rate / 60;
     const ttkBreakpoints = breakpoints.map(point => {
         const bullets = Math.ceil(health / point.y);
-        let ttk = bullets / fireRatePerSecond;
+        let ttk = (bullets-1) / fireRatePerSecond;
 
         if (weapon.name === "Hemlok" ) {
             ttk += Math.floor((bullets-1)/3) * 0.25;

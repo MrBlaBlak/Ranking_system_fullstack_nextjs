@@ -32,9 +32,10 @@
 //
 // export default Page;
 import React from 'react';
+import TestComponent from "@/app/test/TestComponent";
 
 type Props = {};
 const Page = ({}: Props) => {
-    return (<></>)
+    return (<><TestComponent/></>)
 };
 export default Page;

@@ -8,7 +8,11 @@ datasource db {
   directUrl = env("DIRECT_URL") // uses a direct connection
 
 }
-
+model users {
+  id        Int      @id @default(autoincrement())
+  name     String    @unique
+  password  String   // SHA256 hashed password
+}
 model gamers {
   id          Int           @id @default(autoincrement())
   lastTen     String        @db.VarChar(255)
