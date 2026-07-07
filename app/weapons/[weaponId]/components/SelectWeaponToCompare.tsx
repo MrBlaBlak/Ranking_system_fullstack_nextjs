@@ -1,9 +1,9 @@
 import React from 'react';
-import {weapons} from "@prisma/client";
+import {Weapon} from "@prisma/client";
 type Props = {
     weaponToCompare: number, 
     setWeaponToCompare: Function,
-    weaponsData: weapons[]
+    weaponsData: Weapon[]
 };
 const SelectWeaponToCompare = ({weaponToCompare, setWeaponToCompare, weaponsData}: Props) => {
     return (

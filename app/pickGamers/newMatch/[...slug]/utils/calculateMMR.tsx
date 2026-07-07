@@ -1,6 +1,6 @@
 import {FormSchema} from '@/zod/zodSchemas'
-import {gamers} from '@prisma/client'
-const calculateMmr = (formValues: unknown, team1ToCopy: gamers[], team2ToCopy: gamers[]): [number[], number[], gamers[], gamers[]] => {
+import {Gamer} from '@prisma/client'
+const calculateMmr = (formValues: unknown, team1ToCopy: Gamer[], team2ToCopy: Gamer[]): [number[], number[], Gamer[], Gamer[]] => {
     const team1 = team1ToCopy.map(player => ({ ...player }));
     const team2 = team2ToCopy.map(player => ({ ...player }));
     const validatedForm = FormSchema.safeParse(formValues);

@@ -1,13 +1,13 @@
 import React from 'react';
 import {findMostFrequentTitanForGamer} from '@/app/api/gamers/prismaActions'
-import {gamers} from "@prisma/client";
+import {Gamer} from "@prisma/client";
 import prisma from '@/prisma/client'
 import GetBadge from './GetBadgeImage'
 import GetTitan from '../GetTitanImage'
 import Link from 'next/link'
 
 interface TitanStats {
-    gamer_id: number;
+    gamer_id: string;
     max_titan: string;
 }
 
@@ -18,9 +18,9 @@ function formatLastTenResults(lastTen: string): string {
 }
 
 async function Page() {
-    const gamers: gamers[] = await prisma.gamers.findMany();
+    const gamers: Gamer[] = await prisma.gamer.findMany();
     const titanStats: TitanStats[] = await findMostFrequentTitanForGamer()
-    const gamerTitanMap: Map<number, string> = new Map();
+    const gamerTitanMap: Map<string, string> = new Map();
     titanStats.forEach((result) => {
         gamerTitanMap.set(result.gamer_id, result.max_titan);
     });

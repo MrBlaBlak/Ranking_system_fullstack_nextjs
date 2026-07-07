@@ -1,73 +1,77 @@
 'use server'
 import prisma from "@/prisma/client"
-import {Titan_Name, Map_Name, Prisma, gamers} from "@prisma/client";
+import {Gamer, Prisma} from "@prisma/client";
 
-interface TitanFrequencyStats {
-    gamer_id: number;
+export interface TitanFrequencyStats {
+    gamer_id: string;
     max_titan: string;
 }
-interface MapStats {
+export interface MapStats {
     name: string;
     total_wins: number;
     total_losses: number;
     map: string;
 }
-interface ElimsStats {
+export interface ElimsStats {
     name: string;
     total_kills_on_map: number;
     times_map_was_played: number;
     max_kills_on_map: number;
     map: string;
 }
-interface CapsStats {
+export interface CapsStats {
     name: string;
     total_caps_on_map: number;
     times_map_was_played: number;
     max_caps_on_map: number;
     map: string;
 }
-interface TitanStats {
+export interface TitanStats {
     name: string;
     total_wins: number;
     total_losses: number;
     titan: string;
 }
+
 export async function findMostFrequentTitanForGamer(): Promise<TitanFrequencyStats[]> {
-    // Fetch data with relations
-    const gamers = await prisma.gamers.findMany({
+    // 1. Pobieramy graczy tylko ze statystykami z meczów
+    const gamers = await prisma.gamer.findMany({
         include: {
-            match_gamer: {
-                include: {
-                    kills_and_caps: true,
-                },
-            },
+            matchStats: true, // Wystarczy tylko to, bo pole `titan` tu jest!
         },
     });
 
     const titanFrequencyStats: TitanFrequencyStats[] = [];
 
+    // 2. Przetwarzamy dane
     gamers.forEach(gamer => {
-        const titanCounts: Record<Titan_Name, number> = {} as Record<Titan_Name, number>;
+        const titanCounts: Record<string, number> = {};
 
-        gamer.match_gamer.forEach(matchGamer => {
-            const killAndCap = matchGamer.kills_and_caps;
-            if (killAndCap && killAndCap.titan && killAndCap.titan !== 'none') {
-                if (!titanCounts[killAndCap.titan]) {
-                    titanCounts[killAndCap.titan] = 0;
+        // Iterujemy po statystykach meczowych
+        gamer.matchStats.forEach(matchStat => {
+            const titan = matchStat.titan;
+
+            // Ignorujemy brak tytana i tytana "none"
+            if (titan && titan !== 'none') {
+                if (!titanCounts[titan]) {
+                    titanCounts[titan] = 0;
                 }
-                titanCounts[killAndCap.titan]++;
+                titanCounts[titan]++;
             }
         });
 
-        let maxTitan: Titan_Name | undefined = undefined;
+        let maxTitan: string | undefined = undefined;
         let maxCount = 0;
 
+        // Szukamy najczęściej wybieranego tytana
         for (const titan in titanCounts) {
-            if (titanCounts[titan as Titan_Name] > maxCount) {
-                maxCount = titanCounts[titan as Titan_Name];
-                maxTitan = titan as Titan_Name;
+            if (titanCounts[titan] > maxCount) {
+                maxCount = titanCounts[titan];
+                maxTitan = titan;
             }
         }
+
+        // 3. Jeśli gracz w ogóle grał jakimś tytanem, dodajemy go do tablicy
         if (maxTitan) {
             titanFrequencyStats.push({
                 gamer_id: gamer.id,
@@ -78,54 +82,49 @@ export async function findMostFrequentTitanForGamer(): Promise<TitanFrequencySta
 
     return titanFrequencyStats;
 }
-// export async function findMostFrequentTitanForGamer(){
-//     //find most frequently used titan for every gamer
-//     const titanStats: TitanFrequencyStats[] = await prisma.$queryRaw`SELECT t.gamer_id, MAX(t.max_titan) AS max_titan
-//                                          FROM (SELECT mg.gamer_id,
-//                                                       k.titan AS   max_titan,
-//                                                       ROW_NUMBER() OVER (PARTITION BY mg.gamer_id ORDER BY COUNT(k.titan) DESC) AS row_num
-//                                                FROM match_gamer mg
-//                                                         JOIN kills_and_caps k ON mg.id = k.match_gamer_id
-//                                                WHERE k.titan != 7
-//                                                GROUP BY mg.gamer_id, k.titan) AS t
-//                                          WHERE t.row_num = 1
-//                                          GROUP BY t.gamer_id`;
-//     return titanStats
-// }
+
 export async function getMapStats(): Promise<MapStats[]> {
-    const gamers = await prisma.gamers.findMany({
+    // 1. Pobieramy graczy z relacją do statystyk, meczu (mapa) i drużyny (wynik)
+    const gamers = await prisma.gamer.findMany({
         include: {
-            match_gamer: {
+            matchStats: {
                 include: {
-                    matches: true,
-                    teams: true,
+                    match: true,
+                    team: true,
                 },
             },
         },
     });
-    // Process the data to calculate total wins and losses per gamer per map
+
     const mapStats: MapStats[] = [];
 
+    // 2. Przetwarzamy pobrane dane
     gamers.forEach(gamer => {
         const mapStatsMap: Record<string, { total_wins: number; total_losses: number }> = {};
 
-        gamer.match_gamer.forEach(matchGamer => {
-            if (matchGamer.matches && matchGamer.teams) {
-                const map = matchGamer.matches.map;
-                const winOrLoose = matchGamer.teams.win_or_loose;
+        gamer.matchStats.forEach(matchStat => {
+            const match = matchStat.match;
+            const team = matchStat.team;
+
+            if (match && team) {
+                const map = match.map;
+                const result = team.result;
 
                 if (!mapStatsMap[map]) {
                     mapStatsMap[map] = { total_wins: 0, total_losses: 0 };
                 }
 
-                if (winOrLoose === 1) {
+                // Sprawdzamy ładnego enuma zamiast starych jedynek i zer
+                if (result === 'win') {
                     mapStatsMap[map].total_wins += 1;
-                } else if (winOrLoose === 0) {
+                } else if (result === 'loss') {
                     mapStatsMap[map].total_losses += 1;
                 }
+                // Remisy ('draw') są tutaj po prostu ignorowane, tak jak w starym kodzie
             }
         });
 
+        // 3. Budujemy finalną tablicę pod frontend
         for (const map in mapStatsMap) {
             mapStats.push({
                 name: gamer.name,
@@ -138,26 +137,14 @@ export async function getMapStats(): Promise<MapStats[]> {
 
     return mapStats;
 }
-// export async function getMapStats() {
-//     const mapStats: MapStats[] = await prisma.$queryRaw`SELECT g.name,
-//                                                                SUM(CASE WHEN t.win_or_loose = 1 THEN 1 ELSE 0 END) AS total_wins,
-//                                                                SUM(CASE WHEN t.win_or_loose = 0 THEN 1 ELSE 0 END) AS total_losses,
-//                                                                m.map
-//                                                         FROM gamers g
-//                                                                  LEFT JOIN match_gamer mg ON g.id = mg.gamer_id
-//                                                                  LEFT JOIN matches m ON mg.match_id = m.id
-//                                                                  LEFT JOIN teams t ON mg.team_id = t.id
-//                                                         GROUP BY g.name, m.map`;
-//     return mapStats;
-// }
+
 export async function getElimsStats(): Promise<ElimsStats[]> {
-    // Fetch data with relations
-    const gamers = await prisma.gamers.findMany({
+    // 1. Pobieramy graczy wraz z relacjami do statystyk i przypisanych meczów
+    const gamers = await prisma.gamer.findMany({
         include: {
-            match_gamer: {
+            matchStats: {
                 include: {
-                    matches: true,
-                    kills_and_caps: true,
+                    match: true, // Potrzebujemy tego, żeby wyciągnąć nazwę mapy
                 },
             },
         },
@@ -165,28 +152,33 @@ export async function getElimsStats(): Promise<ElimsStats[]> {
 
     const elimsStats: ElimsStats[] = [];
 
+    // 2. Przetwarzamy dane
     gamers.forEach(gamer => {
         const mapStatsMap: Record<string, { total_kills_on_map: number; times_map_was_played: number; max_kills_on_map: number }> = {};
 
-        gamer.match_gamer.forEach(matchGamer => {
-            const match = matchGamer.matches;
-            const killAndCap = matchGamer.kills_and_caps;
+        // Iterujemy po statystykach meczowych (nowy PlayerMatchStat)
+        gamer.matchStats.forEach(matchStat => {
+            const match = matchStat.match;
 
-            if (match && killAndCap) {
-                const map = match.map;
+            if (match) {
+                const map = match.map; // np. "boomtown"
 
                 if (!mapStatsMap[map]) {
                     mapStatsMap[map] = { total_kills_on_map: 0, times_map_was_played: 0, max_kills_on_map: 0 };
                 }
 
-                mapStatsMap[map].total_kills_on_map += killAndCap.kills;
+                // Zliczamy zabójstwa pobierane prosto z matchStat
+                mapStatsMap[map].total_kills_on_map += matchStat.kills;
                 mapStatsMap[map].times_map_was_played += 1;
-                if (killAndCap.kills > mapStatsMap[map].max_kills_on_map) {
-                    mapStatsMap[map].max_kills_on_map = killAndCap.kills;
+
+                // Aktualizujemy rekordową ilość zabójstw na danej mapie
+                if (matchStat.kills > mapStatsMap[map].max_kills_on_map) {
+                    mapStatsMap[map].max_kills_on_map = matchStat.kills;
                 }
             }
         });
 
+        // 3. Budujemy finalną tablicę pod frontend
         for (const map in mapStatsMap) {
             elimsStats.push({
                 name: gamer.name,
@@ -198,27 +190,20 @@ export async function getElimsStats(): Promise<ElimsStats[]> {
         }
     });
 
+    // 4. Sortujemy alfabetycznie po nicku
     elimsStats.sort((a, b) => a.name.localeCompare(b.name));
 
     return elimsStats;
 }
-// export async function getElimsStats() {
-//     const elimsStats: ElimsStats[] = await prisma.$queryRaw`SELECT g.name, SUM(kc.kills) as total_kills_on_map, COUNT(m.map) as times_map_was_played, MAX(kc.kills) as max_kills_on_map, m.map
-//             FROM gamers g
-//             LEFT JOIN match_gamer mg ON g.id = mg.gamer_id
-//             LEFT JOIN matches m ON mg.match_id = m.id
-//             LEFT JOIN kills_and_caps kc ON kc.match_gamer_id = mg.id
-//             GROUP BY g.name, m.map ORDER BY g.name`
-//     return elimsStats
-// }
+
+
 export async function getCapsStats(): Promise<CapsStats[]> {
-    // Fetch data with relations
-    const gamers = await prisma.gamers.findMany({
+    // 1. Pobieramy graczy wraz z ich statystykami i przypisanymi meczami
+    const gamers = await prisma.gamer.findMany({
         include: {
-            match_gamer: {
+            matchStats: {
                 include: {
-                    matches: true,
-                    kills_and_caps: true,
+                    match: true, // Dzięki temu mamy dostęp do match.map
                 },
             },
         },
@@ -226,28 +211,32 @@ export async function getCapsStats(): Promise<CapsStats[]> {
 
     const capsStats: CapsStats[] = [];
 
+    // 2. Przetwarzamy pobrane dane
     gamers.forEach(gamer => {
         const mapStatsMap: Record<string, { total_caps_on_map: number; times_map_was_played: number; max_caps_on_map: number }> = {};
 
-        gamer.match_gamer.forEach(matchGamer => {
-            const match = matchGamer.matches;
-            const killAndCap = matchGamer.kills_and_caps;
+        // Iterujemy po nowej relacji matchStats
+        gamer.matchStats.forEach(matchStat => {
+            const match = matchStat.match;
 
-            if (match && killAndCap) {
-                const map = match.map;
+            if (match) {
+                const map = match.map; // Pobieramy nazwę mapy (np. "boomtown")
 
                 if (!mapStatsMap[map]) {
                     mapStatsMap[map] = { total_caps_on_map: 0, times_map_was_played: 0, max_caps_on_map: 0 };
                 }
 
-                mapStatsMap[map].total_caps_on_map += killAndCap.caps;
+                // field `captures` zastąpił stare `killAndCap.caps`
+                mapStatsMap[map].total_caps_on_map += matchStat.captures;
                 mapStatsMap[map].times_map_was_played += 1;
-                if (killAndCap.caps > mapStatsMap[map].max_caps_on_map) {
-                    mapStatsMap[map].max_caps_on_map = killAndCap.caps;
+
+                if (matchStat.captures > mapStatsMap[map].max_caps_on_map) {
+                    mapStatsMap[map].max_caps_on_map = matchStat.captures;
                 }
             }
         });
 
+        // 3. Budujemy finalną tablicę, której oczekuje Twój frontend
         for (const map in mapStatsMap) {
             capsStats.push({
                 name: gamer.name,
@@ -259,30 +248,18 @@ export async function getCapsStats(): Promise<CapsStats[]> {
         }
     });
 
-    // Sorting the results by gamer name
+    // 4. Sortujemy po nicku gracza
     capsStats.sort((a, b) => a.name.localeCompare(b.name));
 
     return capsStats;
 }
-// export async function getCapsStats() {
-//     const capsStats: CapsStats[] = await prisma.$queryRaw`SELECT g.name, SUM(kc.caps) as total_caps_on_map, COUNT(m.map) as times_map_was_played, MAX(kc.caps) as max_caps_on_map, m.map
-//                                                           FROM gamers g
-//                                                                    LEFT JOIN match_gamer mg ON g.id = mg.gamer_id
-//                                                                    LEFT JOIN matches m ON mg.match_id = m.id
-//                                                                    LEFT JOIN kills_and_caps kc ON kc.match_gamer_id = mg.id
-//                                                           GROUP BY g.name, m.map
-//                                                           ORDER BY g.name`
-//     return capsStats;
-// }
+
 export async function getTitanStats(): Promise<TitanStats[]> {
-    // Fetch data with relations
-    const gamers = await prisma.gamers.findMany({
+    const gamers = await prisma.gamer.findMany({
         include: {
-            match_gamer: {
+            matchStats: {
                 include: {
-                    matches: true,
-                    kills_and_caps: true,
-                    teams: true,
+                    team: true, // Z drużyny wyciągniemy 'win' lub 'loss'
                 },
             },
         },
@@ -290,24 +267,26 @@ export async function getTitanStats(): Promise<TitanStats[]> {
 
     const titanStats: TitanStats[] = [];
 
+    // 2. Przetwarzamy pobrane dane
     gamers.forEach(gamer => {
         const titanStatsMap: Record<string, { total_wins: number; total_losses: number }> = {};
 
-        gamer.match_gamer.forEach(matchGamer => {
-            const team = matchGamer.teams;
-            const killAndCap = matchGamer.kills_and_caps;
+        // Iterujemy po nowej tabeli PlayerMatchStat
+        gamer.matchStats.forEach(matchStat => {
+            const team = matchStat.team;
+            const titan = matchStat.titan;
 
-            if (team && killAndCap && killAndCap.titan !== 'none') {
-                const titan = killAndCap.titan;
-
-                if (!titanStatsMap[titan as Titan_Name]) {
-                    titanStatsMap[titan as Titan_Name] = { total_wins: 0, total_losses: 0 };
+            // Sprawdzamy czy gracz miał jakiegokolwiek tytana w tym meczu (i czy nie był to 'none')
+            if (team && titan && titan !== 'none') {
+                if (!titanStatsMap[titan]) {
+                    titanStatsMap[titan] = { total_wins: 0, total_losses: 0 };
                 }
 
-                if (team.win_or_loose === 1) {
-                    titanStatsMap[titan as Titan_Name].total_wins += 1;
-                } else if (team.win_or_loose === 0) {
-                    titanStatsMap[titan as Titan_Name].total_losses += 1;
+                // Zamiast starych 1 i 0 korzystamy z naszego pięknego enuma TeamResult
+                if (team.result === 'win') {
+                    titanStatsMap[titan].total_wins += 1;
+                } else if (team.result === 'loss') {
+                    titanStatsMap[titan].total_losses += 1;
                 }
             }
         });
@@ -322,60 +301,43 @@ export async function getTitanStats(): Promise<TitanStats[]> {
         }
     });
 
-    // Sorting the results by gamer name
     titanStats.sort((a, b) => a.name.localeCompare(b.name));
 
     return titanStats;
 }
-// export async function getTitanStats() {
-//     const titanStats: TitanStats[] = await prisma.$queryRaw`SELECT g.name,
-//                                                                    SUM(CASE WHEN t.win_or_loose = 1 THEN 1 ELSE 0 END) AS total_wins,
-//                                                                    SUM(CASE WHEN t.win_or_loose = 0 THEN 1 ELSE 0 END) AS total_losses,
-//                                                                    kc.titan
-//                                                             FROM gamers g
-//                                                                      LEFT JOIN match_gamer mg ON g.id = mg.gamer_id
-//                                                                      LEFT JOIN matches m ON mg.match_id = m.id
-//                                                                      LEFT JOIN kills_and_caps kc ON kc.match_gamer_id = mg.id
-//                                                                      LEFT JOIN teams t ON mg.team_id = t.id
-//                                                             GROUP BY g.name, kc.titan
-//                                                             ORDER BY g.name`
-//     return titanStats
-// }
-export async function updateGamer(gamer: gamers) {
 
-    return await prisma.gamers.update({
-        data: gamer,
+export async function updateGamer(gamer: Gamer) {
+    return prisma.gamer.update({
         where: {
             id: gamer.id
-        }
-
+        },
+        data: gamer
     });
 }
 
-export async function postMatch(match: Prisma.matchesCreateInput){
-
-    return await prisma.matches.create({
+export async function postMatch(match: Prisma.MatchCreateInput) {
+    return prisma.match.create({
         data: match
-    })
+    });
 }
-export async function postTeam(team: Prisma.teamsCreateInput){
 
-    return await prisma.teams.create({
+// 2. Zapis Drużyn (Zmieniona nazwa tabeli i typu)
+export async function postTeam(team: Prisma.TeamMatchStatCreateInput) {
+    return prisma.teamMatchStat.create({
         data: team
-    })
+    });
 }
-export async function postMatchGamer(matchGamer: Prisma.match_gamerUncheckedCreateInput){
-    return await prisma.match_gamer.create({
-        data: matchGamer
-    })
+
+// 3. Nowy, zjednoczony zapis statystyk gracza (Zastępuje postMatchGamer oraz postKillsAndCaps!)
+export async function postPlayerMatchStat(playerStat: Prisma.PlayerMatchStatUncheckedCreateInput) {
+    return prisma.playerMatchStat.create({
+        data: playerStat
+    });
 }
-export async function postKillsAndCaps(killsAndCaps: Prisma.kills_and_capsUncheckedCreateInput){
-    return await prisma.kills_and_caps.create({
-        data: killsAndCaps
-    })
-}
-export async function postGamer(gamer: Prisma.gamersCreateInput){
-    return await prisma.gamers.create({
+
+// 4. Zapis Gracza (Zmieniona nazwa tabeli i typu z gamers -> Gamer)
+export async function postGamer(gamer: Prisma.GamerCreateInput) {
+    return prisma.gamer.create({
         data: gamer
-    })
+    });
 }

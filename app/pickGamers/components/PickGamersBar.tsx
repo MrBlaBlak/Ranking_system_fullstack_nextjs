@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import {gamers} from '@prisma/client'
+import {Gamer} from '@prisma/client'
 import GamersList from './GamersList';
 import {useRouter} from 'next/navigation'
 import ButtonsSection from "@/app/pickGamers/components/ButtonsSection";
 
 type Props = {
-    gamers: gamers[]
+    gamers: Gamer[]
 };
 //uncontrolled version of the form
 const PickGamersBar: React.FC<Props> = ({gamers}) => {

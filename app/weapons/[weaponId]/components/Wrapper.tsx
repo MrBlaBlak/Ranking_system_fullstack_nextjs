@@ -1,6 +1,6 @@
 'use client'
 import React, {useState} from 'react';
-import {weapons} from "@prisma/client";
+import {Weapon} from "@prisma/client";
 import ChartsSection from "./ChartsSection"
 import ChartsSectionTogether from './ChartsSectionTogether'
 import SelectWeaponToCompare from './SelectWeaponToCompare'
@@ -8,7 +8,7 @@ import CheckboxShowcaseTogether from './CheckboxShowcaseTogether'
 import Link from 'next/link'
 type Props = {
     weaponId: number,
-    weaponsData: weapons[],
+    weaponsData: Weapon[],
 };
 const Wrapper = ({weaponId, weaponsData}: Props) => {
     const [weaponToCompare, setWeaponToCompare] = useState(0)

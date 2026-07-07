@@ -1,11 +1,11 @@
 import React from 'react';
-import {gamers} from "@prisma/client";
+import {Gamer} from "@prisma/client";
 import {FormValues, GamerMatchStats} from "@/zod/zodSchemas";
 import {Titan_Name} from "@prisma/client";
 
 type Props = {
     nr: number,
-    team: gamers[],
+    team: Gamer[],
     formValues: FormValues,
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
     mmrDifferences: { [key: string]: number },

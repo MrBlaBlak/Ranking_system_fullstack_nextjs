@@ -4,11 +4,11 @@ import {disableSelectedOption} from "@/app/redux/selectedOptionsSlice";
 import Link from "next/link";
 import {useAppDispatch} from "@/app/redux/hooks";
 import {AppDispatch} from "@/app/redux/store";
-import {gamers} from '@prisma/client'
+import {Gamer} from '@prisma/client'
 import {textsPickGamers} from "@/public/data/guideTexts";
 import Guide from "@/app/components/shared/Guide";
 
-type Props = { gamers: gamers[] };
+type Props = { gamers: Gamer[] };
 const ButtonsSection = ({gamers}: Props) => {
     const dispatch = useAppDispatch<AppDispatch>();
 

@@ -5,69 +5,146 @@ generator client {
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URLSUPABASE")
-  directUrl = env("DIRECT_URL") // uses a direct connection
-
+  directUrl = env("DIRECT_URL")
 }
 
-model gamers {
-  id          Int           @id @default(autoincrement())
-  lastTen     String        @db.VarChar(255)
-  mmr         Float
-  name        String        @db.VarChar(255)
-  server      String        @db.VarChar(255)
-  match_gamer match_gamer[]
+model Gamer {
+  id         String            @id
+  name       String            @db.VarChar(255)
+  server     String            @db.VarChar(255)
+  lastTen    String            @db.VarChar(255)
+  mmr        Float
+  matchStats PlayerMatchStat[]
+  events     MatchEvent[]
 }
 
-model kills_and_caps {
-  id             Int         @id @default(autoincrement())
-  caps           Int
-  kills          Int
-  titan          Titan_Name?
-  match_gamer_id Int         @unique
-  match_gamer    match_gamer @relation(fields: [match_gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model Match {
+  id                   Int               @id @default(autoincrement())
+  server               String            @db.VarChar(255)
+  map                  Map_Name
+  gamemode             String
+  suddenDeath          Boolean
+  halftimeMatchTimeSec Int?
+  durationSec          Int
+  startTimeUnix        BigInt
+  teamStats            TeamMatchStat[]
+  playerStats          PlayerMatchStat[]
+  events               MatchEvent[]
 }
 
-model match_gamer {
-  id             Int             @id @default(autoincrement())
-  gamer_id       Int?
-  match_id       Int?
-  team_id        Int?
-  kills_and_caps kills_and_caps?
-  teams          teams?          @relation(fields: [team_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  gamers         gamers?         @relation(fields: [gamer_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  matches        matches?        @relation(fields: [match_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model TeamMatchStat {
+  id      Int        @id @default(autoincrement())
+  matchId Int
+  score   Int //flag_advantage
+  result  TeamResult
 
-  @@index([team_id])
-  @@index([gamer_id])
-  @@index([match_id])
+  match   Match             @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  players PlayerMatchStat[]
+
+  @@index([matchId])
 }
 
-model matches {
-  id          Int           @id @default(autoincrement())
-  created     DateTime      @default(now())
-  map         Map_Name
-  server      String        @db.VarChar(255)
-  match_gamer match_gamer[]
+model PlayerMatchStat {
+  id          Int    @id @default(autoincrement())
+  gamerId     String
+  matchId     Int
+  teamMatchId Int
+
+  // Podstawowe KDA i Obrażenia
+  kills         Int
+  deaths        Int
+  assists       Int
+  pilotKills    Int
+  titanKills    Int
+  killsAsPilot  Int
+  killsAsTitan  Int
+  pilotDamage   Int
+  titan         Titan_Name?
+  titanDamage   Int
+  killStreakMax Int
+
+  // Statystyki obiektywów (CTF)
+  captures        Int
+  returns         Int
+  flagPickups     Int
+  flagDrops       Int
+  flagCaptureRuns Int
+  flagCarrySec    Int
+
+  // Statystyki ruchu
+  maxSpeed    Int
+  avgSpeed    Int
+  groundSec   Int
+  airSec      Int
+  wallrunSec  Int
+  wallhangSec Int
+
+  // Statystyki czasu
+  unconnectedTime Int
+  afkTime         Int
+
+  // Relacje
+  gamer Gamer         @relation(fields: [gamerId], references: [id])
+  match Match         @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  team  TeamMatchStat @relation(fields: [teamMatchId], references: [id])
+
+  titanDrops  TitanDrop[]
+  weaponStats PlayerWeaponStat[]
+
+  @@index([gamerId])
+  @@index([matchId])
 }
 
-model teams {
-  id             Int           @id @default(autoincrement())
-  flag_advantage Int
-  win_or_loose   Int
-  match_gamer    match_gamer[]
+model TitanDrop {
+  id                Int         @id @default(autoincrement())
+  playerMatchStatId Int
+  titan             Titan_Name?
+  matchTimeSec      Int
+  diedMatchTimeSec  Int
+
+  playerMatchStat PlayerMatchStat @relation(fields: [playerMatchStatId], references: [id], onDelete: Cascade)
 }
 
-model weapons {
-  id            Int    @id @default(autoincrement())
-  name          String @db.VarChar(255)
-  weapon_class  String @db.VarChar(255)
-  near_damage   Int
-  mid_damage    Int
-  far_damage    Int
-  near_distance Int
-  mid_distance  Int
-  far_distance  Int
-  fire_rate     Int
+model PlayerWeaponStat {
+  id                Int    @id @default(autoincrement())
+  playerMatchStatId Int
+  weaponName        String
+  damage            Int    @default(0)
+  kills             Int    @default(0)
+
+  playerMatchStat PlayerMatchStat @relation(fields: [playerMatchStatId], references: [id], onDelete: Cascade)
+}
+
+model MatchEvent {
+  id           Int       @id @default(autoincrement())
+  matchId      Int
+  gamerId      String
+  eventType    EventType // "FIRST_BLOOD" lub "CAPTURE"
+  matchTimeSec Int
+  carrySec     Int? // Używane tylko dla zdarzeń typu CAPTURE
+
+  victimId String? // Używane tylko dla zdarzeń FIRST_BLOOD (może wskazywać na innego Gamer.id)
+
+  match Match @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  gamer Gamer @relation(fields: [gamerId], references: [id])
+}
+
+model Weapon {
+  id           Int    @id @default(autoincrement())
+  name         String @unique @db.VarChar(255)
+  weaponClass  String @db.VarChar(255)
+  nearDamage   Int
+  midDamage    Int
+  farDamage    Int
+  nearDistance Int
+  midDistance  Int
+  farDistance  Int
+  fireRate     Int
+}
+
+enum EventType {
+  FIRST_BLOOD
+  CAPTURE
 }
 
 enum Map_Name {
@@ -90,4 +167,10 @@ enum Titan_Name {
   legion
   scorch
   none
+}
+
+enum TeamResult {
+  win
+  loss
+  draw
 }

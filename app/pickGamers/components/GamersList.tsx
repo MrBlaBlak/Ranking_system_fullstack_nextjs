@@ -1,12 +1,12 @@
 'use client'
-import {gamers} from "@prisma/client";
+import {Gamer} from "@prisma/client";
 import React from 'react';
 import {disableSelectedOption} from '@/app/redux/selectedOptionsSlice';
 import {useAppDispatch, useAppSelector} from '@/app/redux/hooks'
 import {AppDispatch} from "@/app/redux/store";
 
 type Props = {
-    gamers: gamers[]
+    gamers: Gamer[]
 };
 const GamersList: React.FC<Props> = ({gamers}) => {
     const dispatch = useAppDispatch<AppDispatch>();

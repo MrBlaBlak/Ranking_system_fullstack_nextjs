@@ -1,6 +1,6 @@
 'use client'
 import React, {useEffect, useState} from 'react';
-import {gamers} from '@prisma/client'
+import {Gamer} from '@prisma/client'
 import updatePlayers from '../utils/updatePlayers'
 import {getRandomMap, getRandomStats} from '../utils/randomValues'
 import calculateMMR from '../utils/calculateMMR'
@@ -16,8 +16,8 @@ import Guide from "@/app/components/shared/Guide";
 import {textsSubmitMatch} from "@/public/data/guideTexts";
 
 type Props = {
-    t1: gamers[],
-    t2: gamers[],
+    t1: Gamer[],
+    t2: Gamer[],
     server: string
 }
 
@@ -94,7 +94,7 @@ const TableSection = ({t1, t2, server}: Props) => {
             draft.suddenDeathWhoWon = e.target.value
         });
     };
-    const updateTeams = (newTeam1: gamers[], newTeam2: gamers[]) => {
+    const updateTeams = (newTeam1: Gamer[], newTeam2: Gamer[]) => {
             setTeam1State(() => newTeam1)
             setTeam2State(() => newTeam2)
     }

@@ -1,26 +1,26 @@
-import {weapons} from "@prisma/client";
+import {Weapon} from "@prisma/client";
 
-export const calculateDamageBreakpoints = (weapon: weapons) => {
+export const calculateDamageBreakpoints = (weapon: Weapon) => {
     const dataPoints = [
-        {distance: weapon.near_distance, damage: weapon.near_damage},
-        {distance: weapon.mid_distance, damage: weapon.mid_damage},
-        {distance: weapon.far_distance, damage: weapon.far_damage},
+        {distance: weapon.nearDistance, damage: weapon.nearDamage},
+        {distance: weapon.midDistance, damage: weapon.midDamage},
+        {distance: weapon.farDistance, damage: weapon.farDamage},
     ];
     const damageBreakpoints = dataPoints.map(point => ({x: point.distance, y: point.damage}))
-    damageBreakpoints.unshift({x: 0, y: weapon.near_damage});
-    damageBreakpoints.push({x: 4000, y: weapon.far_damage})
+    damageBreakpoints.unshift({x: 0, y: weapon.nearDamage});
+    damageBreakpoints.push({x: 4000, y: weapon.farDamage})
     return damageBreakpoints
 }
-export const calculateTTKBreakpoints = (weapon: weapons, health: number) => {
+export const calculateTTKBreakpoints = (weapon: Weapon, health: number) => {
     const dataPoints = [
 
-        {distance: weapon.near_distance, damage: weapon.near_damage},
-        {distance: weapon.mid_distance, damage: weapon.mid_damage},
-        {distance: weapon.far_distance, damage: weapon.far_damage},
+        {distance: weapon.nearDistance, damage: weapon.nearDamage},
+        {distance: weapon.midDistance, damage: weapon.midDamage},
+        {distance: weapon.farDistance, damage: weapon.farDamage},
     ];
     const breakpoints = [];
-    breakpoints.push({x: 0, y: weapon.near_damage});
-    breakpoints.push({x: weapon.near_distance, y: weapon.near_damage});
+    breakpoints.push({x: 0, y: weapon.nearDamage});
+    breakpoints.push({x: weapon.nearDistance, y: weapon.nearDamage});
     for (let i = 0; i < dataPoints.length - 1; i++) {
         const point1 = dataPoints[i];
         const point2 = dataPoints[i + 1];
@@ -36,9 +36,9 @@ export const calculateTTKBreakpoints = (weapon: weapons, health: number) => {
             breakpoints.push({x: distanceBreakpoint, y: damageBreakpoint});
         }
     }
-    breakpoints.push({x: weapon.far_distance, y: weapon.far_damage})
-    breakpoints.push({x: 4000, y: weapon.far_damage})
-    const fireRatePerSecond = weapon.fire_rate / 60;
+    breakpoints.push({x: weapon.farDistance, y: weapon.farDamage})
+    breakpoints.push({x: 4000, y: weapon.farDamage})
+    const fireRatePerSecond = weapon.fireRate / 60;
     const ttkBreakpoints = breakpoints.map(point => {
         const bullets = Math.ceil(health / point.y);
         let ttk = bullets / fireRatePerSecond;
